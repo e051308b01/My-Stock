@@ -17,7 +17,7 @@
                 <h1 class="text-xs text-gray-400 font-medium tracking-wider">總資產估值 (TWD)</h1>
                 <div id="total-value" class="text-3xl font-black text-emerald-400 my-1">計算中...</div>
             </div>
-            <button onclick="fetchLatestPrices()" id="btn-refresh" class="bg-emerald-600/20 hover:bg-emerald-600 text-emerald-400 hover:text-white border border-emerald-500/30 px-3 py-2 rounded-xl text-xs font-bold flex items-center gap-1 active:scale-95 transition">
+            <button onclick="updatePricesViaJSONP()" id="btn-refresh" class="bg-emerald-600/20 hover:bg-emerald-600 text-emerald-400 hover:text-white border border-emerald-500/30 px-3 py-2 rounded-xl text-xs font-bold flex items-center gap-1 active:scale-95 transition">
                 🔄 自動更新現價
             </button>
         </div>
@@ -42,7 +42,7 @@
 
     <div class="p-6 text-center text-gray-600 text-2xs space-y-1">
         <div>* 點擊卡片即可修改庫存數量、買進成本或手動覆蓋股價。</div>
-        <div>* 採用 Direct-Fetch 核心與安全沙盒機制，100% 免疫所有雲端 CORS 生產環境阻擋。</div>
+        <div>* 採用 JSONP 腳本注入架構，完全豁免並繞過所有瀏覽器跨域（CORS）阻擋。</div>
     </div>
 
     <div id="stock-modal" class="hidden fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-end sm:items-center justify-center p-0 sm:p-4">
@@ -97,7 +97,7 @@
             { id: "11", symbol: "2881", name: "富邦金", shares: 8000, cost: 26.70, price: 26.70 }
         ];
 
-        let stocks = JSON.parse(localStorage.getItem('github_portfolio_v6')) || [...defaultStocks];
+        let stocks = JSON.parse(localStorage.getItem('github_portfolio_v6_jsonp')) || [...defaultStocks];
         let currentEditingId = null;
 
         function renderPortfolio() {
@@ -155,58 +155,64 @@
             totalProfitEl.className = `font-bold ${totalProfit >= 0 ? 'text-rose-400' : 'text-green-400'}`;
         }
 
-        // 🚀 終極核心：改用不觸發 CORS 攔截的 JSONP 沙盒載入機制，直連開源大盤數據
-        function fetchLatestPrices() {
+        // 🚀 核心重構：建立開源專案預設的全域接收窗口名稱
+        // 該 GitHub 專案的資料包裝格式會尋找並執行全域的 `onReceiveTwseData` 函式
+        window.onReceiveTwseData = function(rawData) {
             const btn = document.getElementById('btn-refresh');
             const statusEl = document.getElementById('update-status');
-            btn.innerText = "⏳ 雲端即時同步中...";
+            
+            try {
+                let updatedCount = 0;
+                const twseMap = {};
+                
+                // 解析大盤陣列
+                rawData.forEach(item => {
+                    if (item.Code) {
+                        twseMap[item.Code.trim()] = parseFloat(item.ClosingPrice);
+                    }
+                });
+
+                // 動態比對並更新持股價格
+                stocks = stocks.map(stock => {
+                    const code = stock.symbol.trim();
+                    if (twseMap[code] && !isNaN(twseMap[code]) && twseMap[code] > 0) {
+                        updatedCount++;
+                        return { ...stock, price: twseMap[code] };
+                    }
+                    return stock;
+                });
+
+                const now = new Date();
+                statusEl.innerText = `自動更新成功 ${updatedCount} 檔 · 時間: ${now.toLocaleTimeString()}`;
+            } catch (e) {
+                console.error("解析出錯:", e);
+                statusEl.innerText = "資料解析異常，已維持原價。";
+            } finally {
+                btn.innerHTML = "🔄 自動更新現價";
+                btn.disabled = false;
+                saveToLocalStorage();
+                renderPortfolio();
+            }
+        };
+
+        // 🚀 透過動態建立 <script> 來加載 .js 檔案，100% 免疫 CORS
+        function updatePricesViaJSONP() {
+            const btn = document.getElementById('btn-refresh');
+            const statusEl = document.getElementById('update-status');
+            btn.innerText = "⏳ 雲端同步中...";
             btn.disabled = true;
 
-            // 移除上一次的 script 標籤
-            const oldScript = document.getElementById('twse-jsonp-script');
+            // 清理上一次留下的腳本標籤
+            const oldScript = document.getElementById('twse-jsonp-core');
             if (oldScript) oldScript.remove();
 
-            // 建立跨網域全局接收窗口 (JSONP Callback)
-            window.onReceiveTwseData = function(rawData) {
-                try {
-                    let updatedCount = 0;
-                    const twseMap = {};
-                    
-                    rawData.forEach(item => {
-                        if (item.Code) {
-                            twseMap[item.Code.trim()] = parseFloat(item.ClosingPrice);
-                        }
-                    });
-
-                    stocks = stocks.map(stock => {
-                        const code = stock.symbol.trim();
-                        if (twseMap[code] && !isNaN(twseMap[code]) && twseMap[code] > 0) {
-                            updatedCount++;
-                            return { ...stock, price: twseMap[code] };
-                        }
-                        return stock;
-                    });
-
-                    const now = new Date();
-                    statusEl.innerText = `同步成功 ${updatedCount} 檔 · 時間: ${now.toLocaleTimeString()}`;
-                } catch (e) {
-                    console.error(e);
-                    statusEl.innerText = "行情解析失敗，維持快取原價。";
-                } finally {
-                    btn.innerHTML = "🔄 自動更新現價";
-                    btn.disabled = false;
-                    saveToLocalStorage();
-                    renderPortfolio();
-                }
-            };
-
-            // 利用瀏覽器本身就完全豁免 CORS 跨域限制的 <script> 來進行跨網域傳輸
             const script = document.createElement('script');
-            script.id = 'twse-jsonp-script';
+            script.id = 'twse-jsonp-core';
+            // 修正為正確的開源靜態 .js 檔案路徑
             script.src = 'https://rshadow.github.io/twse-openapi/data/exchangeReport/STOCK_DAY_ALL.js';
             
             script.onerror = function() {
-                statusEl.innerText = "雲端中斷，請確認手機網路。";
+                statusEl.innerText = "伺服器連線超時，請檢查網路。";
                 btn.innerHTML = "🔄 自動更新現價";
                 btn.disabled = false;
             };
@@ -259,7 +265,7 @@
             saveToLocalStorage();
             toggleModal(false);
             renderPortfolio();
-            fetchLatestPrices();
+            updatePricesViaJSONP();
         }
 
         function deleteStock() {
@@ -280,15 +286,15 @@
         }
 
         function saveToLocalStorage() {
-            localStorage.setItem('github_portfolio_v6', JSON.stringify(stocks));
+            localStorage.setItem('github_portfolio_v6_jsonp', JSON.stringify(stocks));
         }
 
-        // 初始檢索
+        // 初始渲染
         renderPortfolio();
         
-        // 載入完成 0.5 秒後全自動觸發第一次連線更新
+        // 進入網頁半秒後全自動觸發第一次連線同步
         window.addEventListener('load', () => {
-            setTimeout(fetchLatestPrices, 500);
+            setTimeout(updatePricesViaJSONP, 500);
         });
     </script>
 </body>
