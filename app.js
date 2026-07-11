@@ -18,7 +18,7 @@ const defaultStocks = Object.freeze([
     { id: '9', symbol: '8028', name: '昇陽半導體', shares: 2000, cost: 75.84, price: 312.5 },
     { id: '10', symbol: '8112', name: '至上', shares: 5000, cost: 47.69, price: 85 },
     { id: '11', symbol: '2881', name: '富邦金', shares: 8000, cost: 26.7, price: 124.5 },
-    { id: '12', symbol: 'MA', name: '銀行資產', shares: 3600000, cost: 1, price: 1 }
+    { id: '12', symbol: 'MA', name: '銀行資產', shares: 0, cost: 1, price: 1 }
 ]);
 
 let stocks = loadStocks();
