@@ -86,7 +86,7 @@
 
     <div class="p-8 text-center text-slate-600 text-3xs tracking-wider space-y-1">
         <div>🔒 ENCRYPTED LOCAL STORAGE · SECURE SANDBOX</div>
-        <div>V8.4 PREMIUM AI INSIGHT PLATFORM</div>
+        <div>V8.5 PREMIUM AI INSIGHT PLATFORM</div>
     </div>
 
     <div id="stock-modal" class="hidden fixed inset-0 bg-black/70 backdrop-blur-sm z-50 flex items-end sm:items-center justify-center p-0 sm:p-4">
@@ -96,7 +96,7 @@
                 <button onclick="toggleModal(false)" class="text-slate-400 text-xl p-2">&times;</button>
             </div>
 
-            <div id="yahoo-link-container" class="hidden mb-5">
+            <div id="yahoo-link-container" class="mb-5">
                 <a id="yahoo-stock-link" href="#" target="_blank" class="w-full bg-slate-950 hover:bg-slate-800 text-teal-400 border border-teal-900/50 font-bold py-3 px-4 rounded-xl flex items-center justify-center gap-2 transition active:scale-98 text-xs tracking-wide shadow-inner">
                     🔍 查詢個股盤勢 (外連 Yahoo 股市)
                 </a>
@@ -280,13 +280,14 @@
 
         function toggleModal(show) {
             const modal = document.getElementById('stock-modal');
-            if (show) modal.classList.remove('hidden');
-            else { 
+            if (show) {
+                modal.classList.remove('hidden');
+            } else { 
                 modal.classList.add('hidden'); 
                 document.getElementById('stock-form').reset(); 
                 currentEditingId = null; 
                 document.getElementById('btn-delete').classList.add('hidden');
-                document.getElementById('yahoo-link-container').classList.add('hidden'); // 關閉時隱藏連結
+                document.getElementById('yahoo-link-container').style.display = 'none'; // 🛠️ 關閉時用 style 確保完全隱藏
             }
         }
 
@@ -299,13 +300,21 @@
             document.getElementById('form-price').value = stock.price;
             document.getElementById('btn-delete').classList.remove('hidden');
 
-            // 🛠️ 設定外連 Yahoo 股市頁面連結 (支援代號：例如 2881.TW 或直接帶代號)
+            // 🛠️ 核心修正：強制進行代號格式檢查與網址生成
             const pureSymbol = stock.symbol.trim();
-            const yahooUrl = `https://tw.stock.yahoo.com/quote/${pureSymbol}`;
+            let yahooUrl = `https://tw.stock.yahoo.com/quote/${pureSymbol}`;
+            
+            // 針對帶英文字母的特殊代號（如主動型基金 00403A），如果直接帶代號查不到，引導至 Yahoo 搜尋頁面作為安全保險
+            if (/[a-zA-Z]/.test(pureSymbol)) {
+                yahooUrl = `https://tw.stock.yahoo.com/search?q=${pureSymbol}`;
+            }
+
             const linkEl = document.getElementById('yahoo-stock-link');
             linkEl.href = yahooUrl;
             linkEl.innerText = `🔍 查詢 ${pureSymbol} ${stock.name} 盤勢 (Yahoo 股市)`;
-            document.getElementById('yahoo-link-container').classList.remove('hidden');
+            
+            // 🛠️ 強制設定顯示樣式，突破一切 hidden 容器阻礙
+            document.getElementById('yahoo-link-container').style.display = 'block';
 
             toggleModal(true);
         }
@@ -337,7 +346,11 @@
         function saveToLocalStorage() { localStorage.setItem('github_portfolio_v7_lux', JSON.stringify(stocks)); }
 
         renderPortfolio();
-        window.addEventListener('load', () => { setTimeout(fetchAllData, 500); });
+        window.addEventListener('load', () => { 
+            // 🛠️ 初始狀態確保隱藏
+            document.getElementById('yahoo-link-container').style.display = 'none';
+            setTimeout(fetchAllData, 500); 
+        });
     </script>
 </body>
 </html>
