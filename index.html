@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
     <title>我的頂級資產追蹤系統</title>
+    <!-- 引入 Tailwind CSS -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <style>
         body { 
@@ -24,8 +25,10 @@
 </head>
 <body class="bg-finance-dark text-gray-100 min-h-screen pb-28">
 
+    <!-- 頂部奢華儀表板卡片區 -->
     <div class="p-4 pt-6">
         <div class="relative overflow-hidden rounded-3xl p-6 bg-gradient-to-br from-slate-800 via-slate-900 to-black border border-slate-700/40 shadow-2xl">
+            <!-- 背景裝飾微光 -->
             <div class="absolute -right-10 -top-10 w-32 h-32 bg-emerald-500/10 rounded-full blur-3xl"></div>
             
             <div class="flex flex-wrap justify-between items-start gap-4">
@@ -35,11 +38,13 @@
                         $0
                     </div>
                 </div>
+                <!-- 刷新按鈕 -->
                 <button onclick="fetchAllData()" id="btn-refresh" class="bg-slate-800/80 hover:bg-slate-700 border border-slate-700/60 text-slate-200 px-4 py-2.5 rounded-xl text-xs font-black flex items-center gap-1 active:scale-95 transition shadow-sm shrink-0">
                     🔄 同步數據
                 </button>
             </div>
             
+            <!-- 分隔線 -->
             <div class="w-full h-px bg-slate-800/60 my-4"></div>
             
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
@@ -56,6 +61,7 @@
         </div>
     </div>
 
+    <!-- 晨報區塊 -->
     <div class="px-4 mb-4">
         <div class="glass-panel border border-slate-800/80 rounded-2xl p-5 shadow-xl relative overflow-hidden">
             <div class="absolute -left-6 -bottom-6 w-20 h-20 bg-teal-500/5 rounded-full blur-2xl"></div>
@@ -72,6 +78,7 @@
         </div>
     </div>
 
+    <!-- 頂部操作按鈕 -->
     <div class="px-4 mb-5 flex flex-wrap gap-2">
         <button onclick="toggleModal(true)" class="flex-1 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white font-black py-4 px-4 rounded-2xl text-sm tracking-wide shadow-lg shadow-emerald-900/20 active:scale-98 transition flex justify-center items-center gap-1 min-w-[180px]">
             ➕ 新增 / 調整持股資產
@@ -81,23 +88,30 @@
         </button>
     </div>
 
+    <!-- 持股清單列表 -->
     <div class="px-4 space-y-3" id="stock-list-container">
-        </div>
+        <!-- JS 動態渲染卡片 -->
+    </div>
 
+    <!-- 底部功能安全提示 -->
     <div class="p-8 text-center text-slate-600 text-xs tracking-wider space-y-1 font-bold">
         <div>🔒 ENCRYPTED LOCAL STORAGE · SECURE SANDBOX</div>
         <div>V9.1 PREMIUM OMNI-YAHOO PLATFORM</div>
     </div>
 
+    <!-- 彈出視窗 (Modal) -->
     <div id="stock-modal" class="hidden fixed inset-0 bg-black/70 backdrop-blur-sm z-50 flex items-end sm:items-center justify-center p-0 sm:p-4 overflow-y-auto">
         <div class="bg-slate-900 w-full sm:max-w-md rounded-t-3xl sm:rounded-2xl p-0 shadow-2xl border border-slate-800/80 overflow-hidden my-auto">
             
+            <!-- 雙層分水嶺：上半層（萬能 Yahoo 股市搜尋區） -->
             <div id="yahoo-link-container" class="p-5 bg-emerald-950/20 border-b border-slate-800">
+                <!-- 🛠️ 這裡的按鈕樣式與字樣已在 HTML 階段鎖定，確保只會是 Yahoo 股市 -->
                 <a id="yahoo-stock-link" href="#" target="_blank" class="w-full bg-slate-950/80 hover:bg-emerald-950/50 text-emerald-400 border border-emerald-500/50 font-black py-4 px-4 rounded-xl flex items-center justify-center gap-2 transition active:scale-95 text-sm tracking-wider shadow-md text-center">
                     🔍 查詢個股盤勢 (外連 Yahoo 股市)
                 </a>
             </div>
 
+            <!-- 下半層（編輯表單區） -->
             <div class="p-6">
                 <div class="flex justify-between items-center mb-5">
                     <h3 class="text-base font-bold text-slate-200 tracking-wide">編輯持股資訊</h3>
@@ -136,6 +150,7 @@
         </div>
     </div>
 
+    <!-- JavaScript 邏輯控制 -->
     <script>
         const GAS_AI_URL = "https://script.google.com/macros/s/AKfycbzVKjy5nvE_PxnsyP7WdL7RPMPZMiXYU6dcSY7jeb_J54ejhdt9AegGu9QxoDCUMt810w/exec";
 
@@ -304,7 +319,7 @@
             document.getElementById('form-price').value = stock.price;
             document.getElementById('btn-delete').classList.remove('hidden');
 
-            // 🛠️ 終極修正：將代號去除前後空白、強制轉大寫，並一律套用 Yahoo 的萬能搜尋包裝網址
+            // 🛠️ 終極徹底修正：將所有標的一律清空白轉大寫，並強制定向至 Yahoo 的萬能搜尋網址格式
             const cleanSymbol = stock.symbol.trim().toUpperCase();
             const omniYahooUrl = `https://tw.stock.yahoo.com/search?q=${encodeURIComponent(cleanSymbol)}`;
 
