@@ -86,7 +86,7 @@
 
     <div class="p-8 text-center text-slate-600 text-3xs tracking-wider space-y-1">
         <div>🔒 ENCRYPTED LOCAL STORAGE · SECURE SANDBOX</div>
-        <div>V8.2 PREMIUM AI INSIGHT PLATFORM</div>
+        <div>V8.3 PREMIUM AI INSIGHT PLATFORM</div>
     </div>
 
     <div id="stock-modal" class="hidden fixed inset-0 bg-black/70 backdrop-blur-sm z-50 flex items-end sm:items-center justify-center p-0 sm:p-4">
@@ -143,6 +143,7 @@
             { id: "11", symbol: "2881", name: "富邦金", shares: 8000, cost: 26.70, price: 124.50 }
         ];
 
+        // 🛠️ 關鍵校正：強制對齊 V7 V8 時代的相同資料庫鑰匙名稱
         let stocks = JSON.parse(localStorage.getItem('github_portfolio_v7_lux')) || [...defaultStocks];
         let currentEditingId = null;
 
@@ -252,4 +253,70 @@
             const oldScript = document.getElementById('gas-ai-handler');
             if (oldScript) oldScript.remove();
 
-            window.onReceiveAiReport = function
+            window.onReceiveAiReport = function(data) {
+                if (data && data.status === "success") {
+                    document.getElementById('ai-date').innerText = data.date;
+                    document.getElementById('ai-report-content').innerText = data.report;
+                } else {
+                    document.getElementById('ai-report-content').innerText = "晨報解析失敗，請確認 Google 試算表端設定。";
+                }
+            };
+
+            const script = document.createElement('script');
+            script.id = 'gas-ai-handler';
+            script.src = GAS_AI_URL;
+            script.onerror = function() {
+                document.getElementById('ai-report-content').innerText = "無法連線至雲端大腦。請確認 Google 部署設定是否設為「所有人」。";
+                document.getElementById('ai-date').innerText = "ERROR";
+            };
+            document.body.appendChild(script);
+        }
+
+        function toggleModal(show) {
+            const modal = document.getElementById('stock-modal');
+            if (show) modal.classList.remove('hidden');
+            else { modal.classList.add('hidden'); document.getElementById('stock-form').reset(); currentEditingId = null; document.getElementById('btn-delete').classList.add('hidden'); }
+        }
+
+        function openEditModal(stock) {
+            currentEditingId = stock.id;
+            document.getElementById('form-symbol').value = stock.symbol;
+            document.getElementById('form-name').value = stock.name;
+            document.getElementById('form-shares').value = stock.shares;
+            document.getElementById('form-cost').value = stock.cost;
+            document.getElementById('form-price').value = stock.price;
+            document.getElementById('btn-delete').classList.remove('hidden');
+            toggleModal(true);
+        }
+
+        function saveStock(e) {
+            e.preventDefault();
+            const symbol = document.getElementById('form-symbol').value.trim().toUpperCase();
+            const name = document.getElementById('form-name').value.trim();
+            const shares = parseInt(document.getElementById('form-shares').value);
+            const cost = parseFloat(document.getElementById('form-cost').value);
+            const price = parseFloat(document.getElementById('form-price').value);
+
+            if (currentEditingId) { stocks = stocks.map(s => s.id === currentEditingId ? { ...s, symbol, name, shares, cost, price } : s); }
+            else { stocks.push({ id: Date.now().toString(), symbol, name, shares, cost, price }); }
+            saveToLocalStorage(); toggleModal(false); renderPortfolio(); fetchPricesDirectly();
+        }
+
+        function deleteStock() {
+            if (currentEditingId && confirm('確定要移除此持股記錄嗎？')) {
+                stocks = stocks.filter(s => s.id !== currentEditingId);
+                saveToLocalStorage(); toggleModal(false); renderPortfolio();
+            }
+        }
+
+        function resetToDefault() {
+            if (confirm('確定要將數據重置回初始設定嗎？')) { stocks = [...defaultStocks]; saveToLocalStorage(); renderPortfolio(); }
+        }
+
+        function saveToLocalStorage() { localStorage.setItem('github_portfolio_v7_lux', JSON.stringify(stocks)); }
+
+        renderPortfolio();
+        window.addEventListener('load', () => { setTimeout(fetchAllData, 500); });
+    </script>
+</body>
+</html>
