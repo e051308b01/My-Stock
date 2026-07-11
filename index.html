@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
     <title>我的頂級資產追蹤系統</title>
-    <!-- 引入 Tailwind CSS -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <style>
         body { 
@@ -23,7 +22,6 @@
 </head>
 <body class="bg-finance-dark text-gray-100 min-h-screen pb-28">
 
-    <!-- 頂部奢華儀表板卡片區 -->
     <div class="p-4 pt-6">
         <div class="relative overflow-hidden rounded-3xl p-6 bg-gradient-to-br from-slate-800 via-slate-900 to-black border border-slate-700/40 shadow-2xl">
             <div class="absolute -right-10 -top-10 w-32 h-32 bg-emerald-500/10 rounded-full blur-3xl"></div>
@@ -56,7 +54,6 @@
         </div>
     </div>
 
-    <!-- 晨報區塊 -->
     <div class="px-4 mb-4">
         <div class="glass-panel border border-slate-800/80 rounded-2xl p-5 shadow-xl relative overflow-hidden">
             <div class="absolute -left-6 -bottom-6 w-20 h-20 bg-teal-500/5 rounded-full blur-2xl"></div>
@@ -73,7 +70,6 @@
         </div>
     </div>
 
-    <!-- 頂部操作按鈕 -->
     <div class="px-4 mb-5 flex flex-wrap gap-2">
         <button onclick="toggleModal(true)" class="flex-1 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white font-black py-4 px-4 rounded-2xl text-sm tracking-wide shadow-lg shadow-emerald-900/20 active:scale-98 transition flex justify-center items-center gap-1 min-w-[180px]">
             ➕ 新增 / 調整持股資產
@@ -83,29 +79,23 @@
         </button>
     </div>
 
-    <!-- 持股清單列表 -->
     <div class="px-4 space-y-3" id="stock-list-container">
-        <!-- JS 動態渲染卡片 -->
-    </div>
+        </div>
 
-    <!-- 底部功能安全提示 -->
     <div class="p-8 text-center text-slate-600 text-xs tracking-wider space-y-1 font-bold">
         <div>🔒 ENCRYPTED LOCAL STORAGE · SECURE SANDBOX</div>
-        <div>V9.6 PREMIUM AUTO-RESPONSIVE PLATFORM</div>
+        <div>V9.7 PREMIUM BANK-INTEGRATED PLATFORM</div>
     </div>
 
-    <!-- 彈出視窗 (Modal) -->
     <div id="stock-modal" class="hidden fixed inset-0 bg-black/70 backdrop-blur-sm z-50 flex items-end sm:items-center justify-center p-0 sm:p-4 overflow-y-auto">
         <div class="bg-slate-900 w-full sm:max-w-md rounded-t-3xl sm:rounded-2xl p-0 shadow-2xl border border-slate-800/80 overflow-hidden my-auto">
             
-            <!-- 上半層：外連功能區 -->
             <div id="yahoo-link-container" class="p-5 bg-emerald-950/20 border-b border-slate-800">
                 <button type="button" id="yahoo-stock-link-btn" class="w-full bg-slate-950/80 hover:bg-emerald-950/50 text-emerald-400 border border-emerald-500/50 font-black py-4 px-4 rounded-xl flex items-center justify-center gap-2 transition active:scale-95 text-sm tracking-wider shadow-md text-center cursor-pointer">
                     🔍 查詢個股盤勢 (外連 Yahoo 股市)
                 </button>
             </div>
 
-            <!-- 下半層：編輯表單區 -->
             <div class="p-6">
                 <div class="flex justify-between items-center mb-5">
                     <h3 class="text-base font-bold text-slate-200 tracking-wide">編輯持股資訊</h3>
@@ -144,7 +134,6 @@
         </div>
     </div>
 
-    <!-- JavaScript 邏輯控制 -->
     <script>
         const GAS_AI_URL = "https://script.google.com/macros/s/AKfycbzVKjy5nvE_PxnsyP7WdL7RPMPZMiXYU6dcSY7jeb_J54ejhdt9AegGu9QxoDCUMt810w/exec";
 
@@ -160,7 +149,7 @@
             { id: "9", symbol: "8028", name: "昇陽半導體", shares: 2000, cost: 75.84, price: 312.50 },
             { id: "10", symbol: "8112", name: "至上", shares: 5000, cost: 47.69, price: 85.00 },
             { id: "11", symbol: "2881", name: "富邦金", shares: 8000, cost: 26.70, price: 124.50 },
-            // 🛠️ 完美植入：360 萬銀行資產，附註 MA
+            // 🛠️ 360 萬銀行資產，附註 MA
             { id: "12", symbol: "MA", name: "銀行資產", shares: 3600000, cost: 1.00, price: 1.00 }
         ];
 
@@ -185,8 +174,13 @@
                 card.className = "glass-panel border border-slate-800/70 rounded-2xl p-5 flex flex-wrap justify-between items-center gap-4 active:bg-slate-800/80 transition cursor-pointer shadow-md";
                 card.onclick = () => openEditModal(stock);
                 
-                const profitBg = profit >= 0 ? 'bg-rose-500/10 text-rose-400 border border-rose-500/20' : 'bg-emerald-500/10 text-emerald-400 border border-emerald-500/20';
-                const profitSign = profit >= 0 ? '+' : '';
+                // 🛠️ 核心樣式防禦修正：若為 0% 或是銀行資產 MA，採用優雅的灰藍色平盤中性標籤，防止代碼卡死崩潰
+                let profitBg = 'bg-slate-500/10 text-slate-400 border border-slate-500/20';
+                let profitSign = '';
+                if (stock.symbol !== "MA") {
+                    profitBg = profit >= 0 ? 'bg-rose-500/10 text-rose-400 border border-rose-500/20' : 'bg-emerald-500/10 text-emerald-400 border border-emerald-500/20';
+                    profitSign = profit >= 0 ? '+' : '';
+                }
 
                 card.innerHTML = `
                     <div class="space-y-1.5 min-w-[200px] flex-1">
@@ -195,8 +189,7 @@
                             <span class="font-black text-slate-100 text-base tracking-wide">${stock.name}</span>
                         </div>
                         <div class="text-xs text-slate-400 font-bold leading-relaxed">
-                            庫存: <span class="text-slate-200">${stock.shares.toLocaleString()}</span> 股 · 成本: <span class="text-slate-200">${stock.cost}</span><br>
-                            最新現價: <span class="text-teal-400 font-extrabold">${stock.price.toLocaleString()}</span> 元
+                            ${stock.symbol === "MA" ? `可用餘額: <span class="text-slate-200">3,600,000</span> 元` : `庫存: <span class="text-slate-200">${stock.shares.toLocaleString()}</span> 股 · 成本: <span class="text-slate-200">${stock.cost}</span><br>最新現價: <span class="text-teal-400 font-extrabold">${stock.price.toLocaleString()}</span> 元`}
                         </div>
                     </div>
                     <div class="flex items-center gap-3.5 ml-auto text-right flex-wrap justify-end">
@@ -207,7 +200,7 @@
                             </div>
                         </div>
                         <div class="px-2.5 py-1.5 rounded-xl text-xs font-mono font-black ${profitBg} min-w-[82px] text-center shadow-inner shrink-0">
-                            ${profitSign}${profitPercent.toFixed(1)}%
+                            ${stock.symbol === "MA" ? "儲蓄" : `${profitSign}${profitPercent.toFixed(1)}%`}
                         </div>
                     </div>
                 `;
@@ -247,7 +240,7 @@
                     stocks = stocks.map(stock => {
                         if (!stock.symbol) return stock;
                         const code = stock.symbol.trim();
-                        // 🛠️ 防禦校正：如果是銀行資產 MA，強制保留 1 元現價，不參與股市行情更新
+                        // 🛠️ 強制保護：MA 屬於固定資產，同步時絕對維持 1 元
                         if (code === "MA") return { ...stock, price: 1.00 };
                         if (twseMap[code] && !isNaN(twseMap[code]) && twseMap[code] > 0) { updatedCount++; return { ...stock, price: twseMap[code] }; }
                         return stock;
@@ -326,7 +319,6 @@
             } else if (cleanSymbol === "00981A") {
                 finalTargetUrl = "https://tw.stock.yahoo.com/fund/summary/F000016N6K:FO";
             } else if (cleanSymbol === "MA") {
-                // 🛠️ 銀行資產點選查詢時，直接貼心引導至 Yahoo 股市首頁大盤
                 finalTargetUrl = "https://tw.stock.yahoo.com/";
             } else if (cleanSymbol) {
                 finalTargetUrl = `https://tw.stock.yahoo.com/quote/${cleanSymbol}`;
