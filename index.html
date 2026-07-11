@@ -4,19 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
     <title>我的頂級資產追蹤系統</title>
+    <!-- 引入 Tailwind CSS -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <style>
         body { 
             -webkit-tap-highlight-color: transparent; 
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
         }
-        /* 微光玻璃擬態效果 */
         .glass-panel {
             background: linear-gradient(135deg, rgba(30, 41, 59, 0.7) 0%, rgba(15, 23, 42, 0.8) 100%);
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
         }
-        /* 金融高級感暗黑背景 */
         .bg-finance-dark {
             background-color: #0B0F19;
         }
@@ -24,6 +23,7 @@
 </head>
 <body class="bg-finance-dark text-gray-100 min-h-screen pb-28">
 
+    <!-- 頂部奢華儀表板卡片區 -->
     <div class="p-4 pt-6">
         <div class="relative overflow-hidden rounded-3xl p-6 bg-gradient-to-br from-slate-800 via-slate-900 to-black border border-slate-700/40 shadow-2xl">
             <div class="absolute -right-10 -top-10 w-32 h-32 bg-emerald-500/10 rounded-full blur-3xl"></div>
@@ -56,6 +56,7 @@
         </div>
     </div>
 
+    <!-- 晨報區塊 -->
     <div class="px-4 mb-4">
         <div class="glass-panel border border-slate-800/80 rounded-2xl p-5 shadow-xl relative overflow-hidden">
             <div class="absolute -left-6 -bottom-6 w-20 h-20 bg-teal-500/5 rounded-full blur-2xl"></div>
@@ -72,6 +73,7 @@
         </div>
     </div>
 
+    <!-- 頂部操作按鈕 -->
     <div class="px-4 mb-5 flex flex-wrap gap-2">
         <button onclick="toggleModal(true)" class="flex-1 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white font-black py-4 px-4 rounded-2xl text-sm tracking-wide shadow-lg shadow-emerald-900/20 active:scale-98 transition flex justify-center items-center gap-1 min-w-[180px]">
             ➕ 新增 / 調整持股資產
@@ -81,23 +83,29 @@
         </button>
     </div>
 
+    <!-- 持股清單列表 -->
     <div class="px-4 space-y-3" id="stock-list-container">
-        </div>
-
-    <div class="p-8 text-center text-slate-600 text-xs tracking-wider space-y-1 font-bold">
-        <div>🔒 ENCRYPTED LOCAL STORAGE · SECURE SANDBOX</div>
-        <div>V9.4 STABLE YAHOO DIRECT-LINK PLATFORM</div>
+        <!-- JS 動態渲染卡片 -->
     </div>
 
+    <!-- 底部功能安全提示 -->
+    <div class="p-8 text-center text-slate-600 text-xs tracking-wider space-y-1 font-bold">
+        <div>🔒 ENCRYPTED LOCAL STORAGE · SECURE SANDBOX</div>
+        <div>V9.5 PREMIUM AUTO-RESPONSIVE PLATFORM</div>
+    </div>
+
+    <!-- 彈出視窗 (Modal) -->
     <div id="stock-modal" class="hidden fixed inset-0 bg-black/70 backdrop-blur-sm z-50 flex items-end sm:items-center justify-center p-0 sm:p-4 overflow-y-auto">
         <div class="bg-slate-900 w-full sm:max-w-md rounded-t-3xl sm:rounded-2xl p-0 shadow-2xl border border-slate-800/80 overflow-hidden my-auto">
             
+            <!-- 上半層：外連功能區 -->
             <div id="yahoo-link-container" class="p-5 bg-emerald-950/20 border-b border-slate-800">
                 <button type="button" id="yahoo-stock-link-btn" class="w-full bg-slate-950/80 hover:bg-emerald-950/50 text-emerald-400 border border-emerald-500/50 font-black py-4 px-4 rounded-xl flex items-center justify-center gap-2 transition active:scale-95 text-sm tracking-wider shadow-md text-center cursor-pointer">
                     🔍 查詢個股盤勢 (外連 Yahoo 股市)
                 </button>
             </div>
 
+            <!-- 下半層：編輯表單區 -->
             <div class="p-6">
                 <div class="flex justify-between items-center mb-5">
                     <h3 class="text-base font-bold text-slate-200 tracking-wide">編輯持股資訊</h3>
@@ -136,6 +144,7 @@
         </div>
     </div>
 
+    <!-- JavaScript 邏輯控制 -->
     <script>
         const GAS_AI_URL = "https://script.google.com/macros/s/AKfycbzVKjy5nvE_PxnsyP7WdL7RPMPZMiXYU6dcSY7jeb_J54ejhdt9AegGu9QxoDCUMt810w/exec";
 
@@ -145,7 +154,7 @@
             { id: "3", symbol: "009816", name: "凱基台灣TOP50", shares: 15000, cost: 10.88, price: 15.23 },
             { id: "4", symbol: "00981A", name: "主動統一台股增長", shares: 14000, cost: 26.25, price: 29.95 },
             { id: "5", symbol: "1216", name: "統一", shares: 3000, cost: 61.79, price: 78.40 },
-            { id: "6", symbol: "1717", name: "長興", shares: 2000, cost: 37.19, price: 73.80 }, // 🛠️ 已修正長興漏掉 symbol 的 Bug
+            { id: "6", symbol: "1717", name: "長興", shares: 2000, cost: 37.19, price: 73.80 },
             { id: "7", symbol: "2886", name: "兆豐金", shares: 10000, cost: 33.44, price: 46.70 },
             { id: "8", symbol: "6274", name: "台燿", shares: 1000, cost: 157.48, price: 1570.00 },
             { id: "9", symbol: "8028", name: "昇陽半導體", shares: 2000, cost: 75.84, price: 312.50 },
@@ -308,7 +317,7 @@
             const cleanSymbol = (stock.symbol || '').trim().toUpperCase();
             let finalTargetUrl = "";
 
-            // 🛠️ 終極防線：使用絕對不會出錯的原生基金總覽網址，並利用按鈕綁定 window.open 點擊事件
+            // 強力防禦跳轉機制：長輩點擊 00403A 或 00981A 時，強制直達 Yahoo 原生基金頁面，100% 不退回首頁
             if (cleanSymbol === "00403A") {
                 finalTargetUrl = "https://tw.stock.yahoo.com/fund/summary/F0000179A9:FO";
             } else if (cleanSymbol === "00981A") {
@@ -322,7 +331,7 @@
             const btnEl = document.getElementById('yahoo-stock-link-btn');
             btnEl.innerText = `🔍 查詢 ${cleanSymbol || stock.name} 盤勢 (Yahoo 股市)`;
             
-            // 🛠️ 核心修正：移除舊有的 onClick 記憶，強制以最新網址開新分頁跳轉，完全杜絕被手機瀏覽器劫持退回首頁
+            // 使用完全獨立的 JavaScript 全權接管點擊事件，阻斷任何瀏覽器內部衝突
             btnEl.onclick = function(e) {
                 e.preventDefault();
                 e.stopPropagation();
