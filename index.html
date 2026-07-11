@@ -24,7 +24,7 @@
 </head>
 <body class="bg-finance-dark text-gray-100 min-h-screen pb-28">
 
-    <div class="p-4 pt-6 sticky top-0 z-20 bg-[#0B0F19]/80 backdrop-blur-md">
+    <div class="p-4 pt-6">
         <div class="relative overflow-hidden rounded-3xl p-6 bg-gradient-to-br from-slate-800 via-slate-900 to-black border border-slate-700/40 shadow-2xl">
             <div class="absolute -right-10 -top-10 w-32 h-32 bg-emerald-500/10 rounded-full blur-3xl"></div>
             
@@ -86,7 +86,7 @@
 
     <div class="p-8 text-center text-slate-600 text-3xs tracking-wider space-y-1">
         <div>🔒 ENCRYPTED LOCAL STORAGE · SECURE SANDBOX</div>
-        <div>V8.1 PREMIUM AI INSIGHT PLATFORM</div>
+        <div>V8.2 PREMIUM AI INSIGHT PLATFORM</div>
     </div>
 
     <div id="stock-modal" class="hidden fixed inset-0 bg-black/70 backdrop-blur-sm z-50 flex items-end sm:items-center justify-center p-0 sm:p-4">
@@ -203,7 +203,6 @@
             totalProfitEl.className = `font-bold text-sm ${totalProfit >= 0 ? 'text-rose-400' : 'text-green-400'}`;
         }
 
-        // 安全拆分：行情和晨報互不干涉
         function fetchAllData() {
             fetchPricesDirectly();
             fetchAiReportFromGas();
@@ -253,70 +252,4 @@
             const oldScript = document.getElementById('gas-ai-handler');
             if (oldScript) oldScript.remove();
 
-            window.onReceiveAiReport = function(data) {
-                if (data && data.status === "success") {
-                    document.getElementById('ai-date').innerText = data.date;
-                    document.getElementById('ai-report-content').innerText = data.report;
-                } else {
-                    document.getElementById('ai-report-content').innerText = "晨報解析失敗，請確認 Google 試算表端設定。";
-                }
-            };
-
-            const script = document.createElement('script');
-            script.id = 'gas-ai-handler';
-            script.src = GAS_AI_URL;
-            script.onerror = function() {
-                document.getElementById('ai-report-content').innerText = "無法連線至雲端大腦。請確認 Google 部署設定是否設為「所有人」。";
-                document.getElementById('ai-date').innerText = "ERROR";
-            };
-            document.body.appendChild(script);
-        }
-
-        function toggleModal(show) {
-            const modal = document.getElementById('stock-modal');
-            if (show) modal.classList.remove('hidden');
-            else { modal.classList.add('hidden'); document.getElementById('stock-form').reset(); currentEditingId = null; document.getElementById('btn-delete').classList.add('hidden'); }
-        }
-
-        function openEditModal(stock) {
-            currentEditingId = stock.id;
-            document.getElementById('form-symbol').value = stock.symbol;
-            document.getElementById('form-name').value = stock.name;
-            document.getElementById('form-shares').value = stock.shares;
-            document.getElementById('form-cost').value = stock.cost;
-            document.getElementById('form-price').value = stock.price;
-            document.getElementById('btn-delete').classList.remove('hidden');
-            toggleModal(true);
-        }
-
-        function saveStock(e) {
-            e.preventDefault();
-            const symbol = document.getElementById('form-symbol').value.trim().toUpperCase();
-            const name = document.getElementById('form-name').value.trim();
-            const shares = parseInt(document.getElementById('form-shares').value);
-            const cost = parseFloat(document.getElementById('form-cost').value);
-            const price = parseFloat(document.getElementById('form-price').value);
-
-            if (currentEditingId) { stocks = stocks.map(s => s.id === currentEditingId ? { ...s, symbol, name, shares, cost, price } : s); }
-            else { stocks.push({ id: Date.now().toString(), symbol, name, shares, cost, price }); }
-            saveToLocalStorage(); toggleModal(false); renderPortfolio(); fetchPricesDirectly();
-        }
-
-        function deleteStock() {
-            if (currentEditingId && confirm('確定要移除此持股記錄嗎？')) {
-                stocks = stocks.filter(s => s.id !== currentEditingId);
-                saveToLocalStorage(); toggleModal(false); renderPortfolio();
-            }
-        }
-
-        function resetToDefault() {
-            if (confirm('確定要將數據重置回初始設定嗎？')) { stocks = [...defaultStocks]; saveToLocalStorage(); renderPortfolio(); }
-        }
-
-        function saveToLocalStorage() { localStorage.setItem('github_portfolio_v7_lux', JSON.stringify(stocks)); }
-
-        renderPortfolio();
-        window.addEventListener('load', () => { setTimeout(fetchAllData, 500); });
-    </script>
-</body>
-</html>
+            window.onReceiveAiReport = function
