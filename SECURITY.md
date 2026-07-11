@@ -6,7 +6,9 @@ The bank asset ships with a zero balance. Entering a balance stores it only in t
 
 The application uses a meta Content Security Policy because GitHub Pages does not support repository-defined HTTP response headers. The `_headers` file provides stronger response headers for compatible static hosts such as Cloudflare Pages or Netlify; GitHub Pages ignores this file. In particular, `Permissions-Policy`, `X-Content-Type-Options`, and `Cross-Origin-Opener-Policy` require a host or proxy that supports response headers.
 
-The scheduled `Update market data` GitHub Actions workflow retrieves TWSE and Google Apps Script responses, validates them, and commits reduced JSON snapshots under `data/`. The browser only reads these same-origin snapshots and never executes the remote responses. Prices represent the latest data exposed by TWSE, not guaranteed real-time quotes.
+The scheduled `Update market data` GitHub Actions workflow retrieves TWSE, TPEx, and Google Apps Script responses, validates them, and commits reduced JSON snapshots under `data/`. The browser only reads these same-origin snapshots and never executes the remote responses. Prices represent the latest data exposed by the official exchanges, not guaranteed real-time quotes.
+
+Before publishing a report, the updater compares stock price claims with the same TWSE snapshot. If a claimed price differs from the latest close by more than 35%, the original report is rejected and replaced with verified closing prices. A report is never refreshed when current market data is unavailable for validation.
 
 The workflow has repository write permission because it commits refreshed snapshots. Repository administrators can disable the schedule and run `node scripts/update-data.mjs` manually if automated commits are not desired.
 

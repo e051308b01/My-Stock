@@ -2,7 +2,8 @@ name: Update market data
 
 on:
   schedule:
-    - cron: '15 * * * 1-5'
+    # 17:15 Asia/Taipei, after the official daily close files are available.
+    - cron: '15 9 * * 1-5'
   workflow_dispatch:
 
 permissions:

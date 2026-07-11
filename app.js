@@ -200,7 +200,7 @@ async function fetchAiReportFromGas() {
     const content = document.getElementById('ai-report-content');
     try {
         const data = await fetchJson(GAS_AI_URL);
-        if (!data || typeof data.date !== 'string' || typeof data.report !== 'string' || typeof data.fetchedAt !== 'string') throw new Error('Unexpected report response');
+        if (!data || typeof data.date !== 'string' || typeof data.report !== 'string' || typeof data.fetchedAt !== 'string' || !['passed', 'rejected'].includes(data.validation)) throw new Error('Unexpected report response');
         date.textContent = data.date.slice(0, 40);
         content.textContent = data.report.slice(0, 50000);
     } catch (error) {
