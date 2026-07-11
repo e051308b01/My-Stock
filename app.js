@@ -116,19 +116,19 @@ function renderPortfolio() {
 
         const description = element('div', 'text-xs text-slate-400 font-bold leading-relaxed');
         if (stock.symbol === 'MA') {
-            description.append('可用餘額: ', element('span', 'text-slate-200', stock.shares.toLocaleString()), ' 元');
+            description.append('可用餘額: ', element('span', 'money-value text-slate-200', stock.shares.toLocaleString()), ' 元');
         } else {
-            description.append('庫存: ', element('span', 'text-slate-200', stock.shares.toLocaleString()), ' 股 · 成本: ', element('span', 'text-slate-200', String(stock.cost)), document.createElement('br'), '最新收盤價: ', element('span', 'text-teal-400 font-extrabold', stock.price.toLocaleString()), ' 元');
+            description.append('庫存: ', element('span', 'money-value text-slate-200', stock.shares.toLocaleString()), ' 股 · 成本: ', element('span', 'money-value text-slate-200', String(stock.cost)), document.createElement('br'), '最新收盤價: ', element('span', 'money-value text-teal-400 font-extrabold', stock.price.toLocaleString()), ' 元');
         }
         details.append(description);
 
         const summary = element('div', 'flex items-center gap-3.5 ml-auto text-right flex-wrap justify-end');
         const values = element('div', 'space-y-1');
-        values.append(element('div', 'font-mono font-black text-slate-200 text-base', `$${Math.round(marketValueSum).toLocaleString()}`));
-        values.append(element('div', 'text-xs text-slate-400 font-bold', `成本 $${Math.round(costSum).toLocaleString()}`));
+        values.append(element('div', 'money-value font-mono font-black text-slate-200 text-base', `$${Math.round(marketValueSum).toLocaleString()}`));
+        values.append(element('div', 'money-value text-xs text-slate-400 font-bold', `成本 $${Math.round(costSum).toLocaleString()}`));
         const profitClass = stock.symbol === 'MA' ? 'bg-slate-500/10 text-slate-400 border-slate-500/20' : profit >= 0 ? 'bg-rose-500/10 text-rose-400 border-rose-500/20' : 'bg-emerald-500/10 text-emerald-400 border-emerald-500/20';
         const badgeText = stock.symbol === 'MA' ? '儲蓄' : `${profit >= 0 ? '+' : ''}${profitPercent.toFixed(1)}%`;
-        summary.append(values, element('div', `px-2.5 py-1.5 rounded-xl text-xs font-mono font-black border ${profitClass} min-w-[82px] text-center shadow-inner shrink-0`, badgeText));
+        summary.append(values, element('div', `money-value px-2.5 py-1.5 rounded-xl text-xs font-mono font-black border ${profitClass} min-w-[82px] text-center shadow-inner shrink-0`, badgeText));
         card.append(details, summary);
         container.append(card);
     });
@@ -139,7 +139,7 @@ function renderPortfolio() {
     document.getElementById('total-cost').textContent = `$${Math.round(totalCostValue).toLocaleString()}`;
     const totalProfitEl = document.getElementById('total-profit');
     totalProfitEl.textContent = `${totalProfit >= 0 ? '+' : ''}${Math.round(totalProfit).toLocaleString()} (${totalProfitPercent.toFixed(2)}%)`;
-    totalProfitEl.className = `font-black text-base ${totalProfit >= 0 ? 'text-rose-400' : 'text-green-400'}`;
+    totalProfitEl.className = `money-value responsive-profit font-black text-base ${totalProfit >= 0 ? 'text-rose-400' : 'text-green-400'}`;
 }
 
 async function fetchJson(url) {
