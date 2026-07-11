@@ -36,7 +36,7 @@
                     </div>
                 </div>
                 <button onclick="fetchAllData()" id="btn-refresh" class="bg-slate-800/80 hover:bg-slate-700 border border-slate-700/60 text-slate-300 px-3 py-2 rounded-xl text-2xs font-bold flex items-center gap-1 active:scale-95 transition shadow-sm">
-                    🔄 同步行情
+                    🔄 同步數據
                 </button>
             </div>
             
@@ -86,7 +86,7 @@
 
     <div class="p-8 text-center text-slate-600 text-3xs tracking-wider space-y-1">
         <div>🔒 ENCRYPTED LOCAL STORAGE · SECURE SANDBOX</div>
-        <div>V8 PREMIUM AI INSIGHT PLATFORM</div>
+        <div>V8.1 PREMIUM AI INSIGHT PLATFORM</div>
     </div>
 
     <div id="stock-modal" class="hidden fixed inset-0 bg-black/70 backdrop-blur-sm z-50 flex items-end sm:items-center justify-center p-0 sm:p-4">
@@ -127,7 +127,6 @@
     </div>
 
     <script>
-        // 🔗 貼上你剛才部署成功的 Google Apps Script 網址
         const GAS_AI_URL = "https://script.google.com/macros/s/AKfycbzVKjy5nvE_PxnsyP7WdL7RPMPZMiXYU6dcSY7jeb_J54ejhdt9AegGu9QxoDCUMt810w/exec";
 
         const defaultStocks = [
@@ -204,13 +203,12 @@
             totalProfitEl.className = `font-bold text-sm ${totalProfit >= 0 ? 'text-rose-400' : 'text-green-400'}`;
         }
 
-        // 總合同步：同時抓取台股行情與 Google 雲端 AI 晨報
+        // 安全拆分：行情和晨報互不干涉
         function fetchAllData() {
             fetchPricesDirectly();
             fetchAiReportFromGas();
         }
 
-        // 核心 1：直連抓取台股現價
         function fetchPricesDirectly() {
             const btn = document.getElementById('btn-refresh');
             const statusEl = document.getElementById('update-status');
@@ -230,13 +228,12 @@
                         if (twseMap[code] && !isNaN(twseMap[code]) && twseMap[code] > 0) { updatedCount++; return { ...stock, price: twseMap[code] }; }
                         return stock;
                     });
-
                     const now = new Date();
                     statusEl.innerText = `SUCCESS · 行情已同步 · ${now.toLocaleTimeString()}`;
                 } catch (e) {
                     statusEl.innerText = "DATA ERROR · 維持快取";
                 } finally {
-                    btn.innerHTML = "🔄 同步行情"; btn.disabled = false;
+                    btn.innerHTML = "🔄 同步數據"; btn.disabled = false;
                     saveToLocalStorage(); renderPortfolio();
                 }
             };
@@ -246,13 +243,12 @@
             script.src = 'https://rshadow.github.io/twse-openapi/data/exchangeReport/STOCK_DAY_ALL.js';
             script.onerror = function() {
                 statusEl.innerText = "WEEKEND · 週末市場休市中";
-                btn.innerHTML = "🔄 同步行情"; btn.disabled = false;
+                btn.innerHTML = "🔄 同步數據"; btn.disabled = false;
                 renderPortfolio();
             };
             document.body.appendChild(script);
         }
 
-        // 核心 2：JSONP 跨域直連 Google Apps Script 讀取 AI 晨報
         function fetchAiReportFromGas() {
             const oldScript = document.getElementById('gas-ai-handler');
             if (oldScript) oldScript.remove();
@@ -262,7 +258,7 @@
                     document.getElementById('ai-date').innerText = data.date;
                     document.getElementById('ai-report-content').innerText = data.report;
                 } else {
-                    document.getElementById('ai-report-content').innerText = "晨報解析失敗，請確認 Google 試算表端是否正常。";
+                    document.getElementById('ai-report-content').innerText = "晨報解析失敗，請確認 Google 試算表端設定。";
                 }
             };
 
@@ -270,7 +266,7 @@
             script.id = 'gas-ai-handler';
             script.src = GAS_AI_URL;
             script.onerror = function() {
-                document.getElementById('ai-report-content').innerText = "無法連線至雲端大腦。請確認網路連線或 Google 部署設定是否設為「所有人」。";
+                document.getElementById('ai-report-content').innerText = "無法連線至雲端大腦。請確認 Google 部署設定是否設為「所有人」。";
                 document.getElementById('ai-date').innerText = "ERROR";
             };
             document.body.appendChild(script);
@@ -319,7 +315,6 @@
 
         function saveToLocalStorage() { localStorage.setItem('github_portfolio_v7_lux', JSON.stringify(stocks)); }
 
-        // 網頁開啟自動雙向同步
         renderPortfolio();
         window.addEventListener('load', () => { setTimeout(fetchAllData, 500); });
     </script>
