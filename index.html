@@ -86,7 +86,7 @@
 
     <div class="p-8 text-center text-slate-600 text-xs tracking-wider space-y-1 font-bold">
         <div>🔒 ENCRYPTED LOCAL STORAGE · SECURE SANDBOX</div>
-        <div>V9.2 PREMIUM OMNI-YAHOO PLATFORM</div>
+        <div>V9.3 ENDPOINT YAHOO DIRECT-WAY PLATFORM</div>
     </div>
 
     <div id="stock-modal" class="hidden fixed inset-0 bg-black/70 backdrop-blur-sm z-50 flex items-end sm:items-center justify-center p-0 sm:p-4 overflow-y-auto">
@@ -145,7 +145,7 @@
             { id: "3", symbol: "009816", name: "凱基台灣TOP50", shares: 15000, cost: 10.88, price: 15.23 },
             { id: "4", symbol: "00981A", name: "主動統一台股增長", shares: 14000, cost: 26.25, price: 29.95 },
             { id: "5", symbol: "1216", name: "統一", shares: 3000, cost: 61.79, price: 78.40 },
-            { id: "6", name: "長興", shares: 2000, cost: 37.19, price: 73.80 },
+            { id: "6", symbol: "1717", name: "長興", shares: 2000, cost: 37.19, price: 73.80 },
             { id: "7", symbol: "2886", name: "兆豐金", shares: 10000, cost: 33.44, price: 46.70 },
             { id: "8", symbol: "6274", name: "台燿", shares: 1000, cost: 157.48, price: 1570.00 },
             { id: "9", symbol: "8028", name: "昇陽半導體", shares: 2000, cost: 75.84, price: 312.50 },
@@ -305,20 +305,20 @@
             document.getElementById('btn-delete').classList.remove('hidden');
 
             const cleanSymbol = stock.symbol.trim().toUpperCase();
-            let searchKeyword = cleanSymbol;
+            let finalTargetUrl = "";
 
-            // 🛠️ 終極無障礙智慧分流：解決 Yahoo 手機版網頁不認得英文代號的技術缺陷
+            // 🛠️ 終極繞過技術：直接注入 Yahoo 手機版絕對無法攔截的原生固定基金頁面網址
             if (cleanSymbol === "00403A") {
-                searchKeyword = "統一台灣升級50";
+                finalTargetUrl = "https://tw.stock.yahoo.com/fund/summary/F0000179A9:FO";
             } else if (cleanSymbol === "00981A") {
-                searchKeyword = "統一台股增長";
+                finalTargetUrl = "https://tw.stock.yahoo.com/fund/summary/F000016N6K:FO";
+            } else {
+                // 一般正常個股網址
+                finalTargetUrl = `https://tw.stock.yahoo.com/quote/${cleanSymbol}`;
             }
 
-            // 一律套用萬能搜尋包裝
-            const omniYahooUrl = `https://tw.stock.yahoo.com/search?q=${encodeURIComponent(searchKeyword)}`;
-
             const linkEl = document.getElementById('yahoo-stock-link');
-            linkEl.href = omniYahooUrl;
+            linkEl.href = finalTargetUrl;
             linkEl.innerText = `🔍 查詢 ${cleanSymbol} ${stock.name} 盤勢 (Yahoo 股市)`;
             
             document.getElementById('yahoo-link-container').style.display = 'block';
