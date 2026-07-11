@@ -30,9 +30,35 @@ button {
     min-height: 2.75rem;
 }
 
+.money-value,
+.hero-money {
+    white-space: nowrap;
+    font-variant-numeric: tabular-nums;
+}
+
+.hero-money {
+    max-width: 100%;
+    font-size: clamp(1.75rem, 9vw, 2.25rem);
+    line-height: 1.15;
+}
+
 @media (max-width: 640px) {
     input {
         font-size: max(1rem, 16px);
+    }
+
+    .responsive-profit {
+        font-size: clamp(0.75rem, 3.5vw, 1rem);
+    }
+
+    #stock-list-container > div {
+        align-items: stretch;
+    }
+
+    #stock-list-container > div > div:last-child {
+        width: 100%;
+        margin-left: 0;
+        justify-content: space-between;
     }
 }
 
