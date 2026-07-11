@@ -91,7 +91,7 @@
     <!-- 底部功能安全提示 -->
     <div class="p-8 text-center text-slate-600 text-xs tracking-wider space-y-1 font-bold">
         <div>🔒 ENCRYPTED LOCAL STORAGE · SECURE SANDBOX</div>
-        <div>V9.5 PREMIUM AUTO-RESPONSIVE PLATFORM</div>
+        <div>V9.6 PREMIUM AUTO-RESPONSIVE PLATFORM</div>
     </div>
 
     <!-- 彈出視窗 (Modal) -->
@@ -159,7 +159,9 @@
             { id: "8", symbol: "6274", name: "台燿", shares: 1000, cost: 157.48, price: 1570.00 },
             { id: "9", symbol: "8028", name: "昇陽半導體", shares: 2000, cost: 75.84, price: 312.50 },
             { id: "10", symbol: "8112", name: "至上", shares: 5000, cost: 47.69, price: 85.00 },
-            { id: "11", symbol: "2881", name: "富邦金", shares: 8000, cost: 26.70, price: 124.50 }
+            { id: "11", symbol: "2881", name: "富邦金", shares: 8000, cost: 26.70, price: 124.50 },
+            // 🛠️ 完美植入：360 萬銀行資產，附註 MA
+            { id: "12", symbol: "MA", name: "銀行資產", shares: 3600000, cost: 1.00, price: 1.00 }
         ];
 
         let stocks = JSON.parse(localStorage.getItem('github_portfolio_v7_lux')) || [...defaultStocks];
@@ -245,6 +247,8 @@
                     stocks = stocks.map(stock => {
                         if (!stock.symbol) return stock;
                         const code = stock.symbol.trim();
+                        // 🛠️ 防禦校正：如果是銀行資產 MA，強制保留 1 元現價，不參與股市行情更新
+                        if (code === "MA") return { ...stock, price: 1.00 };
                         if (twseMap[code] && !isNaN(twseMap[code]) && twseMap[code] > 0) { updatedCount++; return { ...stock, price: twseMap[code] }; }
                         return stock;
                     });
@@ -317,11 +321,13 @@
             const cleanSymbol = (stock.symbol || '').trim().toUpperCase();
             let finalTargetUrl = "";
 
-            // 強力防禦跳轉機制：長輩點擊 00403A 或 00981A 時，強制直達 Yahoo 原生基金頁面，100% 不退回首頁
             if (cleanSymbol === "00403A") {
                 finalTargetUrl = "https://tw.stock.yahoo.com/fund/summary/F0000179A9:FO";
             } else if (cleanSymbol === "00981A") {
                 finalTargetUrl = "https://tw.stock.yahoo.com/fund/summary/F000016N6K:FO";
+            } else if (cleanSymbol === "MA") {
+                // 🛠️ 銀行資產點選查詢時，直接貼心引導至 Yahoo 股市首頁大盤
+                finalTargetUrl = "https://tw.stock.yahoo.com/";
             } else if (cleanSymbol) {
                 finalTargetUrl = `https://tw.stock.yahoo.com/quote/${cleanSymbol}`;
             } else {
@@ -329,9 +335,8 @@
             }
 
             const btnEl = document.getElementById('yahoo-stock-link-btn');
-            btnEl.innerText = `🔍 查詢 ${cleanSymbol || stock.name} 盤勢 (Yahoo 股市)`;
+            btnEl.innerText = cleanSymbol === "MA" ? `🔍 查看大盤走勢 (Yahoo 股市)` : `🔍 查詢 ${cleanSymbol || stock.name} 盤勢 (Yahoo 股市)`;
             
-            // 使用完全獨立的 JavaScript 全權接管點擊事件，阻斷任何瀏覽器內部衝突
             btnEl.onclick = function(e) {
                 e.preventDefault();
                 e.stopPropagation();
