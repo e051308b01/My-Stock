@@ -86,21 +86,23 @@
 
     <div class="p-8 text-center text-slate-600 text-3xs tracking-wider space-y-1">
         <div>🔒 ENCRYPTED LOCAL STORAGE · SECURE SANDBOX</div>
-        <div>V8.5 PREMIUM AI INSIGHT PLATFORM</div>
+        <div>V8.6 PREMIUM AI INSIGHT PLATFORM</div>
     </div>
 
     <div id="stock-modal" class="hidden fixed inset-0 bg-black/70 backdrop-blur-sm z-50 flex items-end sm:items-center justify-center p-0 sm:p-4">
         <div class="bg-slate-900 w-full sm:max-w-md rounded-t-3xl sm:rounded-2xl p-6 shadow-2xl border-t border-slate-800">
-            <div class="flex justify-between items-center mb-4">
+            <div class="flex justify-between items-center mb-5">
                 <h3 class="text-base font-bold text-slate-200 tracking-wide">編輯持股資訊</h3>
                 <button onclick="toggleModal(false)" class="text-slate-400 text-xl p-2">&times;</button>
             </div>
 
             <div id="yahoo-link-container" class="mb-5">
-                <a id="yahoo-stock-link" href="#" target="_blank" class="w-full bg-slate-950 hover:bg-slate-800 text-teal-400 border border-teal-900/50 font-bold py-3 px-4 rounded-xl flex items-center justify-center gap-2 transition active:scale-98 text-xs tracking-wide shadow-inner">
+                <a id="yahoo-stock-link" href="#" target="_blank" class="w-full bg-emerald-950/20 hover:bg-emerald-950/40 text-emerald-400 border border-emerald-500/40 font-extrabold py-3.5 px-4 rounded-xl flex items-center justify-center gap-2 transition active:scale-95 text-xs tracking-wider shadow-lg shadow-emerald-950/50">
                     🔍 查詢個股盤勢 (外連 Yahoo 股市)
                 </a>
             </div>
+
+            <div id="yahoo-divider" class="w-full h-px border-t border-dashed border-slate-800 mb-5"></div>
 
             <form id="stock-form" onsubmit="saveStock(event)" class="space-y-4 text-xs">
                 <div>
@@ -287,7 +289,8 @@
                 document.getElementById('stock-form').reset(); 
                 currentEditingId = null; 
                 document.getElementById('btn-delete').classList.add('hidden');
-                document.getElementById('yahoo-link-container').style.display = 'none'; // 🛠️ 關閉時用 style 確保完全隱藏
+                document.getElementById('yahoo-link-container').style.display = 'none';
+                document.getElementById('yahoo-divider').style.display = 'none'; // 🛠️ 同步隱藏虛線
             }
         }
 
@@ -300,11 +303,9 @@
             document.getElementById('form-price').value = stock.price;
             document.getElementById('btn-delete').classList.remove('hidden');
 
-            // 🛠️ 核心修正：強制進行代號格式檢查與網址生成
             const pureSymbol = stock.symbol.trim();
             let yahooUrl = `https://tw.stock.yahoo.com/quote/${pureSymbol}`;
             
-            // 針對帶英文字母的特殊代號（如主動型基金 00403A），如果直接帶代號查不到，引導至 Yahoo 搜尋頁面作為安全保險
             if (/[a-zA-Z]/.test(pureSymbol)) {
                 yahooUrl = `https://tw.stock.yahoo.com/search?q=${pureSymbol}`;
             }
@@ -313,8 +314,9 @@
             linkEl.href = yahooUrl;
             linkEl.innerText = `🔍 查詢 ${pureSymbol} ${stock.name} 盤勢 (Yahoo 股市)`;
             
-            // 🛠️ 強制設定顯示樣式，突破一切 hidden 容器阻礙
+            // 強制設定顯示樣式
             document.getElementById('yahoo-link-container').style.display = 'block';
+            document.getElementById('yahoo-divider').style.display = 'block'; // 🛠️ 強制顯示分隔線
 
             toggleModal(true);
         }
@@ -347,8 +349,8 @@
 
         renderPortfolio();
         window.addEventListener('load', () => { 
-            // 🛠️ 初始狀態確保隱藏
             document.getElementById('yahoo-link-container').style.display = 'none';
+            document.getElementById('yahoo-divider').style.display = 'none'; // 🛠️ 初始隱藏
             setTimeout(fetchAllData, 500); 
         });
     </script>
