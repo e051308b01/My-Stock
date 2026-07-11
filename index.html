@@ -86,7 +86,7 @@
 
     <div class="p-8 text-center text-slate-600 text-xs tracking-wider space-y-1 font-bold">
         <div>🔒 ENCRYPTED LOCAL STORAGE · SECURE SANDBOX</div>
-        <div>V8.9 PREMIUM AUTO-RESPONSIVE PLATFORM</div>
+        <div>V9.0 PREMIUM AUTO-RESPONSIVE PLATFORM</div>
     </div>
 
     <div id="stock-modal" class="hidden fixed inset-0 bg-black/70 backdrop-blur-sm z-50 flex items-end sm:items-center justify-center p-0 sm:p-4 overflow-y-auto">
@@ -94,7 +94,7 @@
             
             <div id="yahoo-link-container" class="p-5 bg-emerald-950/20 border-b border-slate-800">
                 <a id="yahoo-stock-link" href="#" target="_blank" class="w-full bg-slate-950/80 hover:bg-emerald-950/50 text-emerald-400 border border-emerald-500/50 font-black py-4 px-4 rounded-xl flex items-center justify-center gap-2 transition active:scale-95 text-sm tracking-wider shadow-md text-center">
-                    🔍 查詢個股盤勢 (外連 Yahoo 股市)
+                    🔍 查詢個股盤勢
                 </a>
             </div>
 
@@ -156,7 +156,6 @@
         let stocks = JSON.parse(localStorage.getItem('github_portfolio_v7_lux')) || [...defaultStocks];
         let currentEditingId = null;
 
-        // 🛠️ 抗壓響應式渲染：加入 flex-wrap 與靈活動態寬度，字體再大也絕不破版
         function renderPortfolio() {
             const container = document.getElementById('stock-list-container');
             container.innerHTML = '';
@@ -172,7 +171,6 @@
                 totalCostValue += costSum;
 
                 const card = document.createElement('div');
-                // 🛠️ 骨架重構：改為 flex-wrap，當系統字體巨大時，右側數據會安全地流動到下一行
                 card.className = "glass-panel border border-slate-800/70 rounded-2xl p-5 flex flex-wrap justify-between items-center gap-4 active:bg-slate-800/80 transition cursor-pointer shadow-md";
                 card.onclick = () => openEditModal(stock);
                 
@@ -307,15 +305,23 @@
             document.getElementById('btn-delete').classList.remove('hidden');
 
             const pureSymbol = stock.symbol.trim();
-            let yahooUrl = `https://tw.stock.yahoo.com/quote/${pureSymbol}`;
+            let finalUrl = "";
+            let buttonText = "";
             
+            // 🛠️ 核心邏輯修正：判斷是否為帶有字母的特殊主動型基金代號
             if (/[a-zA-Z]/.test(pureSymbol)) {
-                yahooUrl = `https://tw.stock.yahoo.com/search?q=${pureSymbol}`;
+                // 如果含有字母，引導到強大的 Google Finance 財經搜尋，100% 不破版、不導回首頁
+                finalUrl = `https://www.google.com/finance/quote/${pureSymbol}:TPE`;
+                buttonText = `🔍 查詢 ${pureSymbol} ${stock.name} 盤勢 (Google 財經)`;
+            } else {
+                // 如果是純數字的一般個股或 ETF（如 1216、00878），繼續使用穩定的 Yahoo 股市直連頁面
+                finalUrl = `https://tw.stock.yahoo.com/quote/${pureSymbol}`;
+                buttonText = `🔍 查詢 ${pureSymbol} ${stock.name} 盤勢 (Yahoo 股市)`;
             }
 
             const linkEl = document.getElementById('yahoo-stock-link');
-            linkEl.href = yahooUrl;
-            linkEl.innerText = `🔍 查詢 ${pureSymbol} ${stock.name} 盤勢 (Yahoo 股市)`;
+            linkEl.href = finalUrl;
+            linkEl.innerText = buttonText;
             
             document.getElementById('yahoo-link-container').style.display = 'block';
 
