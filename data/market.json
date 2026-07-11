@@ -1,0 +1,5481 @@
+{
+  "asOf": "2026-07-11T08:40:14.620Z",
+  "stocks": [
+    {
+      "Code": "00400A",
+      "ClosingPrice": 14.25
+    },
+    {
+      "Code": "00401A",
+      "ClosingPrice": 13.38
+    },
+    {
+      "Code": "00402A",
+      "ClosingPrice": 9.75
+    },
+    {
+      "Code": "00403A",
+      "ClosingPrice": 10.48
+    },
+    {
+      "Code": "00404A",
+      "ClosingPrice": 9.89
+    },
+    {
+      "Code": "00405A",
+      "ClosingPrice": 8.77
+    },
+    {
+      "Code": "00406A",
+      "ClosingPrice": 9.86
+    },
+    {
+      "Code": "00407A",
+      "ClosingPrice": 9.42
+    },
+    {
+      "Code": "0050",
+      "ClosingPrice": 105.8
+    },
+    {
+      "Code": "0051",
+      "ClosingPrice": 144.25
+    },
+    {
+      "Code": "0052",
+      "ClosingPrice": 62
+    },
+    {
+      "Code": "0053",
+      "ClosingPrice": 237
+    },
+    {
+      "Code": "0055",
+      "ClosingPrice": 42.66
+    },
+    {
+      "Code": "0056",
+      "ClosingPrice": 52.65
+    },
+    {
+      "Code": "0057",
+      "ClosingPrice": 314.15
+    },
+    {
+      "Code": "0061",
+      "ClosingPrice": 24.99
+    },
+    {
+      "Code": "006203",
+      "ClosingPrice": 193.2
+    },
+    {
+      "Code": "006204",
+      "ClosingPrice": 229
+    },
+    {
+      "Code": "006205",
+      "ClosingPrice": 41.08
+    },
+    {
+      "Code": "006206",
+      "ClosingPrice": 37.74
+    },
+    {
+      "Code": "006207",
+      "ClosingPrice": 33.37
+    },
+    {
+      "Code": "006208",
+      "ClosingPrice": 245.7
+    },
+    {
+      "Code": "00625K",
+      "ClosingPrice": 8.6
+    },
+    {
+      "Code": "00631L",
+      "ClosingPrice": 36.78
+    },
+    {
+      "Code": "00632R",
+      "ClosingPrice": 10.21
+    },
+    {
+      "Code": "00633L",
+      "ClosingPrice": 50.35
+    },
+    {
+      "Code": "00634R",
+      "ClosingPrice": 3.1
+    },
+    {
+      "Code": "00635U",
+      "ClosingPrice": 42.42
+    },
+    {
+      "Code": "00636",
+      "ClosingPrice": 28.49
+    },
+    {
+      "Code": "00636K",
+      "ClosingPrice": 8.84
+    },
+    {
+      "Code": "00637L",
+      "ClosingPrice": 20.85
+    },
+    {
+      "Code": "00638R",
+      "ClosingPrice": 6.66
+    },
+    {
+      "Code": "00639",
+      "ClosingPrice": 17.81
+    },
+    {
+      "Code": "00640L",
+      "ClosingPrice": 104.3
+    },
+    {
+      "Code": "00641R",
+      "ClosingPrice": 3.79
+    },
+    {
+      "Code": "00642U",
+      "ClosingPrice": 24.28
+    },
+    {
+      "Code": "00643",
+      "ClosingPrice": 19.87
+    },
+    {
+      "Code": "00643K",
+      "ClosingPrice": 4.21
+    },
+    {
+      "Code": "00645",
+      "ClosingPrice": 56.75
+    },
+    {
+      "Code": "00646",
+      "ClosingPrice": 75.75
+    },
+    {
+      "Code": "00647L",
+      "ClosingPrice": 134.7
+    },
+    {
+      "Code": "00648R",
+      "ClosingPrice": 4.03
+    },
+    {
+      "Code": "00650L",
+      "ClosingPrice": 15.35
+    },
+    {
+      "Code": "00651R",
+      "ClosingPrice": 5.51
+    },
+    {
+      "Code": "00652",
+      "ClosingPrice": 33.2
+    },
+    {
+      "Code": "00653L",
+      "ClosingPrice": 46.48
+    },
+    {
+      "Code": "00654R",
+      "ClosingPrice": 6.81
+    },
+    {
+      "Code": "00655L",
+      "ClosingPrice": 35.05
+    },
+    {
+      "Code": "00656R",
+      "ClosingPrice": 5.93
+    },
+    {
+      "Code": "00657",
+      "ClosingPrice": 79.25
+    },
+    {
+      "Code": "00657K",
+      "ClosingPrice": 24.82
+    },
+    {
+      "Code": "00660",
+      "ClosingPrice": 45.79
+    },
+    {
+      "Code": "00661",
+      "ClosingPrice": 87.2
+    },
+    {
+      "Code": "00662",
+      "ClosingPrice": 120.9
+    },
+    {
+      "Code": "00663L",
+      "ClosingPrice": 105.9
+    },
+    {
+      "Code": "00664R",
+      "ClosingPrice": 1.65
+    },
+    {
+      "Code": "00665L",
+      "ClosingPrice": 8.5
+    },
+    {
+      "Code": "00666R",
+      "ClosingPrice": 9.65
+    },
+    {
+      "Code": "00668",
+      "ClosingPrice": 61.45
+    },
+    {
+      "Code": "00668K",
+      "ClosingPrice": 19.14
+    },
+    {
+      "Code": "00669R",
+      "ClosingPrice": 5.29
+    },
+    {
+      "Code": "00670L",
+      "ClosingPrice": 202
+    },
+    {
+      "Code": "00671R",
+      "ClosingPrice": 2.46
+    },
+    {
+      "Code": "00673R",
+      "ClosingPrice": 14.87
+    },
+    {
+      "Code": "00674R",
+      "ClosingPrice": 30.21
+    },
+    {
+      "Code": "00675L",
+      "ClosingPrice": 321
+    },
+    {
+      "Code": "00676R",
+      "ClosingPrice": 5.64
+    },
+    {
+      "Code": "00678",
+      "ClosingPrice": 41.98
+    },
+    {
+      "Code": "00680L",
+      "ClosingPrice": 6.79
+    },
+    {
+      "Code": "00681R",
+      "ClosingPrice": 21.33
+    },
+    {
+      "Code": "00682U",
+      "ClosingPrice": 20.72
+    },
+    {
+      "Code": "00683L",
+      "ClosingPrice": 22.02
+    },
+    {
+      "Code": "00684R",
+      "ClosingPrice": 14.92
+    },
+    {
+      "Code": "00685L",
+      "ClosingPrice": 12.09
+    },
+    {
+      "Code": "00686R",
+      "ClosingPrice": 1
+    },
+    {
+      "Code": "00688L",
+      "ClosingPrice": 6.75
+    },
+    {
+      "Code": "00689R",
+      "ClosingPrice": 22.38
+    },
+    {
+      "Code": "00690",
+      "ClosingPrice": 78.3
+    },
+    {
+      "Code": "00692",
+      "ClosingPrice": 91.65
+    },
+    {
+      "Code": "00693U",
+      "ClosingPrice": 21.76
+    },
+    {
+      "Code": "00700",
+      "ClosingPrice": 16.45
+    },
+    {
+      "Code": "00701",
+      "ClosingPrice": 39.05
+    },
+    {
+      "Code": "00702",
+      "ClosingPrice": 25.26
+    },
+    {
+      "Code": "00703",
+      "ClosingPrice": 19.16
+    },
+    {
+      "Code": "00706L",
+      "ClosingPrice": 18.39
+    },
+    {
+      "Code": "00707R",
+      "ClosingPrice": 0
+    },
+    {
+      "Code": "00708L",
+      "ClosingPrice": 71.25
+    },
+    {
+      "Code": "00709",
+      "ClosingPrice": 40.01
+    },
+    {
+      "Code": "00710B",
+      "ClosingPrice": 19.09
+    },
+    {
+      "Code": "00711B",
+      "ClosingPrice": 16.1
+    },
+    {
+      "Code": "00712",
+      "ClosingPrice": 8.79
+    },
+    {
+      "Code": "00713",
+      "ClosingPrice": 60.55
+    },
+    {
+      "Code": "00714",
+      "ClosingPrice": 22.04
+    },
+    {
+      "Code": "00715L",
+      "ClosingPrice": 38.78
+    },
+    {
+      "Code": "00717",
+      "ClosingPrice": 14.9
+    },
+    {
+      "Code": "00728",
+      "ClosingPrice": 63
+    },
+    {
+      "Code": "00730",
+      "ClosingPrice": 28.68
+    },
+    {
+      "Code": "00731",
+      "ClosingPrice": 88.9
+    },
+    {
+      "Code": "00733",
+      "ClosingPrice": 73.2
+    },
+    {
+      "Code": "00735",
+      "ClosingPrice": 106.55
+    },
+    {
+      "Code": "00736",
+      "ClosingPrice": 31.43
+    },
+    {
+      "Code": "00737",
+      "ClosingPrice": 38.72
+    },
+    {
+      "Code": "00738U",
+      "ClosingPrice": 46.76
+    },
+    {
+      "Code": "00739",
+      "ClosingPrice": 28.87
+    },
+    {
+      "Code": "00752",
+      "ClosingPrice": 22.48
+    },
+    {
+      "Code": "00753L",
+      "ClosingPrice": 8.99
+    },
+    {
+      "Code": "00757",
+      "ClosingPrice": 130.85
+    },
+    {
+      "Code": "00762",
+      "ClosingPrice": 113.1
+    },
+    {
+      "Code": "00763U",
+      "ClosingPrice": 32.59
+    },
+    {
+      "Code": "00770",
+      "ClosingPrice": 67.6
+    },
+    {
+      "Code": "00771",
+      "ClosingPrice": 15.82
+    },
+    {
+      "Code": "00775B",
+      "ClosingPrice": 32.3
+    },
+    {
+      "Code": "00783",
+      "ClosingPrice": 30.12
+    },
+    {
+      "Code": "00830",
+      "ClosingPrice": 90
+    },
+    {
+      "Code": "00850",
+      "ClosingPrice": 89.75
+    },
+    {
+      "Code": "00851",
+      "ClosingPrice": 71.6
+    },
+    {
+      "Code": "00852L",
+      "ClosingPrice": 34.99
+    },
+    {
+      "Code": "00861",
+      "ClosingPrice": 89.5
+    },
+    {
+      "Code": "00865B",
+      "ClosingPrice": 48.91
+    },
+    {
+      "Code": "00875",
+      "ClosingPrice": 52.35
+    },
+    {
+      "Code": "00876",
+      "ClosingPrice": 94.65
+    },
+    {
+      "Code": "00878",
+      "ClosingPrice": 33.19
+    },
+    {
+      "Code": "00881",
+      "ClosingPrice": 53.3
+    },
+    {
+      "Code": "00882",
+      "ClosingPrice": 14.97
+    },
+    {
+      "Code": "00885",
+      "ClosingPrice": 18.84
+    },
+    {
+      "Code": "00891",
+      "ClosingPrice": 36.47
+    },
+    {
+      "Code": "00892",
+      "ClosingPrice": 44.32
+    },
+    {
+      "Code": "00893",
+      "ClosingPrice": 45.26
+    },
+    {
+      "Code": "00894",
+      "ClosingPrice": 47.5
+    },
+    {
+      "Code": "00895",
+      "ClosingPrice": 50.7
+    },
+    {
+      "Code": "00896",
+      "ClosingPrice": 27.32
+    },
+    {
+      "Code": "00897",
+      "ClosingPrice": 11.51
+    },
+    {
+      "Code": "00898",
+      "ClosingPrice": 9.54
+    },
+    {
+      "Code": "00899",
+      "ClosingPrice": 25.33
+    },
+    {
+      "Code": "00900",
+      "ClosingPrice": 19
+    },
+    {
+      "Code": "00901",
+      "ClosingPrice": 45.55
+    },
+    {
+      "Code": "00902",
+      "ClosingPrice": 13.04
+    },
+    {
+      "Code": "00903",
+      "ClosingPrice": 21.14
+    },
+    {
+      "Code": "00904",
+      "ClosingPrice": 42.15
+    },
+    {
+      "Code": "00905",
+      "ClosingPrice": 27.55
+    },
+    {
+      "Code": "00907",
+      "ClosingPrice": 16.38
+    },
+    {
+      "Code": "00908",
+      "ClosingPrice": 15.26
+    },
+    {
+      "Code": "00909",
+      "ClosingPrice": 45.8
+    },
+    {
+      "Code": "00910",
+      "ClosingPrice": 61.5
+    },
+    {
+      "Code": "00911",
+      "ClosingPrice": 61.45
+    },
+    {
+      "Code": "00912",
+      "ClosingPrice": 34.11
+    },
+    {
+      "Code": "00913",
+      "ClosingPrice": 51.8
+    },
+    {
+      "Code": "00915",
+      "ClosingPrice": 31.98
+    },
+    {
+      "Code": "00916",
+      "ClosingPrice": 26.04
+    },
+    {
+      "Code": "00917",
+      "ClosingPrice": 23.01
+    },
+    {
+      "Code": "00918",
+      "ClosingPrice": 31.94
+    },
+    {
+      "Code": "00919",
+      "ClosingPrice": 29.97
+    },
+    {
+      "Code": "00920",
+      "ClosingPrice": 25.02
+    },
+    {
+      "Code": "00921",
+      "ClosingPrice": 23.14
+    },
+    {
+      "Code": "00922",
+      "ClosingPrice": 40.39
+    },
+    {
+      "Code": "00923",
+      "ClosingPrice": 42.02
+    },
+    {
+      "Code": "00924",
+      "ClosingPrice": 32.63
+    },
+    {
+      "Code": "00926",
+      "ClosingPrice": 25.17
+    },
+    {
+      "Code": "00927",
+      "ClosingPrice": 41.61
+    },
+    {
+      "Code": "00929",
+      "ClosingPrice": 30.19
+    },
+    {
+      "Code": "00930",
+      "ClosingPrice": 24.48
+    },
+    {
+      "Code": "00932",
+      "ClosingPrice": 17.82
+    },
+    {
+      "Code": "00934",
+      "ClosingPrice": 28.06
+    },
+    {
+      "Code": "00935",
+      "ClosingPrice": 58.95
+    },
+    {
+      "Code": "00936",
+      "ClosingPrice": 20.91
+    },
+    {
+      "Code": "00938",
+      "ClosingPrice": 24.6
+    },
+    {
+      "Code": "00939",
+      "ClosingPrice": 21.46
+    },
+    {
+      "Code": "00940",
+      "ClosingPrice": 12.53
+    },
+    {
+      "Code": "00941",
+      "ClosingPrice": 27.33
+    },
+    {
+      "Code": "00943",
+      "ClosingPrice": 22.42
+    },
+    {
+      "Code": "00944",
+      "ClosingPrice": 21.79
+    },
+    {
+      "Code": "00945B",
+      "ClosingPrice": 14.64
+    },
+    {
+      "Code": "00946",
+      "ClosingPrice": 15.4
+    },
+    {
+      "Code": "00947",
+      "ClosingPrice": 37.3
+    },
+    {
+      "Code": "00949",
+      "ClosingPrice": 20.66
+    },
+    {
+      "Code": "00951",
+      "ClosingPrice": 19.69
+    },
+    {
+      "Code": "00952",
+      "ClosingPrice": 18.45
+    },
+    {
+      "Code": "00953B",
+      "ClosingPrice": 9.72
+    },
+    {
+      "Code": "00954",
+      "ClosingPrice": 21.02
+    },
+    {
+      "Code": "00956",
+      "ClosingPrice": 12.53
+    },
+    {
+      "Code": "00960",
+      "ClosingPrice": 17.76
+    },
+    {
+      "Code": "00961",
+      "ClosingPrice": 12.69
+    },
+    {
+      "Code": "00962",
+      "ClosingPrice": 14.81
+    },
+    {
+      "Code": "00963",
+      "ClosingPrice": 12.75
+    },
+    {
+      "Code": "00964",
+      "ClosingPrice": 14.15
+    },
+    {
+      "Code": "00965",
+      "ClosingPrice": 24.76
+    },
+    {
+      "Code": "00971",
+      "ClosingPrice": 17.09
+    },
+    {
+      "Code": "00972",
+      "ClosingPrice": 19.99
+    },
+    {
+      "Code": "009800",
+      "ClosingPrice": 13.09
+    },
+    {
+      "Code": "009801",
+      "ClosingPrice": 12.37
+    },
+    {
+      "Code": "009802",
+      "ClosingPrice": 18.98
+    },
+    {
+      "Code": "009803",
+      "ClosingPrice": 21.32
+    },
+    {
+      "Code": "009804",
+      "ClosingPrice": 23.6
+    },
+    {
+      "Code": "009805",
+      "ClosingPrice": 16.6
+    },
+    {
+      "Code": "009808",
+      "ClosingPrice": 31.15
+    },
+    {
+      "Code": "009809",
+      "ClosingPrice": 17.8
+    },
+    {
+      "Code": "00980A",
+      "ClosingPrice": 23.64
+    },
+    {
+      "Code": "009810",
+      "ClosingPrice": 20.72
+    },
+    {
+      "Code": "009811",
+      "ClosingPrice": 13.05
+    },
+    {
+      "Code": "009812",
+      "ClosingPrice": 12.45
+    },
+    {
+      "Code": "009813",
+      "ClosingPrice": 11.14
+    },
+    {
+      "Code": "009816",
+      "ClosingPrice": 15.23
+    },
+    {
+      "Code": "009817",
+      "ClosingPrice": 9.03
+    },
+    {
+      "Code": "009818",
+      "ClosingPrice": 19.87
+    },
+    {
+      "Code": "009819",
+      "ClosingPrice": 10.16
+    },
+    {
+      "Code": "00981A",
+      "ClosingPrice": 29.95
+    },
+    {
+      "Code": "00981T",
+      "ClosingPrice": 12.24
+    },
+    {
+      "Code": "009820",
+      "ClosingPrice": 9.86
+    },
+    {
+      "Code": "009821",
+      "ClosingPrice": 13.35
+    },
+    {
+      "Code": "009824",
+      "ClosingPrice": 10.05
+    },
+    {
+      "Code": "00982A",
+      "ClosingPrice": 24.02
+    },
+    {
+      "Code": "00982D",
+      "ClosingPrice": 9.97
+    },
+    {
+      "Code": "00982T",
+      "ClosingPrice": 15.5
+    },
+    {
+      "Code": "00983A",
+      "ClosingPrice": 12.24
+    },
+    {
+      "Code": "00983D",
+      "ClosingPrice": 10.18
+    },
+    {
+      "Code": "00984A",
+      "ClosingPrice": 16.3
+    },
+    {
+      "Code": "00984D",
+      "ClosingPrice": 10.16
+    },
+    {
+      "Code": "00985A",
+      "ClosingPrice": 21.69
+    },
+    {
+      "Code": "00985B",
+      "ClosingPrice": 10.31
+    },
+    {
+      "Code": "00986A",
+      "ClosingPrice": 14.92
+    },
+    {
+      "Code": "00987A",
+      "ClosingPrice": 16.06
+    },
+    {
+      "Code": "00988A",
+      "ClosingPrice": 19.17
+    },
+    {
+      "Code": "00989A",
+      "ClosingPrice": 17.66
+    },
+    {
+      "Code": "00990A",
+      "ClosingPrice": 17.96
+    },
+    {
+      "Code": "00991A",
+      "ClosingPrice": 19.51
+    },
+    {
+      "Code": "00992A",
+      "ClosingPrice": 17.83
+    },
+    {
+      "Code": "00993A",
+      "ClosingPrice": 13.34
+    },
+    {
+      "Code": "00994A",
+      "ClosingPrice": 17.09
+    },
+    {
+      "Code": "00995A",
+      "ClosingPrice": 17.3
+    },
+    {
+      "Code": "00996A",
+      "ClosingPrice": 15.04
+    },
+    {
+      "Code": "00997A",
+      "ClosingPrice": 12.15
+    },
+    {
+      "Code": "00999A",
+      "ClosingPrice": 10.7
+    },
+    {
+      "Code": "01001T",
+      "ClosingPrice": 11.5
+    },
+    {
+      "Code": "01002T",
+      "ClosingPrice": 13.72
+    },
+    {
+      "Code": "01004T",
+      "ClosingPrice": 10.29
+    },
+    {
+      "Code": "01007T",
+      "ClosingPrice": 12.43
+    },
+    {
+      "Code": "01009T",
+      "ClosingPrice": 5.72
+    },
+    {
+      "Code": "01010T",
+      "ClosingPrice": 10
+    },
+    {
+      "Code": "020000",
+      "ClosingPrice": 33.15
+    },
+    {
+      "Code": "020011",
+      "ClosingPrice": 0
+    },
+    {
+      "Code": "020012",
+      "ClosingPrice": 0
+    },
+    {
+      "Code": "02001L",
+      "ClosingPrice": 160
+    },
+    {
+      "Code": "020020",
+      "ClosingPrice": 27.05
+    },
+    {
+      "Code": "020028",
+      "ClosingPrice": 18.65
+    },
+    {
+      "Code": "020029",
+      "ClosingPrice": 18.4
+    },
+    {
+      "Code": "020030",
+      "ClosingPrice": 18.08
+    },
+    {
+      "Code": "020031",
+      "ClosingPrice": 10.15
+    },
+    {
+      "Code": "020032",
+      "ClosingPrice": 10.26
+    },
+    {
+      "Code": "020034",
+      "ClosingPrice": 13.93
+    },
+    {
+      "Code": "020036",
+      "ClosingPrice": 0
+    },
+    {
+      "Code": "020037",
+      "ClosingPrice": 11.03
+    },
+    {
+      "Code": "020038",
+      "ClosingPrice": 14.28
+    },
+    {
+      "Code": "020039",
+      "ClosingPrice": 14.52
+    },
+    {
+      "Code": "1101",
+      "ClosingPrice": 22.7
+    },
+    {
+      "Code": "1101B",
+      "ClosingPrice": 43.8
+    },
+    {
+      "Code": "1102",
+      "ClosingPrice": 35.7
+    },
+    {
+      "Code": "1103",
+      "ClosingPrice": 13.4
+    },
+    {
+      "Code": "1104",
+      "ClosingPrice": 27.1
+    },
+    {
+      "Code": "1108",
+      "ClosingPrice": 13.65
+    },
+    {
+      "Code": "1109",
+      "ClosingPrice": 14.7
+    },
+    {
+      "Code": "1110",
+      "ClosingPrice": 15.6
+    },
+    {
+      "Code": "1201",
+      "ClosingPrice": 12.45
+    },
+    {
+      "Code": "1203",
+      "ClosingPrice": 43.15
+    },
+    {
+      "Code": "1210",
+      "ClosingPrice": 57
+    },
+    {
+      "Code": "1213",
+      "ClosingPrice": 7.53
+    },
+    {
+      "Code": "1215",
+      "ClosingPrice": 112
+    },
+    {
+      "Code": "1216",
+      "ClosingPrice": 78.4
+    },
+    {
+      "Code": "1217",
+      "ClosingPrice": 9.99
+    },
+    {
+      "Code": "1218",
+      "ClosingPrice": 16.85
+    },
+    {
+      "Code": "1219",
+      "ClosingPrice": 12.2
+    },
+    {
+      "Code": "1220",
+      "ClosingPrice": 11.55
+    },
+    {
+      "Code": "1225",
+      "ClosingPrice": 28.1
+    },
+    {
+      "Code": "1227",
+      "ClosingPrice": 29.75
+    },
+    {
+      "Code": "1229",
+      "ClosingPrice": 40.1
+    },
+    {
+      "Code": "1231",
+      "ClosingPrice": 86.4
+    },
+    {
+      "Code": "1232",
+      "ClosingPrice": 145.5
+    },
+    {
+      "Code": "1233",
+      "ClosingPrice": 27.9
+    },
+    {
+      "Code": "1234",
+      "ClosingPrice": 33.2
+    },
+    {
+      "Code": "1235",
+      "ClosingPrice": 36
+    },
+    {
+      "Code": "1236",
+      "ClosingPrice": 24.55
+    },
+    {
+      "Code": "1256",
+      "ClosingPrice": 197.5
+    },
+    {
+      "Code": "1301",
+      "ClosingPrice": 54.8
+    },
+    {
+      "Code": "1303",
+      "ClosingPrice": 181.5
+    },
+    {
+      "Code": "1304",
+      "ClosingPrice": 13.4
+    },
+    {
+      "Code": "1305",
+      "ClosingPrice": 12.8
+    },
+    {
+      "Code": "1307",
+      "ClosingPrice": 32.15
+    },
+    {
+      "Code": "1308",
+      "ClosingPrice": 14.65
+    },
+    {
+      "Code": "1309",
+      "ClosingPrice": 14.55
+    },
+    {
+      "Code": "1310",
+      "ClosingPrice": 10.35
+    },
+    {
+      "Code": "1312",
+      "ClosingPrice": 13.5
+    },
+    {
+      "Code": "1312A",
+      "ClosingPrice": 0
+    },
+    {
+      "Code": "1313",
+      "ClosingPrice": 12.5
+    },
+    {
+      "Code": "1314",
+      "ClosingPrice": 8.9
+    },
+    {
+      "Code": "1315",
+      "ClosingPrice": 63.6
+    },
+    {
+      "Code": "1316",
+      "ClosingPrice": 10.35
+    },
+    {
+      "Code": "1319",
+      "ClosingPrice": 75.8
+    },
+    {
+      "Code": "1321",
+      "ClosingPrice": 31.45
+    },
+    {
+      "Code": "1323",
+      "ClosingPrice": 20.4
+    },
+    {
+      "Code": "1324",
+      "ClosingPrice": 10.45
+    },
+    {
+      "Code": "1325",
+      "ClosingPrice": 24.45
+    },
+    {
+      "Code": "1326",
+      "ClosingPrice": 60
+    },
+    {
+      "Code": "1337",
+      "ClosingPrice": 5.13
+    },
+    {
+      "Code": "1338",
+      "ClosingPrice": 16.9
+    },
+    {
+      "Code": "1339",
+      "ClosingPrice": 44.8
+    },
+    {
+      "Code": "1340",
+      "ClosingPrice": 5.5
+    },
+    {
+      "Code": "1341",
+      "ClosingPrice": 58.2
+    },
+    {
+      "Code": "1342",
+      "ClosingPrice": 110.5
+    },
+    {
+      "Code": "1402",
+      "ClosingPrice": 27.45
+    },
+    {
+      "Code": "1409",
+      "ClosingPrice": 26.55
+    },
+    {
+      "Code": "1410",
+      "ClosingPrice": 26.25
+    },
+    {
+      "Code": "1413",
+      "ClosingPrice": 9.39
+    },
+    {
+      "Code": "1414",
+      "ClosingPrice": 19.4
+    },
+    {
+      "Code": "1416",
+      "ClosingPrice": 11.05
+    },
+    {
+      "Code": "1417",
+      "ClosingPrice": 8.84
+    },
+    {
+      "Code": "1418",
+      "ClosingPrice": 19.2
+    },
+    {
+      "Code": "1419",
+      "ClosingPrice": 66.7
+    },
+    {
+      "Code": "1423",
+      "ClosingPrice": 36.9
+    },
+    {
+      "Code": "1432",
+      "ClosingPrice": 15.2
+    },
+    {
+      "Code": "1434",
+      "ClosingPrice": 17.7
+    },
+    {
+      "Code": "1435",
+      "ClosingPrice": 29.2
+    },
+    {
+      "Code": "1436",
+      "ClosingPrice": 44.9
+    },
+    {
+      "Code": "1437",
+      "ClosingPrice": 30.8
+    },
+    {
+      "Code": "1438",
+      "ClosingPrice": 21.95
+    },
+    {
+      "Code": "1439",
+      "ClosingPrice": 23.5
+    },
+    {
+      "Code": "1440",
+      "ClosingPrice": 13.35
+    },
+    {
+      "Code": "1441",
+      "ClosingPrice": 9.36
+    },
+    {
+      "Code": "1442",
+      "ClosingPrice": 28.45
+    },
+    {
+      "Code": "1443",
+      "ClosingPrice": 26.1
+    },
+    {
+      "Code": "1444",
+      "ClosingPrice": 8.23
+    },
+    {
+      "Code": "1445",
+      "ClosingPrice": 11.25
+    },
+    {
+      "Code": "1446",
+      "ClosingPrice": 15
+    },
+    {
+      "Code": "1447",
+      "ClosingPrice": 8.38
+    },
+    {
+      "Code": "1449",
+      "ClosingPrice": 13.85
+    },
+    {
+      "Code": "1451",
+      "ClosingPrice": 17.3
+    },
+    {
+      "Code": "1452",
+      "ClosingPrice": 11.65
+    },
+    {
+      "Code": "1453",
+      "ClosingPrice": 11.15
+    },
+    {
+      "Code": "1454",
+      "ClosingPrice": 12.8
+    },
+    {
+      "Code": "1455",
+      "ClosingPrice": 9.3
+    },
+    {
+      "Code": "1456",
+      "ClosingPrice": 13.35
+    },
+    {
+      "Code": "1457",
+      "ClosingPrice": 14.15
+    },
+    {
+      "Code": "1459",
+      "ClosingPrice": 11.65
+    },
+    {
+      "Code": "1460",
+      "ClosingPrice": 7.17
+    },
+    {
+      "Code": "1463",
+      "ClosingPrice": 18
+    },
+    {
+      "Code": "1464",
+      "ClosingPrice": 10.55
+    },
+    {
+      "Code": "1465",
+      "ClosingPrice": 12.75
+    },
+    {
+      "Code": "1466",
+      "ClosingPrice": 16.85
+    },
+    {
+      "Code": "1467",
+      "ClosingPrice": 8.41
+    },
+    {
+      "Code": "1468",
+      "ClosingPrice": 12.2
+    },
+    {
+      "Code": "1470",
+      "ClosingPrice": 21.5
+    },
+    {
+      "Code": "1471",
+      "ClosingPrice": 10.4
+    },
+    {
+      "Code": "1472",
+      "ClosingPrice": 88.5
+    },
+    {
+      "Code": "1473",
+      "ClosingPrice": 20.2
+    },
+    {
+      "Code": "1474",
+      "ClosingPrice": 10.5
+    },
+    {
+      "Code": "1475",
+      "ClosingPrice": 27.3
+    },
+    {
+      "Code": "1476",
+      "ClosingPrice": 335
+    },
+    {
+      "Code": "1477",
+      "ClosingPrice": 222.5
+    },
+    {
+      "Code": "1503",
+      "ClosingPrice": 221.5
+    },
+    {
+      "Code": "1504",
+      "ClosingPrice": 67.5
+    },
+    {
+      "Code": "1506",
+      "ClosingPrice": 10.55
+    },
+    {
+      "Code": "1512",
+      "ClosingPrice": 7.08
+    },
+    {
+      "Code": "1513",
+      "ClosingPrice": 168.5
+    },
+    {
+      "Code": "1514",
+      "ClosingPrice": 122.5
+    },
+    {
+      "Code": "1515",
+      "ClosingPrice": 40.15
+    },
+    {
+      "Code": "1516",
+      "ClosingPrice": 18.2
+    },
+    {
+      "Code": "1517",
+      "ClosingPrice": 10.7
+    },
+    {
+      "Code": "1519",
+      "ClosingPrice": 721
+    },
+    {
+      "Code": "1521",
+      "ClosingPrice": 25.8
+    },
+    {
+      "Code": "1522",
+      "ClosingPrice": 30
+    },
+    {
+      "Code": "1522A",
+      "ClosingPrice": 49.85
+    },
+    {
+      "Code": "1524",
+      "ClosingPrice": 28.3
+    },
+    {
+      "Code": "1525",
+      "ClosingPrice": 66.9
+    },
+    {
+      "Code": "1526",
+      "ClosingPrice": 14.4
+    },
+    {
+      "Code": "1527",
+      "ClosingPrice": 33.5
+    },
+    {
+      "Code": "1528",
+      "ClosingPrice": 22.6
+    },
+    {
+      "Code": "1529",
+      "ClosingPrice": 21.75
+    },
+    {
+      "Code": "1530",
+      "ClosingPrice": 28.75
+    },
+    {
+      "Code": "1531",
+      "ClosingPrice": 13
+    },
+    {
+      "Code": "1532",
+      "ClosingPrice": 23.05
+    },
+    {
+      "Code": "1533",
+      "ClosingPrice": 36.85
+    },
+    {
+      "Code": "1535",
+      "ClosingPrice": 49.9
+    },
+    {
+      "Code": "1536",
+      "ClosingPrice": 55
+    },
+    {
+      "Code": "1537",
+      "ClosingPrice": 126
+    },
+    {
+      "Code": "1538",
+      "ClosingPrice": 10
+    },
+    {
+      "Code": "1539",
+      "ClosingPrice": 15.85
+    },
+    {
+      "Code": "1540",
+      "ClosingPrice": 22.55
+    },
+    {
+      "Code": "1541",
+      "ClosingPrice": 21.4
+    },
+    {
+      "Code": "1558",
+      "ClosingPrice": 92.4
+    },
+    {
+      "Code": "1560",
+      "ClosingPrice": 709
+    },
+    {
+      "Code": "1563",
+      "ClosingPrice": 67.7
+    },
+    {
+      "Code": "1568",
+      "ClosingPrice": 32.9
+    },
+    {
+      "Code": "1582",
+      "ClosingPrice": 79.2
+    },
+    {
+      "Code": "1583",
+      "ClosingPrice": 48.55
+    },
+    {
+      "Code": "1587",
+      "ClosingPrice": 26.6
+    },
+    {
+      "Code": "1590",
+      "ClosingPrice": 1280
+    },
+    {
+      "Code": "1597",
+      "ClosingPrice": 138.5
+    },
+    {
+      "Code": "1598",
+      "ClosingPrice": 19.1
+    },
+    {
+      "Code": "1603",
+      "ClosingPrice": 32
+    },
+    {
+      "Code": "1604",
+      "ClosingPrice": 23.4
+    },
+    {
+      "Code": "1605",
+      "ClosingPrice": 34.4
+    },
+    {
+      "Code": "1608",
+      "ClosingPrice": 34.05
+    },
+    {
+      "Code": "1609",
+      "ClosingPrice": 39.1
+    },
+    {
+      "Code": "1611",
+      "ClosingPrice": 13.15
+    },
+    {
+      "Code": "1612",
+      "ClosingPrice": 33.55
+    },
+    {
+      "Code": "1614",
+      "ClosingPrice": 32.1
+    },
+    {
+      "Code": "1615",
+      "ClosingPrice": 46.4
+    },
+    {
+      "Code": "1616",
+      "ClosingPrice": 21.8
+    },
+    {
+      "Code": "1617",
+      "ClosingPrice": 23.5
+    },
+    {
+      "Code": "1618",
+      "ClosingPrice": 38.8
+    },
+    {
+      "Code": "1623",
+      "ClosingPrice": 226.5
+    },
+    {
+      "Code": "1626",
+      "ClosingPrice": 10.9
+    },
+    {
+      "Code": "1702",
+      "ClosingPrice": 32.6
+    },
+    {
+      "Code": "1707",
+      "ClosingPrice": 91.6
+    },
+    {
+      "Code": "1708",
+      "ClosingPrice": 58.8
+    },
+    {
+      "Code": "1709",
+      "ClosingPrice": 24.4
+    },
+    {
+      "Code": "1710",
+      "ClosingPrice": 16.4
+    },
+    {
+      "Code": "1711",
+      "ClosingPrice": 42.8
+    },
+    {
+      "Code": "1712",
+      "ClosingPrice": 39.6
+    },
+    {
+      "Code": "1713",
+      "ClosingPrice": 47.85
+    },
+    {
+      "Code": "1714",
+      "ClosingPrice": 17.25
+    },
+    {
+      "Code": "1717",
+      "ClosingPrice": 73.8
+    },
+    {
+      "Code": "1718",
+      "ClosingPrice": 14.2
+    },
+    {
+      "Code": "1720",
+      "ClosingPrice": 63.9
+    },
+    {
+      "Code": "1721",
+      "ClosingPrice": 23.85
+    },
+    {
+      "Code": "1722",
+      "ClosingPrice": 47.55
+    },
+    {
+      "Code": "1723",
+      "ClosingPrice": 84.4
+    },
+    {
+      "Code": "1725",
+      "ClosingPrice": 31.6
+    },
+    {
+      "Code": "1726",
+      "ClosingPrice": 78.8
+    },
+    {
+      "Code": "1727",
+      "ClosingPrice": 90.9
+    },
+    {
+      "Code": "1730",
+      "ClosingPrice": 51.3
+    },
+    {
+      "Code": "1731",
+      "ClosingPrice": 20.65
+    },
+    {
+      "Code": "1732",
+      "ClosingPrice": 27
+    },
+    {
+      "Code": "1733",
+      "ClosingPrice": 30.3
+    },
+    {
+      "Code": "1734",
+      "ClosingPrice": 33.1
+    },
+    {
+      "Code": "1735",
+      "ClosingPrice": 22
+    },
+    {
+      "Code": "1736",
+      "ClosingPrice": 131.5
+    },
+    {
+      "Code": "1737",
+      "ClosingPrice": 31.9
+    },
+    {
+      "Code": "1752",
+      "ClosingPrice": 31.8
+    },
+    {
+      "Code": "1760",
+      "ClosingPrice": 62.2
+    },
+    {
+      "Code": "1762",
+      "ClosingPrice": 38.15
+    },
+    {
+      "Code": "1773",
+      "ClosingPrice": 174.5
+    },
+    {
+      "Code": "1776",
+      "ClosingPrice": 19.55
+    },
+    {
+      "Code": "1783",
+      "ClosingPrice": 40.35
+    },
+    {
+      "Code": "1786",
+      "ClosingPrice": 56
+    },
+    {
+      "Code": "1789",
+      "ClosingPrice": 20.55
+    },
+    {
+      "Code": "1795",
+      "ClosingPrice": 204
+    },
+    {
+      "Code": "1802",
+      "ClosingPrice": 65
+    },
+    {
+      "Code": "1805",
+      "ClosingPrice": 10.1
+    },
+    {
+      "Code": "1806",
+      "ClosingPrice": 8.41
+    },
+    {
+      "Code": "1808",
+      "ClosingPrice": 30.1
+    },
+    {
+      "Code": "1809",
+      "ClosingPrice": 48.6
+    },
+    {
+      "Code": "1810",
+      "ClosingPrice": 23.85
+    },
+    {
+      "Code": "1817",
+      "ClosingPrice": 38.75
+    },
+    {
+      "Code": "1903",
+      "ClosingPrice": 48.95
+    },
+    {
+      "Code": "1904",
+      "ClosingPrice": 23.4
+    },
+    {
+      "Code": "1905",
+      "ClosingPrice": 15.75
+    },
+    {
+      "Code": "1906",
+      "ClosingPrice": 11.3
+    },
+    {
+      "Code": "1907",
+      "ClosingPrice": 27.75
+    },
+    {
+      "Code": "1909",
+      "ClosingPrice": 10.3
+    },
+    {
+      "Code": "2002",
+      "ClosingPrice": 18.55
+    },
+    {
+      "Code": "2002A",
+      "ClosingPrice": 38.4
+    },
+    {
+      "Code": "2006",
+      "ClosingPrice": 70.2
+    },
+    {
+      "Code": "2007",
+      "ClosingPrice": 7.31
+    },
+    {
+      "Code": "2008",
+      "ClosingPrice": 29.85
+    },
+    {
+      "Code": "2009",
+      "ClosingPrice": 38.1
+    },
+    {
+      "Code": "2010",
+      "ClosingPrice": 21.35
+    },
+    {
+      "Code": "2012",
+      "ClosingPrice": 15.7
+    },
+    {
+      "Code": "2013",
+      "ClosingPrice": 41.4
+    },
+    {
+      "Code": "2014",
+      "ClosingPrice": 17.15
+    },
+    {
+      "Code": "2015",
+      "ClosingPrice": 61.5
+    },
+    {
+      "Code": "2017",
+      "ClosingPrice": 9.12
+    },
+    {
+      "Code": "2020",
+      "ClosingPrice": 21.45
+    },
+    {
+      "Code": "2022",
+      "ClosingPrice": 8.07
+    },
+    {
+      "Code": "2023",
+      "ClosingPrice": 13.9
+    },
+    {
+      "Code": "2024",
+      "ClosingPrice": 13.6
+    },
+    {
+      "Code": "2025",
+      "ClosingPrice": 12.1
+    },
+    {
+      "Code": "2027",
+      "ClosingPrice": 40
+    },
+    {
+      "Code": "2028",
+      "ClosingPrice": 15.9
+    },
+    {
+      "Code": "2029",
+      "ClosingPrice": 20.8
+    },
+    {
+      "Code": "2030",
+      "ClosingPrice": 17.8
+    },
+    {
+      "Code": "2031",
+      "ClosingPrice": 38.35
+    },
+    {
+      "Code": "2032",
+      "ClosingPrice": 16.4
+    },
+    {
+      "Code": "2033",
+      "ClosingPrice": 15.8
+    },
+    {
+      "Code": "2034",
+      "ClosingPrice": 20.55
+    },
+    {
+      "Code": "2038",
+      "ClosingPrice": 13.2
+    },
+    {
+      "Code": "2049",
+      "ClosingPrice": 331.5
+    },
+    {
+      "Code": "2059",
+      "ClosingPrice": 8250
+    },
+    {
+      "Code": "2062",
+      "ClosingPrice": 19.3
+    },
+    {
+      "Code": "2069",
+      "ClosingPrice": 18.2
+    },
+    {
+      "Code": "2072",
+      "ClosingPrice": 147
+    },
+    {
+      "Code": "2101",
+      "ClosingPrice": 34
+    },
+    {
+      "Code": "2102",
+      "ClosingPrice": 19.05
+    },
+    {
+      "Code": "2103",
+      "ClosingPrice": 23.05
+    },
+    {
+      "Code": "2104",
+      "ClosingPrice": 10.45
+    },
+    {
+      "Code": "2105",
+      "ClosingPrice": 32.4
+    },
+    {
+      "Code": "2106",
+      "ClosingPrice": 17.4
+    },
+    {
+      "Code": "2107",
+      "ClosingPrice": 25.6
+    },
+    {
+      "Code": "2108",
+      "ClosingPrice": 28.85
+    },
+    {
+      "Code": "2109",
+      "ClosingPrice": 14.8
+    },
+    {
+      "Code": "2114",
+      "ClosingPrice": 89.7
+    },
+    {
+      "Code": "2115",
+      "ClosingPrice": 21.4
+    },
+    {
+      "Code": "2201",
+      "ClosingPrice": 28.45
+    },
+    {
+      "Code": "2204",
+      "ClosingPrice": 57
+    },
+    {
+      "Code": "2206",
+      "ClosingPrice": 64.2
+    },
+    {
+      "Code": "2207",
+      "ClosingPrice": 476.5
+    },
+    {
+      "Code": "2208",
+      "ClosingPrice": 19.75
+    },
+    {
+      "Code": "2211",
+      "ClosingPrice": 95
+    },
+    {
+      "Code": "2227",
+      "ClosingPrice": 49.95
+    },
+    {
+      "Code": "2228",
+      "ClosingPrice": 85.4
+    },
+    {
+      "Code": "2231",
+      "ClosingPrice": 111
+    },
+    {
+      "Code": "2233",
+      "ClosingPrice": 252.5
+    },
+    {
+      "Code": "2236",
+      "ClosingPrice": 176
+    },
+    {
+      "Code": "2239",
+      "ClosingPrice": 21.55
+    },
+    {
+      "Code": "2241",
+      "ClosingPrice": 42.95
+    },
+    {
+      "Code": "2243",
+      "ClosingPrice": 51
+    },
+    {
+      "Code": "2247",
+      "ClosingPrice": 233
+    },
+    {
+      "Code": "2248",
+      "ClosingPrice": 59
+    },
+    {
+      "Code": "2250",
+      "ClosingPrice": 64.5
+    },
+    {
+      "Code": "2254",
+      "ClosingPrice": 59.4
+    },
+    {
+      "Code": "2258",
+      "ClosingPrice": 31.8
+    },
+    {
+      "Code": "2301",
+      "ClosingPrice": 213.5
+    },
+    {
+      "Code": "2302",
+      "ClosingPrice": 46.35
+    },
+    {
+      "Code": "2303",
+      "ClosingPrice": 156
+    },
+    {
+      "Code": "2305",
+      "ClosingPrice": 36
+    },
+    {
+      "Code": "2308",
+      "ClosingPrice": 1880
+    },
+    {
+      "Code": "2312",
+      "ClosingPrice": 34
+    },
+    {
+      "Code": "2313",
+      "ClosingPrice": 223
+    },
+    {
+      "Code": "2314",
+      "ClosingPrice": 13.85
+    },
+    {
+      "Code": "2316",
+      "ClosingPrice": 208
+    },
+    {
+      "Code": "2317",
+      "ClosingPrice": 237.5
+    },
+    {
+      "Code": "2321",
+      "ClosingPrice": 13.85
+    },
+    {
+      "Code": "2323",
+      "ClosingPrice": 11.15
+    },
+    {
+      "Code": "2324",
+      "ClosingPrice": 36.6
+    },
+    {
+      "Code": "2327",
+      "ClosingPrice": 900
+    },
+    {
+      "Code": "2328",
+      "ClosingPrice": 48.5
+    },
+    {
+      "Code": "2329",
+      "ClosingPrice": 51.4
+    },
+    {
+      "Code": "2330",
+      "ClosingPrice": 2415
+    },
+    {
+      "Code": "2331",
+      "ClosingPrice": 20.55
+    },
+    {
+      "Code": "2332",
+      "ClosingPrice": 24.05
+    },
+    {
+      "Code": "2337",
+      "ClosingPrice": 143.5
+    },
+    {
+      "Code": "2338",
+      "ClosingPrice": 47.7
+    },
+    {
+      "Code": "2340",
+      "ClosingPrice": 36.5
+    },
+    {
+      "Code": "2342",
+      "ClosingPrice": 49
+    },
+    {
+      "Code": "2344",
+      "ClosingPrice": 176.5
+    },
+    {
+      "Code": "2345",
+      "ClosingPrice": 2470
+    },
+    {
+      "Code": "2347",
+      "ClosingPrice": 88.5
+    },
+    {
+      "Code": "2348",
+      "ClosingPrice": 75.9
+    },
+    {
+      "Code": "2348A",
+      "ClosingPrice": 37.7
+    },
+    {
+      "Code": "2349",
+      "ClosingPrice": 12.85
+    },
+    {
+      "Code": "2351",
+      "ClosingPrice": 200
+    },
+    {
+      "Code": "2352",
+      "ClosingPrice": 33
+    },
+    {
+      "Code": "2353",
+      "ClosingPrice": 32.5
+    },
+    {
+      "Code": "2354",
+      "ClosingPrice": 57
+    },
+    {
+      "Code": "2355",
+      "ClosingPrice": 50.7
+    },
+    {
+      "Code": "2356",
+      "ClosingPrice": 69.8
+    },
+    {
+      "Code": "2357",
+      "ClosingPrice": 684
+    },
+    {
+      "Code": "2359",
+      "ClosingPrice": 139
+    },
+    {
+      "Code": "2360",
+      "ClosingPrice": 1820
+    },
+    {
+      "Code": "2362",
+      "ClosingPrice": 43.4
+    },
+    {
+      "Code": "2363",
+      "ClosingPrice": 65.6
+    },
+    {
+      "Code": "2364",
+      "ClosingPrice": 68
+    },
+    {
+      "Code": "2365",
+      "ClosingPrice": 32.5
+    },
+    {
+      "Code": "2367",
+      "ClosingPrice": 51.5
+    },
+    {
+      "Code": "2368",
+      "ClosingPrice": 1075
+    },
+    {
+      "Code": "2369",
+      "ClosingPrice": 42.5
+    },
+    {
+      "Code": "2371",
+      "ClosingPrice": 27.7
+    },
+    {
+      "Code": "2373",
+      "ClosingPrice": 53.9
+    },
+    {
+      "Code": "2374",
+      "ClosingPrice": 75
+    },
+    {
+      "Code": "2375",
+      "ClosingPrice": 188.5
+    },
+    {
+      "Code": "2376",
+      "ClosingPrice": 336.5
+    },
+    {
+      "Code": "2377",
+      "ClosingPrice": 145
+    },
+    {
+      "Code": "2379",
+      "ClosingPrice": 840
+    },
+    {
+      "Code": "2380",
+      "ClosingPrice": 20
+    },
+    {
+      "Code": "2382",
+      "ClosingPrice": 373.5
+    },
+    {
+      "Code": "2383",
+      "ClosingPrice": 5295
+    },
+    {
+      "Code": "2385",
+      "ClosingPrice": 107
+    },
+    {
+      "Code": "2387",
+      "ClosingPrice": 39.85
+    },
+    {
+      "Code": "2388",
+      "ClosingPrice": 73.1
+    },
+    {
+      "Code": "2390",
+      "ClosingPrice": 12.9
+    },
+    {
+      "Code": "2392",
+      "ClosingPrice": 37.05
+    },
+    {
+      "Code": "2393",
+      "ClosingPrice": 71
+    },
+    {
+      "Code": "2395",
+      "ClosingPrice": 540
+    },
+    {
+      "Code": "2397",
+      "ClosingPrice": 58.5
+    },
+    {
+      "Code": "2399",
+      "ClosingPrice": 48.85
+    },
+    {
+      "Code": "2401",
+      "ClosingPrice": 33
+    },
+    {
+      "Code": "2402",
+      "ClosingPrice": 64.4
+    },
+    {
+      "Code": "2404",
+      "ClosingPrice": 1215
+    },
+    {
+      "Code": "2405",
+      "ClosingPrice": 17.5
+    },
+    {
+      "Code": "2406",
+      "ClosingPrice": 38.5
+    },
+    {
+      "Code": "2408",
+      "ClosingPrice": 435.5
+    },
+    {
+      "Code": "2409",
+      "ClosingPrice": 31.45
+    },
+    {
+      "Code": "2412",
+      "ClosingPrice": 133.5
+    },
+    {
+      "Code": "2413",
+      "ClosingPrice": 45.3
+    },
+    {
+      "Code": "2414",
+      "ClosingPrice": 61.6
+    },
+    {
+      "Code": "2415",
+      "ClosingPrice": 38.3
+    },
+    {
+      "Code": "2417",
+      "ClosingPrice": 45.05
+    },
+    {
+      "Code": "2419",
+      "ClosingPrice": 27.9
+    },
+    {
+      "Code": "2420",
+      "ClosingPrice": 60.8
+    },
+    {
+      "Code": "2421",
+      "ClosingPrice": 142.5
+    },
+    {
+      "Code": "2423",
+      "ClosingPrice": 79.7
+    },
+    {
+      "Code": "2424",
+      "ClosingPrice": 10.1
+    },
+    {
+      "Code": "2425",
+      "ClosingPrice": 40.05
+    },
+    {
+      "Code": "2426",
+      "ClosingPrice": 72
+    },
+    {
+      "Code": "2427",
+      "ClosingPrice": 25.25
+    },
+    {
+      "Code": "2428",
+      "ClosingPrice": 325
+    },
+    {
+      "Code": "2429",
+      "ClosingPrice": 43.2
+    },
+    {
+      "Code": "2430",
+      "ClosingPrice": 18
+    },
+    {
+      "Code": "2431",
+      "ClosingPrice": 11.45
+    },
+    {
+      "Code": "2432",
+      "ClosingPrice": 28.2
+    },
+    {
+      "Code": "2433",
+      "ClosingPrice": 42
+    },
+    {
+      "Code": "2434",
+      "ClosingPrice": 62.1
+    },
+    {
+      "Code": "2436",
+      "ClosingPrice": 67.2
+    },
+    {
+      "Code": "2438",
+      "ClosingPrice": 20.25
+    },
+    {
+      "Code": "2439",
+      "ClosingPrice": 88.9
+    },
+    {
+      "Code": "2440",
+      "ClosingPrice": 16.65
+    },
+    {
+      "Code": "2441",
+      "ClosingPrice": 144.5
+    },
+    {
+      "Code": "2442",
+      "ClosingPrice": 19.25
+    },
+    {
+      "Code": "2444",
+      "ClosingPrice": 12.4
+    },
+    {
+      "Code": "2449",
+      "ClosingPrice": 308.5
+    },
+    {
+      "Code": "2450",
+      "ClosingPrice": 28.75
+    },
+    {
+      "Code": "2451",
+      "ClosingPrice": 253.5
+    },
+    {
+      "Code": "2453",
+      "ClosingPrice": 53.7
+    },
+    {
+      "Code": "2454",
+      "ClosingPrice": 3925
+    },
+    {
+      "Code": "2455",
+      "ClosingPrice": 330.5
+    },
+    {
+      "Code": "2457",
+      "ClosingPrice": 27.85
+    },
+    {
+      "Code": "2458",
+      "ClosingPrice": 183.5
+    },
+    {
+      "Code": "2459",
+      "ClosingPrice": 63.7
+    },
+    {
+      "Code": "2460",
+      "ClosingPrice": 34.3
+    },
+    {
+      "Code": "2461",
+      "ClosingPrice": 17.3
+    },
+    {
+      "Code": "2462",
+      "ClosingPrice": 22.85
+    },
+    {
+      "Code": "2464",
+      "ClosingPrice": 161.5
+    },
+    {
+      "Code": "2465",
+      "ClosingPrice": 89.5
+    },
+    {
+      "Code": "2466",
+      "ClosingPrice": 98.5
+    },
+    {
+      "Code": "2467",
+      "ClosingPrice": 556
+    },
+    {
+      "Code": "2468",
+      "ClosingPrice": 36.6
+    },
+    {
+      "Code": "2471",
+      "ClosingPrice": 53.2
+    },
+    {
+      "Code": "2472",
+      "ClosingPrice": 376
+    },
+    {
+      "Code": "2474",
+      "ClosingPrice": 195.5
+    },
+    {
+      "Code": "2476",
+      "ClosingPrice": 129
+    },
+    {
+      "Code": "2477",
+      "ClosingPrice": 21.3
+    },
+    {
+      "Code": "2478",
+      "ClosingPrice": 174
+    },
+    {
+      "Code": "2480",
+      "ClosingPrice": 160.5
+    },
+    {
+      "Code": "2481",
+      "ClosingPrice": 213
+    },
+    {
+      "Code": "2482",
+      "ClosingPrice": 17.65
+    },
+    {
+      "Code": "2483",
+      "ClosingPrice": 68
+    },
+    {
+      "Code": "2484",
+      "ClosingPrice": 90.7
+    },
+    {
+      "Code": "2485",
+      "ClosingPrice": 49.9
+    },
+    {
+      "Code": "2486",
+      "ClosingPrice": 259
+    },
+    {
+      "Code": "2488",
+      "ClosingPrice": 48.4
+    },
+    {
+      "Code": "2489",
+      "ClosingPrice": 38.4
+    },
+    {
+      "Code": "2491",
+      "ClosingPrice": 36.65
+    },
+    {
+      "Code": "2492",
+      "ClosingPrice": 465.5
+    },
+    {
+      "Code": "2493",
+      "ClosingPrice": 274
+    },
+    {
+      "Code": "2495",
+      "ClosingPrice": 52.5
+    },
+    {
+      "Code": "2496",
+      "ClosingPrice": 61.6
+    },
+    {
+      "Code": "2497",
+      "ClosingPrice": 60.8
+    },
+    {
+      "Code": "2498",
+      "ClosingPrice": 45.15
+    },
+    {
+      "Code": "2501",
+      "ClosingPrice": 23.9
+    },
+    {
+      "Code": "2504",
+      "ClosingPrice": 32.1
+    },
+    {
+      "Code": "2505",
+      "ClosingPrice": 17.95
+    },
+    {
+      "Code": "2506",
+      "ClosingPrice": 8.9
+    },
+    {
+      "Code": "2509",
+      "ClosingPrice": 13.1
+    },
+    {
+      "Code": "2511",
+      "ClosingPrice": 8.49
+    },
+    {
+      "Code": "2514",
+      "ClosingPrice": 12.95
+    },
+    {
+      "Code": "2515",
+      "ClosingPrice": 13.9
+    },
+    {
+      "Code": "2516",
+      "ClosingPrice": 13.65
+    },
+    {
+      "Code": "2520",
+      "ClosingPrice": 35.1
+    },
+    {
+      "Code": "2524",
+      "ClosingPrice": 35.5
+    },
+    {
+      "Code": "2527",
+      "ClosingPrice": 42.6
+    },
+    {
+      "Code": "2528",
+      "ClosingPrice": 22.45
+    },
+    {
+      "Code": "2530",
+      "ClosingPrice": 19.75
+    },
+    {
+      "Code": "2534",
+      "ClosingPrice": 16.5
+    },
+    {
+      "Code": "2535",
+      "ClosingPrice": 88.5
+    },
+    {
+      "Code": "2536",
+      "ClosingPrice": 19.55
+    },
+    {
+      "Code": "2537",
+      "ClosingPrice": 11.2
+    },
+    {
+      "Code": "2538",
+      "ClosingPrice": 9.91
+    },
+    {
+      "Code": "2539",
+      "ClosingPrice": 39.3
+    },
+    {
+      "Code": "2540",
+      "ClosingPrice": 52.8
+    },
+    {
+      "Code": "2542",
+      "ClosingPrice": 43.6
+    },
+    {
+      "Code": "2543",
+      "ClosingPrice": 38.8
+    },
+    {
+      "Code": "2545",
+      "ClosingPrice": 34.8
+    },
+    {
+      "Code": "2546",
+      "ClosingPrice": 92.2
+    },
+    {
+      "Code": "2547",
+      "ClosingPrice": 11.45
+    },
+    {
+      "Code": "2548",
+      "ClosingPrice": 101
+    },
+    {
+      "Code": "2597",
+      "ClosingPrice": 168.5
+    },
+    {
+      "Code": "2601",
+      "ClosingPrice": 7.98
+    },
+    {
+      "Code": "2603",
+      "ClosingPrice": 194.5
+    },
+    {
+      "Code": "2605",
+      "ClosingPrice": 30.45
+    },
+    {
+      "Code": "2606",
+      "ClosingPrice": 63.1
+    },
+    {
+      "Code": "2607",
+      "ClosingPrice": 46.35
+    },
+    {
+      "Code": "2608",
+      "ClosingPrice": 29.45
+    },
+    {
+      "Code": "2609",
+      "ClosingPrice": 51.6
+    },
+    {
+      "Code": "2610",
+      "ClosingPrice": 21.4
+    },
+    {
+      "Code": "2611",
+      "ClosingPrice": 14.6
+    },
+    {
+      "Code": "2612",
+      "ClosingPrice": 54.4
+    },
+    {
+      "Code": "2613",
+      "ClosingPrice": 21.75
+    },
+    {
+      "Code": "2614",
+      "ClosingPrice": 18.2
+    },
+    {
+      "Code": "2615",
+      "ClosingPrice": 80.4
+    },
+    {
+      "Code": "2616",
+      "ClosingPrice": 13.65
+    },
+    {
+      "Code": "2617",
+      "ClosingPrice": 30.5
+    },
+    {
+      "Code": "2618",
+      "ClosingPrice": 39.6
+    },
+    {
+      "Code": "2630",
+      "ClosingPrice": 53.9
+    },
+    {
+      "Code": "2633",
+      "ClosingPrice": 26.7
+    },
+    {
+      "Code": "2634",
+      "ClosingPrice": 58
+    },
+    {
+      "Code": "2636",
+      "ClosingPrice": 70.5
+    },
+    {
+      "Code": "2637",
+      "ClosingPrice": 83
+    },
+    {
+      "Code": "2642",
+      "ClosingPrice": 20.85
+    },
+    {
+      "Code": "2645",
+      "ClosingPrice": 240
+    },
+    {
+      "Code": "2646",
+      "ClosingPrice": 21.15
+    },
+    {
+      "Code": "2701",
+      "ClosingPrice": 10.8
+    },
+    {
+      "Code": "2702",
+      "ClosingPrice": 13.25
+    },
+    {
+      "Code": "2704",
+      "ClosingPrice": 45.4
+    },
+    {
+      "Code": "2705",
+      "ClosingPrice": 16.15
+    },
+    {
+      "Code": "2706",
+      "ClosingPrice": 12.55
+    },
+    {
+      "Code": "2707",
+      "ClosingPrice": 180
+    },
+    {
+      "Code": "2712",
+      "ClosingPrice": 14.75
+    },
+    {
+      "Code": "2722",
+      "ClosingPrice": 22.7
+    },
+    {
+      "Code": "2723",
+      "ClosingPrice": 66.9
+    },
+    {
+      "Code": "2727",
+      "ClosingPrice": 240.5
+    },
+    {
+      "Code": "2731",
+      "ClosingPrice": 145.5
+    },
+    {
+      "Code": "2739",
+      "ClosingPrice": 34.25
+    },
+    {
+      "Code": "2748",
+      "ClosingPrice": 39.55
+    },
+    {
+      "Code": "2753",
+      "ClosingPrice": 176
+    },
+    {
+      "Code": "2762",
+      "ClosingPrice": 82.4
+    },
+    {
+      "Code": "2801",
+      "ClosingPrice": 24.05
+    },
+    {
+      "Code": "2812",
+      "ClosingPrice": 20.6
+    },
+    {
+      "Code": "2816",
+      "ClosingPrice": 34.35
+    },
+    {
+      "Code": "2820",
+      "ClosingPrice": 17.05
+    },
+    {
+      "Code": "2832",
+      "ClosingPrice": 56.3
+    },
+    {
+      "Code": "2834",
+      "ClosingPrice": 17.95
+    },
+    {
+      "Code": "2836",
+      "ClosingPrice": 12.45
+    },
+    {
+      "Code": "2836A",
+      "ClosingPrice": 24.75
+    },
+    {
+      "Code": "2838",
+      "ClosingPrice": 23.8
+    },
+    {
+      "Code": "2838A",
+      "ClosingPrice": 52.1
+    },
+    {
+      "Code": "2845",
+      "ClosingPrice": 13.2
+    },
+    {
+      "Code": "2849",
+      "ClosingPrice": 14.6
+    },
+    {
+      "Code": "2850",
+      "ClosingPrice": 143.5
+    },
+    {
+      "Code": "2851",
+      "ClosingPrice": 37.85
+    },
+    {
+      "Code": "2852",
+      "ClosingPrice": 26.8
+    },
+    {
+      "Code": "2855",
+      "ClosingPrice": 50.4
+    },
+    {
+      "Code": "2867",
+      "ClosingPrice": 8.86
+    },
+    {
+      "Code": "2880",
+      "ClosingPrice": 38.85
+    },
+    {
+      "Code": "2881",
+      "ClosingPrice": 124.5
+    },
+    {
+      "Code": "2881A",
+      "ClosingPrice": 61.9
+    },
+    {
+      "Code": "2881B",
+      "ClosingPrice": 60.8
+    },
+    {
+      "Code": "2881C",
+      "ClosingPrice": 50.9
+    },
+    {
+      "Code": "2882",
+      "ClosingPrice": 96.3
+    },
+    {
+      "Code": "2882A",
+      "ClosingPrice": 60.2
+    },
+    {
+      "Code": "2882B",
+      "ClosingPrice": 58.7
+    },
+    {
+      "Code": "2883",
+      "ClosingPrice": 30.05
+    },
+    {
+      "Code": "2883B",
+      "ClosingPrice": 7.97
+    },
+    {
+      "Code": "2884",
+      "ClosingPrice": 34.75
+    },
+    {
+      "Code": "2885",
+      "ClosingPrice": 68.3
+    },
+    {
+      "Code": "2886",
+      "ClosingPrice": 46.7
+    },
+    {
+      "Code": "2887",
+      "ClosingPrice": 36.85
+    },
+    {
+      "Code": "2887E",
+      "ClosingPrice": 48.85
+    },
+    {
+      "Code": "2887F",
+      "ClosingPrice": 45.75
+    },
+    {
+      "Code": "2887G",
+      "ClosingPrice": 42.55
+    },
+    {
+      "Code": "2887H",
+      "ClosingPrice": 40.85
+    },
+    {
+      "Code": "2887I",
+      "ClosingPrice": 9.44
+    },
+    {
+      "Code": "2887Z1",
+      "ClosingPrice": 17.85
+    },
+    {
+      "Code": "2889",
+      "ClosingPrice": 15.8
+    },
+    {
+      "Code": "2890",
+      "ClosingPrice": 40.45
+    },
+    {
+      "Code": "2891",
+      "ClosingPrice": 69.9
+    },
+    {
+      "Code": "2891B",
+      "ClosingPrice": 64.9
+    },
+    {
+      "Code": "2891C",
+      "ClosingPrice": 63
+    },
+    {
+      "Code": "2892",
+      "ClosingPrice": 33.6
+    },
+    {
+      "Code": "2897",
+      "ClosingPrice": 10.55
+    },
+    {
+      "Code": "2897B",
+      "ClosingPrice": 11.9
+    },
+    {
+      "Code": "2901",
+      "ClosingPrice": 23.8
+    },
+    {
+      "Code": "2903",
+      "ClosingPrice": 22.25
+    },
+    {
+      "Code": "2904",
+      "ClosingPrice": 14
+    },
+    {
+      "Code": "2905",
+      "ClosingPrice": 15.4
+    },
+    {
+      "Code": "2906",
+      "ClosingPrice": 14
+    },
+    {
+      "Code": "2908",
+      "ClosingPrice": 21.85
+    },
+    {
+      "Code": "2910",
+      "ClosingPrice": 22.35
+    },
+    {
+      "Code": "2911",
+      "ClosingPrice": 7.84
+    },
+    {
+      "Code": "2912",
+      "ClosingPrice": 241
+    },
+    {
+      "Code": "2913",
+      "ClosingPrice": 11.75
+    },
+    {
+      "Code": "2915",
+      "ClosingPrice": 52
+    },
+    {
+      "Code": "2923",
+      "ClosingPrice": 27.15
+    },
+    {
+      "Code": "2929",
+      "ClosingPrice": 5.79
+    },
+    {
+      "Code": "2939",
+      "ClosingPrice": 19.45
+    },
+    {
+      "Code": "2945",
+      "ClosingPrice": 41.3
+    },
+    {
+      "Code": "3002",
+      "ClosingPrice": 20.45
+    },
+    {
+      "Code": "3003",
+      "ClosingPrice": 66.1
+    },
+    {
+      "Code": "3004",
+      "ClosingPrice": 153.5
+    },
+    {
+      "Code": "3005",
+      "ClosingPrice": 112
+    },
+    {
+      "Code": "3006",
+      "ClosingPrice": 237
+    },
+    {
+      "Code": "3008",
+      "ClosingPrice": 3950
+    },
+    {
+      "Code": "3010",
+      "ClosingPrice": 117.5
+    },
+    {
+      "Code": "3011",
+      "ClosingPrice": 13.1
+    },
+    {
+      "Code": "3013",
+      "ClosingPrice": 102
+    },
+    {
+      "Code": "3014",
+      "ClosingPrice": 139.5
+    },
+    {
+      "Code": "3015",
+      "ClosingPrice": 64.2
+    },
+    {
+      "Code": "3016",
+      "ClosingPrice": 121.5
+    },
+    {
+      "Code": "3017",
+      "ClosingPrice": 2350
+    },
+    {
+      "Code": "3018",
+      "ClosingPrice": 12.05
+    },
+    {
+      "Code": "3019",
+      "ClosingPrice": 143.5
+    },
+    {
+      "Code": "3021",
+      "ClosingPrice": 26.5
+    },
+    {
+      "Code": "3022",
+      "ClosingPrice": 89
+    },
+    {
+      "Code": "3023",
+      "ClosingPrice": 326
+    },
+    {
+      "Code": "3024",
+      "ClosingPrice": 12.4
+    },
+    {
+      "Code": "3025",
+      "ClosingPrice": 59.8
+    },
+    {
+      "Code": "3026",
+      "ClosingPrice": 1005
+    },
+    {
+      "Code": "3027",
+      "ClosingPrice": 20.4
+    },
+    {
+      "Code": "3028",
+      "ClosingPrice": 75.2
+    },
+    {
+      "Code": "3029",
+      "ClosingPrice": 103
+    },
+    {
+      "Code": "3030",
+      "ClosingPrice": 299
+    },
+    {
+      "Code": "3031",
+      "ClosingPrice": 30.85
+    },
+    {
+      "Code": "3032",
+      "ClosingPrice": 81.4
+    },
+    {
+      "Code": "3033",
+      "ClosingPrice": 49.6
+    },
+    {
+      "Code": "3034",
+      "ClosingPrice": 542
+    },
+    {
+      "Code": "3035",
+      "ClosingPrice": 216
+    },
+    {
+      "Code": "3036",
+      "ClosingPrice": 211.5
+    },
+    {
+      "Code": "3037",
+      "ClosingPrice": 875
+    },
+    {
+      "Code": "3038",
+      "ClosingPrice": 21.85
+    },
+    {
+      "Code": "3040",
+      "ClosingPrice": 37.5
+    },
+    {
+      "Code": "3041",
+      "ClosingPrice": 26.45
+    },
+    {
+      "Code": "3042",
+      "ClosingPrice": 200
+    },
+    {
+      "Code": "3043",
+      "ClosingPrice": 21.65
+    },
+    {
+      "Code": "3044",
+      "ClosingPrice": 448.5
+    },
+    {
+      "Code": "3045",
+      "ClosingPrice": 108.5
+    },
+    {
+      "Code": "3046",
+      "ClosingPrice": 55.6
+    },
+    {
+      "Code": "3047",
+      "ClosingPrice": 16.65
+    },
+    {
+      "Code": "3048",
+      "ClosingPrice": 60
+    },
+    {
+      "Code": "3049",
+      "ClosingPrice": 12.65
+    },
+    {
+      "Code": "3050",
+      "ClosingPrice": 12.45
+    },
+    {
+      "Code": "3051",
+      "ClosingPrice": 25.2
+    },
+    {
+      "Code": "3052",
+      "ClosingPrice": 10.9
+    },
+    {
+      "Code": "3054",
+      "ClosingPrice": 63.4
+    },
+    {
+      "Code": "3055",
+      "ClosingPrice": 158
+    },
+    {
+      "Code": "3056",
+      "ClosingPrice": 14.85
+    },
+    {
+      "Code": "3057",
+      "ClosingPrice": 19
+    },
+    {
+      "Code": "3058",
+      "ClosingPrice": 9.5
+    },
+    {
+      "Code": "3059",
+      "ClosingPrice": 46.5
+    },
+    {
+      "Code": "3060",
+      "ClosingPrice": 37.15
+    },
+    {
+      "Code": "3062",
+      "ClosingPrice": 24
+    },
+    {
+      "Code": "3090",
+      "ClosingPrice": 286.5
+    },
+    {
+      "Code": "3092",
+      "ClosingPrice": 28.8
+    },
+    {
+      "Code": "3094",
+      "ClosingPrice": 40.35
+    },
+    {
+      "Code": "3130",
+      "ClosingPrice": 220.5
+    },
+    {
+      "Code": "3135",
+      "ClosingPrice": 172
+    },
+    {
+      "Code": "3138",
+      "ClosingPrice": 115
+    },
+    {
+      "Code": "3149",
+      "ClosingPrice": 89.5
+    },
+    {
+      "Code": "3150",
+      "ClosingPrice": 18.3
+    },
+    {
+      "Code": "3164",
+      "ClosingPrice": 16.45
+    },
+    {
+      "Code": "3167",
+      "ClosingPrice": 775
+    },
+    {
+      "Code": "3168",
+      "ClosingPrice": 44.15
+    },
+    {
+      "Code": "3189",
+      "ClosingPrice": 795
+    },
+    {
+      "Code": "3209",
+      "ClosingPrice": 58.8
+    },
+    {
+      "Code": "3229",
+      "ClosingPrice": 38.75
+    },
+    {
+      "Code": "3231",
+      "ClosingPrice": 144.5
+    },
+    {
+      "Code": "3257",
+      "ClosingPrice": 64.2
+    },
+    {
+      "Code": "3266",
+      "ClosingPrice": 13.45
+    },
+    {
+      "Code": "3296",
+      "ClosingPrice": 28
+    },
+    {
+      "Code": "3305",
+      "ClosingPrice": 127.5
+    },
+    {
+      "Code": "3308",
+      "ClosingPrice": 21.6
+    },
+    {
+      "Code": "3311",
+      "ClosingPrice": 36.6
+    },
+    {
+      "Code": "3312",
+      "ClosingPrice": 55.6
+    },
+    {
+      "Code": "3321",
+      "ClosingPrice": 21.8
+    },
+    {
+      "Code": "3338",
+      "ClosingPrice": 69.5
+    },
+    {
+      "Code": "3346",
+      "ClosingPrice": 26.35
+    },
+    {
+      "Code": "3356",
+      "ClosingPrice": 59.8
+    },
+    {
+      "Code": "3376",
+      "ClosingPrice": 194
+    },
+    {
+      "Code": "3380",
+      "ClosingPrice": 33.75
+    },
+    {
+      "Code": "3406",
+      "ClosingPrice": 616
+    },
+    {
+      "Code": "3413",
+      "ClosingPrice": 334.5
+    },
+    {
+      "Code": "3416",
+      "ClosingPrice": 181.5
+    },
+    {
+      "Code": "3419",
+      "ClosingPrice": 13.7
+    },
+    {
+      "Code": "3432",
+      "ClosingPrice": 18.1
+    },
+    {
+      "Code": "3437",
+      "ClosingPrice": 20.75
+    },
+    {
+      "Code": "3443",
+      "ClosingPrice": 4340
+    },
+    {
+      "Code": "3447",
+      "ClosingPrice": 37.05
+    },
+    {
+      "Code": "3450",
+      "ClosingPrice": 502
+    },
+    {
+      "Code": "3481",
+      "ClosingPrice": 65.3
+    },
+    {
+      "Code": "3494",
+      "ClosingPrice": 7.78
+    },
+    {
+      "Code": "3501",
+      "ClosingPrice": 40.5
+    },
+    {
+      "Code": "3504",
+      "ClosingPrice": 81.8
+    },
+    {
+      "Code": "3515",
+      "ClosingPrice": 211
+    },
+    {
+      "Code": "3518",
+      "ClosingPrice": 29.85
+    },
+    {
+      "Code": "3528",
+      "ClosingPrice": 99.3
+    },
+    {
+      "Code": "3530",
+      "ClosingPrice": 65.2
+    },
+    {
+      "Code": "3532",
+      "ClosingPrice": 423.5
+    },
+    {
+      "Code": "3533",
+      "ClosingPrice": 1955
+    },
+    {
+      "Code": "3535",
+      "ClosingPrice": 104.5
+    },
+    {
+      "Code": "3543",
+      "ClosingPrice": 33.4
+    },
+    {
+      "Code": "3545",
+      "ClosingPrice": 57.6
+    },
+    {
+      "Code": "3550",
+      "ClosingPrice": 28.2
+    },
+    {
+      "Code": "3557",
+      "ClosingPrice": 25.6
+    },
+    {
+      "Code": "3563",
+      "ClosingPrice": 721
+    },
+    {
+      "Code": "3576",
+      "ClosingPrice": 16.4
+    },
+    {
+      "Code": "3583",
+      "ClosingPrice": 817
+    },
+    {
+      "Code": "3588",
+      "ClosingPrice": 66.8
+    },
+    {
+      "Code": "3591",
+      "ClosingPrice": 25.55
+    },
+    {
+      "Code": "3592",
+      "ClosingPrice": 272.5
+    },
+    {
+      "Code": "3593",
+      "ClosingPrice": 15.95
+    },
+    {
+      "Code": "3596",
+      "ClosingPrice": 194
+    },
+    {
+      "Code": "3605",
+      "ClosingPrice": 91.2
+    },
+    {
+      "Code": "3607",
+      "ClosingPrice": 16.15
+    },
+    {
+      "Code": "3617",
+      "ClosingPrice": 242
+    },
+    {
+      "Code": "3622",
+      "ClosingPrice": 55.9
+    },
+    {
+      "Code": "3645",
+      "ClosingPrice": 82.9
+    },
+    {
+      "Code": "3652",
+      "ClosingPrice": 33.9
+    },
+    {
+      "Code": "3653",
+      "ClosingPrice": 3205
+    },
+    {
+      "Code": "3661",
+      "ClosingPrice": 4210
+    },
+    {
+      "Code": "3665",
+      "ClosingPrice": 1865
+    },
+    {
+      "Code": "3669",
+      "ClosingPrice": 34.9
+    },
+    {
+      "Code": "3673",
+      "ClosingPrice": 77.8
+    },
+    {
+      "Code": "3679",
+      "ClosingPrice": 110
+    },
+    {
+      "Code": "3686",
+      "ClosingPrice": 16.45
+    },
+    {
+      "Code": "3694",
+      "ClosingPrice": 65
+    },
+    {
+      "Code": "3701",
+      "ClosingPrice": 41.65
+    },
+    {
+      "Code": "3702",
+      "ClosingPrice": 106.5
+    },
+    {
+      "Code": "3703",
+      "ClosingPrice": 20.6
+    },
+    {
+      "Code": "3704",
+      "ClosingPrice": 45.35
+    },
+    {
+      "Code": "3705",
+      "ClosingPrice": 54.6
+    },
+    {
+      "Code": "3706",
+      "ClosingPrice": 88.7
+    },
+    {
+      "Code": "3708",
+      "ClosingPrice": 106.5
+    },
+    {
+      "Code": "3711",
+      "ClosingPrice": 677
+    },
+    {
+      "Code": "3712",
+      "ClosingPrice": 17.2
+    },
+    {
+      "Code": "3714",
+      "ClosingPrice": 63.7
+    },
+    {
+      "Code": "3715",
+      "ClosingPrice": 151
+    },
+    {
+      "Code": "3716",
+      "ClosingPrice": 35.2
+    },
+    {
+      "Code": "3717",
+      "ClosingPrice": 25.45
+    },
+    {
+      "Code": "4104",
+      "ClosingPrice": 69.8
+    },
+    {
+      "Code": "4106",
+      "ClosingPrice": 23.55
+    },
+    {
+      "Code": "4108",
+      "ClosingPrice": 12
+    },
+    {
+      "Code": "4119",
+      "ClosingPrice": 45.5
+    },
+    {
+      "Code": "4133",
+      "ClosingPrice": 20.8
+    },
+    {
+      "Code": "4137",
+      "ClosingPrice": 96.7
+    },
+    {
+      "Code": "4142",
+      "ClosingPrice": 17.65
+    },
+    {
+      "Code": "4148",
+      "ClosingPrice": 30
+    },
+    {
+      "Code": "4155",
+      "ClosingPrice": 15.6
+    },
+    {
+      "Code": "4164",
+      "ClosingPrice": 29
+    },
+    {
+      "Code": "4169",
+      "ClosingPrice": 270
+    },
+    {
+      "Code": "4178",
+      "ClosingPrice": 19
+    },
+    {
+      "Code": "4190",
+      "ClosingPrice": 25.8
+    },
+    {
+      "Code": "4195",
+      "ClosingPrice": 17.85
+    },
+    {
+      "Code": "4306",
+      "ClosingPrice": 15.5
+    },
+    {
+      "Code": "4414",
+      "ClosingPrice": 8.73
+    },
+    {
+      "Code": "4426",
+      "ClosingPrice": 8.26
+    },
+    {
+      "Code": "4438",
+      "ClosingPrice": 61.5
+    },
+    {
+      "Code": "4439",
+      "ClosingPrice": 101
+    },
+    {
+      "Code": "4440",
+      "ClosingPrice": 18.05
+    },
+    {
+      "Code": "4441",
+      "ClosingPrice": 190
+    },
+    {
+      "Code": "4526",
+      "ClosingPrice": 37.75
+    },
+    {
+      "Code": "4532",
+      "ClosingPrice": 26.05
+    },
+    {
+      "Code": "4536",
+      "ClosingPrice": 171.5
+    },
+    {
+      "Code": "4540",
+      "ClosingPrice": 59.3
+    },
+    {
+      "Code": "4545",
+      "ClosingPrice": 38.3
+    },
+    {
+      "Code": "4551",
+      "ClosingPrice": 229.5
+    },
+    {
+      "Code": "4552",
+      "ClosingPrice": 19.65
+    },
+    {
+      "Code": "4555",
+      "ClosingPrice": 48.7
+    },
+    {
+      "Code": "4557",
+      "ClosingPrice": 49.6
+    },
+    {
+      "Code": "4560",
+      "ClosingPrice": 34.3
+    },
+    {
+      "Code": "4562",
+      "ClosingPrice": 34
+    },
+    {
+      "Code": "4564",
+      "ClosingPrice": 19.3
+    },
+    {
+      "Code": "4566",
+      "ClosingPrice": 62.1
+    },
+    {
+      "Code": "4569",
+      "ClosingPrice": 168
+    },
+    {
+      "Code": "4571",
+      "ClosingPrice": 165.5
+    },
+    {
+      "Code": "4572",
+      "ClosingPrice": 147.5
+    },
+    {
+      "Code": "4576",
+      "ClosingPrice": 218
+    },
+    {
+      "Code": "4581",
+      "ClosingPrice": 50.5
+    },
+    {
+      "Code": "4582",
+      "ClosingPrice": 26.3
+    },
+    {
+      "Code": "4583",
+      "ClosingPrice": 606
+    },
+    {
+      "Code": "4585",
+      "ClosingPrice": 318
+    },
+    {
+      "Code": "4588",
+      "ClosingPrice": 57.5
+    },
+    {
+      "Code": "4590",
+      "ClosingPrice": 90.4
+    },
+    {
+      "Code": "4720",
+      "ClosingPrice": 23.55
+    },
+    {
+      "Code": "4722",
+      "ClosingPrice": 256.5
+    },
+    {
+      "Code": "4736",
+      "ClosingPrice": 126
+    },
+    {
+      "Code": "4737",
+      "ClosingPrice": 57.9
+    },
+    {
+      "Code": "4739",
+      "ClosingPrice": 99
+    },
+    {
+      "Code": "4746",
+      "ClosingPrice": 54.8
+    },
+    {
+      "Code": "4755",
+      "ClosingPrice": 131.5
+    },
+    {
+      "Code": "4763",
+      "ClosingPrice": 47.6
+    },
+    {
+      "Code": "4764",
+      "ClosingPrice": 336
+    },
+    {
+      "Code": "4766",
+      "ClosingPrice": 339.5
+    },
+    {
+      "Code": "4770",
+      "ClosingPrice": 217.5
+    },
+    {
+      "Code": "4771",
+      "ClosingPrice": 213
+    },
+    {
+      "Code": "4807",
+      "ClosingPrice": 37.65
+    },
+    {
+      "Code": "4904",
+      "ClosingPrice": 95
+    },
+    {
+      "Code": "4906",
+      "ClosingPrice": 39.9
+    },
+    {
+      "Code": "4912",
+      "ClosingPrice": 86.5
+    },
+    {
+      "Code": "4915",
+      "ClosingPrice": 68.8
+    },
+    {
+      "Code": "4916",
+      "ClosingPrice": 108
+    },
+    {
+      "Code": "4919",
+      "ClosingPrice": 162.5
+    },
+    {
+      "Code": "4927",
+      "ClosingPrice": 40.85
+    },
+    {
+      "Code": "4930",
+      "ClosingPrice": 16.9
+    },
+    {
+      "Code": "4934",
+      "ClosingPrice": 17.25
+    },
+    {
+      "Code": "4935",
+      "ClosingPrice": 36.15
+    },
+    {
+      "Code": "4938",
+      "ClosingPrice": 82.7
+    },
+    {
+      "Code": "4942",
+      "ClosingPrice": 37.3
+    },
+    {
+      "Code": "4943",
+      "ClosingPrice": 8.6
+    },
+    {
+      "Code": "4949",
+      "ClosingPrice": 79
+    },
+    {
+      "Code": "4952",
+      "ClosingPrice": 57.8
+    },
+    {
+      "Code": "4956",
+      "ClosingPrice": 36.6
+    },
+    {
+      "Code": "4958",
+      "ClosingPrice": 588
+    },
+    {
+      "Code": "4960",
+      "ClosingPrice": 23.65
+    },
+    {
+      "Code": "4961",
+      "ClosingPrice": 176
+    },
+    {
+      "Code": "4967",
+      "ClosingPrice": 233
+    },
+    {
+      "Code": "4968",
+      "ClosingPrice": 111.5
+    },
+    {
+      "Code": "4976",
+      "ClosingPrice": 38.3
+    },
+    {
+      "Code": "4977",
+      "ClosingPrice": 152.5
+    },
+    {
+      "Code": "4989",
+      "ClosingPrice": 91.8
+    },
+    {
+      "Code": "4994",
+      "ClosingPrice": 91
+    },
+    {
+      "Code": "4999",
+      "ClosingPrice": 20.05
+    },
+    {
+      "Code": "5007",
+      "ClosingPrice": 55.8
+    },
+    {
+      "Code": "5203",
+      "ClosingPrice": 68.2
+    },
+    {
+      "Code": "5215",
+      "ClosingPrice": 42.05
+    },
+    {
+      "Code": "5222",
+      "ClosingPrice": 123
+    },
+    {
+      "Code": "5225",
+      "ClosingPrice": 73.9
+    },
+    {
+      "Code": "5234",
+      "ClosingPrice": 380.5
+    },
+    {
+      "Code": "5243",
+      "ClosingPrice": 97.8
+    },
+    {
+      "Code": "5244",
+      "ClosingPrice": 34.1
+    },
+    {
+      "Code": "5258",
+      "ClosingPrice": 52.8
+    },
+    {
+      "Code": "5269",
+      "ClosingPrice": 1480
+    },
+    {
+      "Code": "5283",
+      "ClosingPrice": 53
+    },
+    {
+      "Code": "5284",
+      "ClosingPrice": 330
+    },
+    {
+      "Code": "5285",
+      "ClosingPrice": 96
+    },
+    {
+      "Code": "5288",
+      "ClosingPrice": 190
+    },
+    {
+      "Code": "5292",
+      "ClosingPrice": 192.5
+    },
+    {
+      "Code": "5306",
+      "ClosingPrice": 86.5
+    },
+    {
+      "Code": "5388",
+      "ClosingPrice": 84.6
+    },
+    {
+      "Code": "5434",
+      "ClosingPrice": 509
+    },
+    {
+      "Code": "5469",
+      "ClosingPrice": 80.6
+    },
+    {
+      "Code": "5471",
+      "ClosingPrice": 67.6
+    },
+    {
+      "Code": "5484",
+      "ClosingPrice": 49.3
+    },
+    {
+      "Code": "5515",
+      "ClosingPrice": 41.2
+    },
+    {
+      "Code": "5519",
+      "ClosingPrice": 34.45
+    },
+    {
+      "Code": "5521",
+      "ClosingPrice": 10.6
+    },
+    {
+      "Code": "5522",
+      "ClosingPrice": 64.7
+    },
+    {
+      "Code": "5525",
+      "ClosingPrice": 21.85
+    },
+    {
+      "Code": "5531",
+      "ClosingPrice": 7.95
+    },
+    {
+      "Code": "5533",
+      "ClosingPrice": 13.55
+    },
+    {
+      "Code": "5534",
+      "ClosingPrice": 79.2
+    },
+    {
+      "Code": "5538",
+      "ClosingPrice": 32.95
+    },
+    {
+      "Code": "5546",
+      "ClosingPrice": 15.95
+    },
+    {
+      "Code": "5607",
+      "ClosingPrice": 51.4
+    },
+    {
+      "Code": "5608",
+      "ClosingPrice": 14.6
+    },
+    {
+      "Code": "5706",
+      "ClosingPrice": 47.2
+    },
+    {
+      "Code": "5871",
+      "ClosingPrice": 114.5
+    },
+    {
+      "Code": "5871A",
+      "ClosingPrice": 102.5
+    },
+    {
+      "Code": "5876",
+      "ClosingPrice": 42.8
+    },
+    {
+      "Code": "5880",
+      "ClosingPrice": 25.15
+    },
+    {
+      "Code": "5906",
+      "ClosingPrice": 36.8
+    },
+    {
+      "Code": "5907",
+      "ClosingPrice": 5
+    },
+    {
+      "Code": "6005",
+      "ClosingPrice": 36.4
+    },
+    {
+      "Code": "6024",
+      "ClosingPrice": 64.5
+    },
+    {
+      "Code": "6108",
+      "ClosingPrice": 18.6
+    },
+    {
+      "Code": "6112",
+      "ClosingPrice": 44.35
+    },
+    {
+      "Code": "6115",
+      "ClosingPrice": 46
+    },
+    {
+      "Code": "6116",
+      "ClosingPrice": 17.2
+    },
+    {
+      "Code": "6117",
+      "ClosingPrice": 72.4
+    },
+    {
+      "Code": "6120",
+      "ClosingPrice": 14.4
+    },
+    {
+      "Code": "6128",
+      "ClosingPrice": 20.35
+    },
+    {
+      "Code": "6133",
+      "ClosingPrice": 24.65
+    },
+    {
+      "Code": "6136",
+      "ClosingPrice": 24.1
+    },
+    {
+      "Code": "6139",
+      "ClosingPrice": 875
+    },
+    {
+      "Code": "6141",
+      "ClosingPrice": 39.05
+    },
+    {
+      "Code": "6142",
+      "ClosingPrice": 11.25
+    },
+    {
+      "Code": "6152",
+      "ClosingPrice": 13.45
+    },
+    {
+      "Code": "6153",
+      "ClosingPrice": 19.7
+    },
+    {
+      "Code": "6155",
+      "ClosingPrice": 73.2
+    },
+    {
+      "Code": "6164",
+      "ClosingPrice": 14.95
+    },
+    {
+      "Code": "6165",
+      "ClosingPrice": 50.1
+    },
+    {
+      "Code": "6166",
+      "ClosingPrice": 134.5
+    },
+    {
+      "Code": "6168",
+      "ClosingPrice": 28.85
+    },
+    {
+      "Code": "6176",
+      "ClosingPrice": 90.6
+    },
+    {
+      "Code": "6177",
+      "ClosingPrice": 45.3
+    },
+    {
+      "Code": "6183",
+      "ClosingPrice": 90.2
+    },
+    {
+      "Code": "6184",
+      "ClosingPrice": 42.95
+    },
+    {
+      "Code": "6189",
+      "ClosingPrice": 50.4
+    },
+    {
+      "Code": "6191",
+      "ClosingPrice": 101
+    },
+    {
+      "Code": "6192",
+      "ClosingPrice": 120
+    },
+    {
+      "Code": "6196",
+      "ClosingPrice": 549
+    },
+    {
+      "Code": "6197",
+      "ClosingPrice": 358.5
+    },
+    {
+      "Code": "6201",
+      "ClosingPrice": 48.2
+    },
+    {
+      "Code": "6202",
+      "ClosingPrice": 73.3
+    },
+    {
+      "Code": "6205",
+      "ClosingPrice": 69.5
+    },
+    {
+      "Code": "6206",
+      "ClosingPrice": 131.5
+    },
+    {
+      "Code": "6209",
+      "ClosingPrice": 80.8
+    },
+    {
+      "Code": "6213",
+      "ClosingPrice": 385
+    },
+    {
+      "Code": "6214",
+      "ClosingPrice": 143.5
+    },
+    {
+      "Code": "6215",
+      "ClosingPrice": 113.5
+    },
+    {
+      "Code": "6216",
+      "ClosingPrice": 23.15
+    },
+    {
+      "Code": "6224",
+      "ClosingPrice": 74.5
+    },
+    {
+      "Code": "6225",
+      "ClosingPrice": 23.3
+    },
+    {
+      "Code": "6226",
+      "ClosingPrice": 26.6
+    },
+    {
+      "Code": "6230",
+      "ClosingPrice": 124
+    },
+    {
+      "Code": "6235",
+      "ClosingPrice": 42.4
+    },
+    {
+      "Code": "6239",
+      "ClosingPrice": 320
+    },
+    {
+      "Code": "6243",
+      "ClosingPrice": 39.55
+    },
+    {
+      "Code": "6257",
+      "ClosingPrice": 244.5
+    },
+    {
+      "Code": "6269",
+      "ClosingPrice": 62.5
+    },
+    {
+      "Code": "6271",
+      "ClosingPrice": 252
+    },
+    {
+      "Code": "6272",
+      "ClosingPrice": 31.45
+    },
+    {
+      "Code": "6277",
+      "ClosingPrice": 70.7
+    },
+    {
+      "Code": "6278",
+      "ClosingPrice": 199.5
+    },
+    {
+      "Code": "6281",
+      "ClosingPrice": 52
+    },
+    {
+      "Code": "6282",
+      "ClosingPrice": 57.6
+    },
+    {
+      "Code": "6283",
+      "ClosingPrice": 23.2
+    },
+    {
+      "Code": "6285",
+      "ClosingPrice": 260.5
+    },
+    {
+      "Code": "6405",
+      "ClosingPrice": 55.7
+    },
+    {
+      "Code": "6409",
+      "ClosingPrice": 1105
+    },
+    {
+      "Code": "6412",
+      "ClosingPrice": 88.8
+    },
+    {
+      "Code": "6414",
+      "ClosingPrice": 394
+    },
+    {
+      "Code": "6415",
+      "ClosingPrice": 523
+    },
+    {
+      "Code": "6416",
+      "ClosingPrice": 98.4
+    },
+    {
+      "Code": "6426",
+      "ClosingPrice": 187.5
+    },
+    {
+      "Code": "6431",
+      "ClosingPrice": 18.25
+    },
+    {
+      "Code": "6438",
+      "ClosingPrice": 150
+    },
+    {
+      "Code": "6442",
+      "ClosingPrice": 1480
+    },
+    {
+      "Code": "6443",
+      "ClosingPrice": 31.25
+    },
+    {
+      "Code": "6446",
+      "ClosingPrice": 1285
+    },
+    {
+      "Code": "6449",
+      "ClosingPrice": 352
+    },
+    {
+      "Code": "6451",
+      "ClosingPrice": 518
+    },
+    {
+      "Code": "6456",
+      "ClosingPrice": 70.7
+    },
+    {
+      "Code": "6464",
+      "ClosingPrice": 77.6
+    },
+    {
+      "Code": "6472",
+      "ClosingPrice": 426
+    },
+    {
+      "Code": "6477",
+      "ClosingPrice": 39.85
+    },
+    {
+      "Code": "6491",
+      "ClosingPrice": 375
+    },
+    {
+      "Code": "6504",
+      "ClosingPrice": 36
+    },
+    {
+      "Code": "6505",
+      "ClosingPrice": 58.8
+    },
+    {
+      "Code": "6515",
+      "ClosingPrice": 7765
+    },
+    {
+      "Code": "6525",
+      "ClosingPrice": 199.5
+    },
+    {
+      "Code": "6526",
+      "ClosingPrice": 652
+    },
+    {
+      "Code": "6531",
+      "ClosingPrice": 922
+    },
+    {
+      "Code": "6533",
+      "ClosingPrice": 191.5
+    },
+    {
+      "Code": "6534",
+      "ClosingPrice": 93
+    },
+    {
+      "Code": "6541",
+      "ClosingPrice": 40.8
+    },
+    {
+      "Code": "6550",
+      "ClosingPrice": 13
+    },
+    {
+      "Code": "6552",
+      "ClosingPrice": 29.45
+    },
+    {
+      "Code": "6558",
+      "ClosingPrice": 29.8
+    },
+    {
+      "Code": "6573",
+      "ClosingPrice": 27.95
+    },
+    {
+      "Code": "6579",
+      "ClosingPrice": 168
+    },
+    {
+      "Code": "6581",
+      "ClosingPrice": 106.5
+    },
+    {
+      "Code": "6582",
+      "ClosingPrice": 32.8
+    },
+    {
+      "Code": "6585",
+      "ClosingPrice": 124.5
+    },
+    {
+      "Code": "6589",
+      "ClosingPrice": 48.25
+    },
+    {
+      "Code": "6591",
+      "ClosingPrice": 49.4
+    },
+    {
+      "Code": "6592",
+      "ClosingPrice": 59.4
+    },
+    {
+      "Code": "6592A",
+      "ClosingPrice": 95.1
+    },
+    {
+      "Code": "6592B",
+      "ClosingPrice": 95.1
+    },
+    {
+      "Code": "6598",
+      "ClosingPrice": 22.85
+    },
+    {
+      "Code": "6605",
+      "ClosingPrice": 126
+    },
+    {
+      "Code": "6606",
+      "ClosingPrice": 25.05
+    },
+    {
+      "Code": "6614",
+      "ClosingPrice": 40
+    },
+    {
+      "Code": "6625",
+      "ClosingPrice": 78.9
+    },
+    {
+      "Code": "6641",
+      "ClosingPrice": 18.55
+    },
+    {
+      "Code": "6645",
+      "ClosingPrice": 15.8
+    },
+    {
+      "Code": "6655",
+      "ClosingPrice": 118
+    },
+    {
+      "Code": "6657",
+      "ClosingPrice": 35.3
+    },
+    {
+      "Code": "6658",
+      "ClosingPrice": 179.5
+    },
+    {
+      "Code": "6666",
+      "ClosingPrice": 44.45
+    },
+    {
+      "Code": "6668",
+      "ClosingPrice": 37.9
+    },
+    {
+      "Code": "6669",
+      "ClosingPrice": 5040
+    },
+    {
+      "Code": "6670",
+      "ClosingPrice": 261.5
+    },
+    {
+      "Code": "6671",
+      "ClosingPrice": 24.6
+    },
+    {
+      "Code": "6672",
+      "ClosingPrice": 298
+    },
+    {
+      "Code": "6674",
+      "ClosingPrice": 16.8
+    },
+    {
+      "Code": "6689",
+      "ClosingPrice": 63.8
+    },
+    {
+      "Code": "6691",
+      "ClosingPrice": 708
+    },
+    {
+      "Code": "6695",
+      "ClosingPrice": 53.7
+    },
+    {
+      "Code": "6698",
+      "ClosingPrice": 40.05
+    },
+    {
+      "Code": "6706",
+      "ClosingPrice": 139
+    },
+    {
+      "Code": "6715",
+      "ClosingPrice": 391.5
+    },
+    {
+      "Code": "6719",
+      "ClosingPrice": 266.5
+    },
+    {
+      "Code": "6722",
+      "ClosingPrice": 35.45
+    },
+    {
+      "Code": "6742",
+      "ClosingPrice": 57
+    },
+    {
+      "Code": "6743",
+      "ClosingPrice": 30.9
+    },
+    {
+      "Code": "6753",
+      "ClosingPrice": 148
+    },
+    {
+      "Code": "6754",
+      "ClosingPrice": 41.5
+    },
+    {
+      "Code": "6756",
+      "ClosingPrice": 99.7
+    },
+    {
+      "Code": "6757",
+      "ClosingPrice": 58.2
+    },
+    {
+      "Code": "6768",
+      "ClosingPrice": 71.2
+    },
+    {
+      "Code": "6770",
+      "ClosingPrice": 71.1
+    },
+    {
+      "Code": "6771",
+      "ClosingPrice": 39.8
+    },
+    {
+      "Code": "6776",
+      "ClosingPrice": 55.7
+    },
+    {
+      "Code": "6781",
+      "ClosingPrice": 1130
+    },
+    {
+      "Code": "6782",
+      "ClosingPrice": 208
+    },
+    {
+      "Code": "6789",
+      "ClosingPrice": 515
+    },
+    {
+      "Code": "6790",
+      "ClosingPrice": 40.6
+    },
+    {
+      "Code": "6792",
+      "ClosingPrice": 61.7
+    },
+    {
+      "Code": "6794",
+      "ClosingPrice": 82.4
+    },
+    {
+      "Code": "6796",
+      "ClosingPrice": 59.2
+    },
+    {
+      "Code": "6799",
+      "ClosingPrice": 98.6
+    },
+    {
+      "Code": "6805",
+      "ClosingPrice": 1460
+    },
+    {
+      "Code": "6807",
+      "ClosingPrice": 33.35
+    },
+    {
+      "Code": "6830",
+      "ClosingPrice": 416.5
+    },
+    {
+      "Code": "6831",
+      "ClosingPrice": 782
+    },
+    {
+      "Code": "6834",
+      "ClosingPrice": 130
+    },
+    {
+      "Code": "6835",
+      "ClosingPrice": 34.35
+    },
+    {
+      "Code": "6838",
+      "ClosingPrice": 24.3
+    },
+    {
+      "Code": "6854",
+      "ClosingPrice": 113.5
+    },
+    {
+      "Code": "6861",
+      "ClosingPrice": 292
+    },
+    {
+      "Code": "6862",
+      "ClosingPrice": 181.5
+    },
+    {
+      "Code": "6863",
+      "ClosingPrice": 92.8
+    },
+    {
+      "Code": "6869",
+      "ClosingPrice": 71.2
+    },
+    {
+      "Code": "6873",
+      "ClosingPrice": 86.6
+    },
+    {
+      "Code": "6885",
+      "ClosingPrice": 21.85
+    },
+    {
+      "Code": "6887",
+      "ClosingPrice": 33.8
+    },
+    {
+      "Code": "6890",
+      "ClosingPrice": 206
+    },
+    {
+      "Code": "6901",
+      "ClosingPrice": 20.75
+    },
+    {
+      "Code": "6902",
+      "ClosingPrice": 137.5
+    },
+    {
+      "Code": "6906",
+      "ClosingPrice": 82
+    },
+    {
+      "Code": "6908",
+      "ClosingPrice": 36.6
+    },
+    {
+      "Code": "6909",
+      "ClosingPrice": 51.3
+    },
+    {
+      "Code": "6914",
+      "ClosingPrice": 142.5
+    },
+    {
+      "Code": "6916",
+      "ClosingPrice": 20.15
+    },
+    {
+      "Code": "6918",
+      "ClosingPrice": 74.1
+    },
+    {
+      "Code": "6919",
+      "ClosingPrice": 107.5
+    },
+    {
+      "Code": "6921",
+      "ClosingPrice": 68
+    },
+    {
+      "Code": "6923",
+      "ClosingPrice": 75.4
+    },
+    {
+      "Code": "6924",
+      "ClosingPrice": 130
+    },
+    {
+      "Code": "6928",
+      "ClosingPrice": 53.3
+    },
+    {
+      "Code": "6931",
+      "ClosingPrice": 39.75
+    },
+    {
+      "Code": "6933",
+      "ClosingPrice": 157.5
+    },
+    {
+      "Code": "6934",
+      "ClosingPrice": 79.7
+    },
+    {
+      "Code": "6936",
+      "ClosingPrice": 32.65
+    },
+    {
+      "Code": "6937",
+      "ClosingPrice": 258.5
+    },
+    {
+      "Code": "6944",
+      "ClosingPrice": 998
+    },
+    {
+      "Code": "6949",
+      "ClosingPrice": 925
+    },
+    {
+      "Code": "6951",
+      "ClosingPrice": 78.7
+    },
+    {
+      "Code": "6952",
+      "ClosingPrice": 35.2
+    },
+    {
+      "Code": "6955",
+      "ClosingPrice": 117
+    },
+    {
+      "Code": "6957",
+      "ClosingPrice": 209.5
+    },
+    {
+      "Code": "6958",
+      "ClosingPrice": 16.85
+    },
+    {
+      "Code": "6958A",
+      "ClosingPrice": 18.25
+    },
+    {
+      "Code": "6962",
+      "ClosingPrice": 35.95
+    },
+    {
+      "Code": "6965",
+      "ClosingPrice": 80
+    },
+    {
+      "Code": "6969",
+      "ClosingPrice": 26
+    },
+    {
+      "Code": "6988",
+      "ClosingPrice": 13.6
+    },
+    {
+      "Code": "6994",
+      "ClosingPrice": 41.4
+    },
+    {
+      "Code": "7610",
+      "ClosingPrice": 2650
+    },
+    {
+      "Code": "7631",
+      "ClosingPrice": 153.5
+    },
+    {
+      "Code": "7705",
+      "ClosingPrice": 30.5
+    },
+    {
+      "Code": "7711",
+      "ClosingPrice": 307.5
+    },
+    {
+      "Code": "7721",
+      "ClosingPrice": 71
+    },
+    {
+      "Code": "7722",
+      "ClosingPrice": 321.5
+    },
+    {
+      "Code": "7730",
+      "ClosingPrice": 183
+    },
+    {
+      "Code": "7732",
+      "ClosingPrice": 35.7
+    },
+    {
+      "Code": "7736",
+      "ClosingPrice": 70.4
+    },
+    {
+      "Code": "7740",
+      "ClosingPrice": 147.5
+    },
+    {
+      "Code": "7749",
+      "ClosingPrice": 404
+    },
+    {
+      "Code": "7750",
+      "ClosingPrice": 2065
+    },
+    {
+      "Code": "7760",
+      "ClosingPrice": 35.6
+    },
+    {
+      "Code": "7765",
+      "ClosingPrice": 221.5
+    },
+    {
+      "Code": "7768",
+      "ClosingPrice": 350.5
+    },
+    {
+      "Code": "7769",
+      "ClosingPrice": 6660
+    },
+    {
+      "Code": "7780",
+      "ClosingPrice": 17.9
+    },
+    {
+      "Code": "7786",
+      "ClosingPrice": 132.5
+    },
+    {
+      "Code": "7788",
+      "ClosingPrice": 250.5
+    },
+    {
+      "Code": "7791",
+      "ClosingPrice": 62.3
+    },
+    {
+      "Code": "7795",
+      "ClosingPrice": 552
+    },
+    {
+      "Code": "7799",
+      "ClosingPrice": 435.5
+    },
+    {
+      "Code": "7803",
+      "ClosingPrice": 22.7
+    },
+    {
+      "Code": "7818",
+      "ClosingPrice": 70.2
+    },
+    {
+      "Code": "7821",
+      "ClosingPrice": 41
+    },
+    {
+      "Code": "7822",
+      "ClosingPrice": 998
+    },
+    {
+      "Code": "7823",
+      "ClosingPrice": 88.8
+    },
+    {
+      "Code": "7827",
+      "ClosingPrice": 185
+    },
+    {
+      "Code": "8011",
+      "ClosingPrice": 17.5
+    },
+    {
+      "Code": "8016",
+      "ClosingPrice": 363
+    },
+    {
+      "Code": "8021",
+      "ClosingPrice": 521
+    },
+    {
+      "Code": "8028",
+      "ClosingPrice": 312.5
+    },
+    {
+      "Code": "8033",
+      "ClosingPrice": 227
+    },
+    {
+      "Code": "8039",
+      "ClosingPrice": 154
+    },
+    {
+      "Code": "8045",
+      "ClosingPrice": 58.4
+    },
+    {
+      "Code": "8046",
+      "ClosingPrice": 1215
+    },
+    {
+      "Code": "8070",
+      "ClosingPrice": 52.7
+    },
+    {
+      "Code": "8072",
+      "ClosingPrice": 29.1
+    },
+    {
+      "Code": "8081",
+      "ClosingPrice": 283
+    },
+    {
+      "Code": "8101",
+      "ClosingPrice": 13.1
+    },
+    {
+      "Code": "8103",
+      "ClosingPrice": 92
+    },
+    {
+      "Code": "8104",
+      "ClosingPrice": 41.15
+    },
+    {
+      "Code": "8105",
+      "ClosingPrice": 20.25
+    },
+    {
+      "Code": "8110",
+      "ClosingPrice": 50.6
+    },
+    {
+      "Code": "8112",
+      "ClosingPrice": 85
+    },
+    {
+      "Code": "8112A",
+      "ClosingPrice": 45
+    },
+    {
+      "Code": "8114",
+      "ClosingPrice": 204
+    },
+    {
+      "Code": "8131",
+      "ClosingPrice": 76
+    },
+    {
+      "Code": "8150",
+      "ClosingPrice": 117
+    },
+    {
+      "Code": "8162",
+      "ClosingPrice": 78.1
+    },
+    {
+      "Code": "8163",
+      "ClosingPrice": 37.15
+    },
+    {
+      "Code": "8201",
+      "ClosingPrice": 12.65
+    },
+    {
+      "Code": "8210",
+      "ClosingPrice": 1175
+    },
+    {
+      "Code": "8213",
+      "ClosingPrice": 34.1
+    },
+    {
+      "Code": "8215",
+      "ClosingPrice": 28.3
+    },
+    {
+      "Code": "8222",
+      "ClosingPrice": 40
+    },
+    {
+      "Code": "8249",
+      "ClosingPrice": 47
+    },
+    {
+      "Code": "8261",
+      "ClosingPrice": 325
+    },
+    {
+      "Code": "8271",
+      "ClosingPrice": 181
+    },
+    {
+      "Code": "8341",
+      "ClosingPrice": 76.6
+    },
+    {
+      "Code": "8367",
+      "ClosingPrice": 40.6
+    },
+    {
+      "Code": "8374",
+      "ClosingPrice": 85.8
+    },
+    {
+      "Code": "8404",
+      "ClosingPrice": 16.8
+    },
+    {
+      "Code": "8411",
+      "ClosingPrice": 12.4
+    },
+    {
+      "Code": "8422",
+      "ClosingPrice": 27
+    },
+    {
+      "Code": "8429",
+      "ClosingPrice": 6.25
+    },
+    {
+      "Code": "8438",
+      "ClosingPrice": 93.8
+    },
+    {
+      "Code": "8442",
+      "ClosingPrice": 45.5
+    },
+    {
+      "Code": "8443",
+      "ClosingPrice": 11.4
+    },
+    {
+      "Code": "8454",
+      "ClosingPrice": 268
+    },
+    {
+      "Code": "8462",
+      "ClosingPrice": 159
+    },
+    {
+      "Code": "8463",
+      "ClosingPrice": 21.4
+    },
+    {
+      "Code": "8464",
+      "ClosingPrice": 360
+    },
+    {
+      "Code": "8466",
+      "ClosingPrice": 17.45
+    },
+    {
+      "Code": "8467",
+      "ClosingPrice": 114.5
+    },
+    {
+      "Code": "8473",
+      "ClosingPrice": 45.6
+    },
+    {
+      "Code": "8476",
+      "ClosingPrice": 24.1
+    },
+    {
+      "Code": "8478",
+      "ClosingPrice": 154
+    },
+    {
+      "Code": "8481",
+      "ClosingPrice": 42.2
+    },
+    {
+      "Code": "8482",
+      "ClosingPrice": 47.9
+    },
+    {
+      "Code": "8487",
+      "ClosingPrice": 78.6
+    },
+    {
+      "Code": "8488",
+      "ClosingPrice": 10.05
+    },
+    {
+      "Code": "8499",
+      "ClosingPrice": 296.5
+    },
+    {
+      "Code": "8926",
+      "ClosingPrice": 76
+    },
+    {
+      "Code": "8940",
+      "ClosingPrice": 16.35
+    },
+    {
+      "Code": "8996",
+      "ClosingPrice": 1230
+    },
+    {
+      "Code": "9103",
+      "ClosingPrice": 5.05
+    },
+    {
+      "Code": "910322",
+      "ClosingPrice": 22.5
+    },
+    {
+      "Code": "9105",
+      "ClosingPrice": 8.64
+    },
+    {
+      "Code": "910861",
+      "ClosingPrice": 4.3
+    },
+    {
+      "Code": "9110",
+      "ClosingPrice": 3
+    },
+    {
+      "Code": "911608",
+      "ClosingPrice": 2.71
+    },
+    {
+      "Code": "911622",
+      "ClosingPrice": 3.81
+    },
+    {
+      "Code": "911868",
+      "ClosingPrice": 1.2
+    },
+    {
+      "Code": "912000",
+      "ClosingPrice": 2.7
+    },
+    {
+      "Code": "9136",
+      "ClosingPrice": 12.55
+    },
+    {
+      "Code": "9802",
+      "ClosingPrice": 75
+    },
+    {
+      "Code": "9902",
+      "ClosingPrice": 13.9
+    },
+    {
+      "Code": "9904",
+      "ClosingPrice": 24.25
+    },
+    {
+      "Code": "9905",
+      "ClosingPrice": 20.3
+    },
+    {
+      "Code": "9906",
+      "ClosingPrice": 40.5
+    },
+    {
+      "Code": "9907",
+      "ClosingPrice": 15.1
+    },
+    {
+      "Code": "9908",
+      "ClosingPrice": 29.75
+    },
+    {
+      "Code": "9910",
+      "ClosingPrice": 67.5
+    },
+    {
+      "Code": "9911",
+      "ClosingPrice": 83.5
+    },
+    {
+      "Code": "9912",
+      "ClosingPrice": 12.75
+    },
+    {
+      "Code": "9914",
+      "ClosingPrice": 72.8
+    },
+    {
+      "Code": "9917",
+      "ClosingPrice": 107.5
+    },
+    {
+      "Code": "9918",
+      "ClosingPrice": 43.75
+    },
+    {
+      "Code": "9919",
+      "ClosingPrice": 13.8
+    },
+    {
+      "Code": "9921",
+      "ClosingPrice": 72.7
+    },
+    {
+      "Code": "9924",
+      "ClosingPrice": 39.9
+    },
+    {
+      "Code": "9925",
+      "ClosingPrice": 41.3
+    },
+    {
+      "Code": "9926",
+      "ClosingPrice": 49.65
+    },
+    {
+      "Code": "9927",
+      "ClosingPrice": 68.3
+    },
+    {
+      "Code": "9928",
+      "ClosingPrice": 18.65
+    },
+    {
+      "Code": "9929",
+      "ClosingPrice": 10.95
+    },
+    {
+      "Code": "9930",
+      "ClosingPrice": 63.4
+    },
+    {
+      "Code": "9931",
+      "ClosingPrice": 33.3
+    },
+    {
+      "Code": "9933",
+      "ClosingPrice": 41.1
+    },
+    {
+      "Code": "9934",
+      "ClosingPrice": 10.3
+    },
+    {
+      "Code": "9935",
+      "ClosingPrice": 18.3
+    },
+    {
+      "Code": "9937",
+      "ClosingPrice": 55.4
+    },
+    {
+      "Code": "9938",
+      "ClosingPrice": 46.15
+    },
+    {
+      "Code": "9939",
+      "ClosingPrice": 122.5
+    },
+    {
+      "Code": "9940",
+      "ClosingPrice": 19.7
+    },
+    {
+      "Code": "9941",
+      "ClosingPrice": 81
+    },
+    {
+      "Code": "9941A",
+      "ClosingPrice": 50.9
+    },
+    {
+      "Code": "9942",
+      "ClosingPrice": 120
+    },
+    {
+      "Code": "9943",
+      "ClosingPrice": 53.3
+    },
+    {
+      "Code": "9944",
+      "ClosingPrice": 17.75
+    },
+    {
+      "Code": "9945",
+      "ClosingPrice": 25.85
+    },
+    {
+      "Code": "9946",
+      "ClosingPrice": 19.9
+    },
+    {
+      "Code": "9955",
+      "ClosingPrice": 26.2
+    },
+    {
+      "Code": "9958",
+      "ClosingPrice": 117
+    }
+  ]
+}
