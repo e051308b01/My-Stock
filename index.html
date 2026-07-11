@@ -41,8 +41,8 @@
         </div>
 
     <div class="p-6 text-center text-gray-600 text-2xs space-y-1">
-        <div>* 點擊股票卡片可隨時微調「即時庫存」或手動覆蓋現價。</div>
-        <div>* 採用 Script-Bypass 技術，完美支援手機與電腦本地直接自動同步最新收盤價。</div>
+        <div>* 點擊股票卡片可隨時微調「即時庫存」、「成本」或手動覆蓋現價。</div>
+        <div>* 點擊上方更新按鈕可同步每日證交所最新官方收盤價。</div>
     </div>
 
     <div id="stock-modal" class="hidden fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-end sm:items-center justify-center p-0 sm:p-4">
@@ -53,12 +53,8 @@
             </div>
             <form id="stock-form" onsubmit="saveStock(event)" class="space-y-4 text-sm">
                 <div>
-                    <label class="block text-xs text-gray-400 mb-1">股票代號 (例如: 6274)</label>
-                    <input type="text" id="form-symbol" required placeholder="請輸入純數字代號" class="w-full bg-gray-900 border border-gray-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-emerald-500">
-                </div>
-                <div>
-                    <label class="block text-xs text-gray-400 mb-1">股票自訂名稱 (例如: 台燿)</label>
-                    <input type="text" id="form-name" required placeholder="請輸入股票簡稱" class="w-full bg-gray-900 border border-gray-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-emerald-500">
+                    <label class="block text-xs text-gray-400 mb-1">股票名稱/代號 (例如: 6274 台燿 或 2881 富邦金)</label>
+                    <input type="text" id="form-name" required placeholder="請輸入股票代號與簡稱" class="w-full bg-gray-900 border border-gray-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-emerald-500">
                 </div>
                 <div class="grid grid-cols-2 gap-3">
                     <div>
@@ -72,7 +68,7 @@
                 </div>
                 <div>
                     <label class="block text-xs text-gray-400 mb-1">目前現價 (手動覆蓋或留空讓系統自動查)</label>
-                    <input type="number" step="0.01" id="form-price" placeholder="自動查價失敗時可在此填入" class="w-full bg-gray-900 border border-gray-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-emerald-500">
+                    <input type="number" step="0.01" id="form-price" placeholder="選填，系統會自動查收盤價" class="w-full bg-gray-900 border border-gray-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-emerald-500">
                 </div>
                 <div class="flex gap-2 pt-2">
                     <button type="button" onclick="deleteStock()" id="btn-delete" class="hidden bg-rose-900/40 hover:bg-rose-900 text-rose-300 font-medium py-3 px-4 rounded-xl active:scale-98 transition">刪除</button>
@@ -83,22 +79,22 @@
     </div>
 
     <script>
-        // 初始化包含你的 11 檔核心持股設定 (分離 symbol 以便自動配對股價)
+        // 初始化整合版：包含名稱與代號一體化，確保畫面與你目前的截圖一模一樣
         const defaultStocks = [
-            { id: "1", symbol: "00403A", name: "主動統一升級50", shares: 15000, cost: 10.13, price: 10.48 },
-            { id: "2", symbol: "00878", name: "國泰永續高股息", shares: 25000, cost: 18.72, price: 33.19 },
-            { id: "3", symbol: "009816", name: "凱基台灣TOP50", shares: 15000, cost: 10.88, price: 15.23 },
-            { id: "4", symbol: "00981A", name: "主動統一台股增長", shares: 14000, cost: 26.25, price: 29.95 },
-            { id: "5", symbol: "1216", name: "統一", shares: 3000, cost: 61.79, price: 78.40 },
-            { id: "6", symbol: "1717", name: "長興", shares: 2000, cost: 37.19, price: 73.80 },
-            { id: "7", symbol: "2886", name: "兆豐金", shares: 10000, cost: 33.44, price: 46.70 },
-            { id: "8", symbol: "6274", name: "台燿", shares: 1000, cost: 157.48, price: 1570.00 },
-            { id: "9", symbol: "8028", name: "昇陽半導體", shares: 2000, cost: 75.84, price: 312.50 },
-            { id: "10", symbol: "8112", name: "至上", shares: 5000, cost: 47.69, price: 85.00 },
-            { id: "11", symbol: "2881", name: "富邦金", shares: 8000, cost: 26.70, price: 26.70 }
+            { id: "1", name: "00403A 主動統一升級50", shares: 15000, cost: 10.13, price: 10.48 },
+            { id: "2", name: "00878 國泰永續高股息", shares: 25000, cost: 18.72, price: 33.19 },
+            { id: "3", name: "009816 凱基台灣TOP50", shares: 15000, cost: 10.88, price: 15.23 },
+            { id: "4", name: "00981A 主動統一台股增長", shares: 14000, cost: 26.25, price: 29.95 },
+            { id: "5", name: "1216 統一", shares: 3000, cost: 61.79, price: 78.40 },
+            { id: "6", name: "1717 長興", shares: 2000, cost: 37.19, price: 73.80 },
+            { id: "7", name: "2886 兆豐金", shares: 10000, cost: 33.44, price: 46.70 },
+            { id: "8", name: "6274 台燿", shares: 1000, cost: 157.48, price: 1570.00 },
+            { id: "9", name: "8028 昇陽半導體", shares: 2000, cost: 75.84, price: 312.50 },
+            { id: "10", name: "8112 至上", shares: 5000, cost: 47.69, price: 85.00 },
+            { id: "11", name: "2881 富邦金", shares: 8000, cost: 26.70, price: 26.70 }
         ];
 
-        let stocks = JSON.parse(localStorage.getItem('bypass_portfolio')) || [...defaultStocks];
+        let stocks = JSON.parse(localStorage.getItem('cloud_portfolio')) || [...defaultStocks];
         let currentEditingId = null;
 
         function renderPortfolio() {
@@ -126,7 +122,7 @@
 
                 card.innerHTML = `
                     <div class="space-y-1">
-                        <div class="font-bold text-gray-100 text-base tracking-wide">${stock.symbol} ${stock.name}</div>
+                        <div class="font-bold text-gray-100 text-base tracking-wide">${stock.name}</div>
                         <div class="text-xs text-gray-400">
                             庫存 ${stock.shares.toLocaleString()} 股 · 均價 ${stock.cost}
                         </div>
@@ -156,37 +152,38 @@
             totalProfitEl.className = `font-bold ${totalProfit >= 0 ? 'text-rose-400' : 'text-green-400'}`;
         }
 
-        // 終極核心：利用動態插入 <script> 標籤加載數據，徹底繞過 file:/// 跨域安全性限制
+        // 核心更新機制：解決 file:/// 安全阻擋，並升級為強效名稱代號模糊配對
         function autoUpdatePrices() {
             const btn = document.getElementById('btn-refresh');
             const statusEl = document.getElementById('update-status');
             btn.innerText = "⏳ 載入中...";
             btn.disabled = true;
 
-            // 移除舊的 script 避免重複堆疊
             const oldScript = document.getElementById('price-api-script');
             if (oldScript) oldScript.remove();
 
-            // 建立全域回呼函式（當外部數據加載完後會自動執行這段）
             window.twseDataCallback = function(data) {
                 let successCount = 0;
-                
-                // 建立一個加速對照表
                 const priceMap = {};
+                
+                // 整理證交所開放大檔
                 data.forEach(item => {
                     if (item.Code) {
                         priceMap[item.Code.trim()] = parseFloat(item.ClosingPrice);
                     }
                 });
 
-                // 更新我們的持股價格
+                // 模糊配對邏輯：自動從使用者的自訂名稱中撈出前 4 到 6 碼數字作為代號
                 stocks = stocks.map(stock => {
-                    const cleanSymbol = stock.symbol.trim();
-                    if (priceMap[cleanSymbol] && !isNaN(priceMap[cleanSymbol]) && priceMap[cleanSymbol] > 0) {
-                        successCount++;
-                        return { ...stock, price: priceMap[cleanSymbol] };
+                    const match = stock.name.match(/\d{4,6}/);
+                    if (match) {
+                        const code = match[0];
+                        if (priceMap[code] && !isNaN(priceMap[code]) && priceMap[code] > 0) {
+                            successCount++;
+                            return { ...stock, price: priceMap[code] };
+                        }
                     }
-                    return stock;
+                    return stock; // 若沒配對到（如剛上市的主動式基金），保留原快現價
                 });
 
                 const now = new Date();
@@ -198,15 +195,12 @@
                 renderPortfolio();
             };
 
-            // 動態插入 Script 標籤（串接已將證交所每日行情轉為可執行 JS 的 GitHub 開源 CDN）
             const script = document.createElement('script');
             script.id = 'price-api-script';
-            // 此開放路徑專門提供給無法使用 Fetch 的前端環境，包裝為 twseDataCallback 函式
             script.src = 'https://rshadow.github.io/twse-openapi/data/exchangeReport/STOCK_DAY_ALL.js';
             
-            // 異常安全防線（如果斷線或專案維護，5秒後解鎖按鈕）
             script.onerror = function() {
-                statusEl.innerText = "自動更新暫時無法連線，已採用本機快取。";
+                statusEl.innerText = "連線逾時，已採用本地安全快取現價。";
                 btn.innerHTML = "🔄 自動更新現價";
                 btn.disabled = false;
                 renderPortfolio();
@@ -229,7 +223,6 @@
 
         function openEditModal(stock) {
             currentEditingId = stock.id;
-            document.getElementById('form-symbol').value = stock.symbol;
             document.getElementById('form-name').value = stock.name;
             document.getElementById('form-shares').value = stock.shares;
             document.getElementById('form-cost').value = stock.cost;
@@ -241,7 +234,6 @@
 
         function saveStock(e) {
             e.preventDefault();
-            const symbol = document.getElementById('form-symbol').value.trim().toUpperCase();
             const name = document.getElementById('form-name').value.trim();
             const shares = parseInt(document.getElementById('form-shares').value);
             const cost = parseFloat(document.getElementById('form-cost').value);
@@ -250,11 +242,11 @@
             if (isNaN(price)) price = cost;
 
             if (currentEditingId) {
-                stocks = stocks.map(s => s.id === currentEditingId ? { ...s, symbol, name, shares, cost, price } : s);
+                stocks = stocks.map(s => s.id === currentEditingId ? { ...s, name, shares, cost, price } : s);
             } else {
                 const newStock = {
                     id: Date.now().toString(),
-                    symbol, name, shares, cost, price
+                    name, shares, cost, price
                 };
                 stocks.push(newStock);
             }
@@ -262,7 +254,7 @@
             saveToLocalStorage();
             toggleModal(false);
             renderPortfolio();
-            autoUpdatePrices(); // 新增修改後立刻再刷新一次最新行情
+            autoUpdatePrices();
         }
 
         function deleteStock() {
@@ -283,13 +275,11 @@
         }
 
         function saveToLocalStorage() {
-            localStorage.setItem('bypass_portfolio', JSON.stringify(stocks));
+            localStorage.setItem('cloud_portfolio', JSON.stringify(stocks));
         }
 
         // 初始載入
         renderPortfolio();
-        
-        // 進入網頁 0.5 秒後全自動觸發一次更新股價
         window.addEventListener('load', () => {
             setTimeout(autoUpdatePrices, 500);
         });
