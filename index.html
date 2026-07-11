@@ -86,15 +86,22 @@
 
     <div class="p-8 text-center text-slate-600 text-3xs tracking-wider space-y-1">
         <div>🔒 ENCRYPTED LOCAL STORAGE · SECURE SANDBOX</div>
-        <div>V8.3 PREMIUM AI INSIGHT PLATFORM</div>
+        <div>V8.4 PREMIUM AI INSIGHT PLATFORM</div>
     </div>
 
     <div id="stock-modal" class="hidden fixed inset-0 bg-black/70 backdrop-blur-sm z-50 flex items-end sm:items-center justify-center p-0 sm:p-4">
         <div class="bg-slate-900 w-full sm:max-w-md rounded-t-3xl sm:rounded-2xl p-6 shadow-2xl border-t border-slate-800">
-            <div class="flex justify-between items-center mb-5">
+            <div class="flex justify-between items-center mb-4">
                 <h3 class="text-base font-bold text-slate-200 tracking-wide">編輯持股資訊</h3>
                 <button onclick="toggleModal(false)" class="text-slate-400 text-xl p-2">&times;</button>
             </div>
+
+            <div id="yahoo-link-container" class="hidden mb-5">
+                <a id="yahoo-stock-link" href="#" target="_blank" class="w-full bg-slate-950 hover:bg-slate-800 text-teal-400 border border-teal-900/50 font-bold py-3 px-4 rounded-xl flex items-center justify-center gap-2 transition active:scale-98 text-xs tracking-wide shadow-inner">
+                    🔍 查詢個股盤勢 (外連 Yahoo 股市)
+                </a>
+            </div>
+
             <form id="stock-form" onsubmit="saveStock(event)" class="space-y-4 text-xs">
                 <div>
                     <label class="block text-3xs uppercase tracking-widest text-slate-500 font-bold mb-1">股票代號</label>
@@ -143,7 +150,6 @@
             { id: "11", symbol: "2881", name: "富邦金", shares: 8000, cost: 26.70, price: 124.50 }
         ];
 
-        // 🛠️ 關鍵校正：強制對齊 V7 V8 時代的相同資料庫鑰匙名稱
         let stocks = JSON.parse(localStorage.getItem('github_portfolio_v7_lux')) || [...defaultStocks];
         let currentEditingId = null;
 
@@ -275,7 +281,13 @@
         function toggleModal(show) {
             const modal = document.getElementById('stock-modal');
             if (show) modal.classList.remove('hidden');
-            else { modal.classList.add('hidden'); document.getElementById('stock-form').reset(); currentEditingId = null; document.getElementById('btn-delete').classList.add('hidden'); }
+            else { 
+                modal.classList.add('hidden'); 
+                document.getElementById('stock-form').reset(); 
+                currentEditingId = null; 
+                document.getElementById('btn-delete').classList.add('hidden');
+                document.getElementById('yahoo-link-container').classList.add('hidden'); // 關閉時隱藏連結
+            }
         }
 
         function openEditModal(stock) {
@@ -286,6 +298,15 @@
             document.getElementById('form-cost').value = stock.cost;
             document.getElementById('form-price').value = stock.price;
             document.getElementById('btn-delete').classList.remove('hidden');
+
+            // 🛠️ 設定外連 Yahoo 股市頁面連結 (支援代號：例如 2881.TW 或直接帶代號)
+            const pureSymbol = stock.symbol.trim();
+            const yahooUrl = `https://tw.stock.yahoo.com/quote/${pureSymbol}`;
+            const linkEl = document.getElementById('yahoo-stock-link');
+            linkEl.href = yahooUrl;
+            linkEl.innerText = `🔍 查詢 ${pureSymbol} ${stock.name} 盤勢 (Yahoo 股市)`;
+            document.getElementById('yahoo-link-container').classList.remove('hidden');
+
             toggleModal(true);
         }
 
