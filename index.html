@@ -28,7 +28,7 @@
             
             <div class="flex flex-wrap justify-between items-start gap-4">
                 <div>
-                    <h1 class="text-xs uppercase tracking-widest text-slate-400 font-bold">Net Worth · 總資產淨估值 (含銀行現金)</h1>
+                    <h1 class="text-xs uppercase tracking-widest text-slate-400 font-bold">Net Worth · 總資產淨估值 (含現金)</h1>
                     <div id="total-value" class="text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-300 to-emerald-200 tracking-tight my-2 break-all">
                         $0
                     </div>
@@ -40,24 +40,24 @@
             
             <div class="w-full h-px bg-slate-800/60 my-4"></div>
             
-            <div class="grid grid-cols-2 gap-3 text-sm mb-4 border-b border-slate-800/60 pb-3">
-                <div>
-                    <span class="text-slate-400 block text-xs font-bold mb-0.5">📊 股票持倉總估值</span>
-                    <span id="total-stock-market" class="text-teal-400 font-black text-base tracking-wide">$0</span>
+            <div class="grid grid-cols-2 gap-4 text-sm mb-4 border-b border-slate-800/60 pb-4">
+                <div class="bg-slate-950/40 p-3 rounded-xl border border-slate-800/40 shadow-inner">
+                    <span class="text-slate-400 block text-xs font-bold mb-1">📈 股票庫存總值</span>
+                    <span id="total-stock-market" class="text-teal-400 font-black text-lg tracking-wide">$0</span>
                 </div>
-                <div class="text-right">
-                    <span class="text-slate-400 block text-xs font-bold mb-0.5">🏦 銀行儲蓄資產 (MA)</span>
-                    <span id="total-bank-cash" class="text-slate-100 font-black text-base tracking-wide">$3,600,000</span>
+                <div class="bg-slate-950/40 p-3 rounded-xl border border-slate-800/40 shadow-inner text-right">
+                    <span class="text-slate-400 block text-xs font-bold mb-1">🏦 銀行活存資產</span>
+                    <span id="total-bank-cash" class="text-slate-100 font-black text-lg tracking-wide">$3,600,000</span>
                 </div>
             </div>
 
             <div class="grid grid-cols-2 gap-3 text-sm">
                 <div>
-                    <span class="text-slate-400 block text-xs uppercase font-bold mb-0.5">持股總投入成本</span>
+                    <span class="text-slate-400 block text-xs uppercase font-bold mb-0.5">持股投入總成本</span>
                     <span id="total-cost" class="text-slate-300 font-bold text-base tracking-wide">0</span>
                 </div>
                 <div class="text-right">
-                    <span class="text-slate-400 block text-xs uppercase font-bold mb-0.5">股票未實現總損益</span>
+                    <span class="text-slate-400 block text-xs uppercase font-bold mb-0.5">股票未實現損益</span>
                     <span id="total-profit" class="font-black text-base tracking-wide">0</span>
                 </div>
             </div>
@@ -95,7 +95,7 @@
 
     <div class="p-8 text-center text-slate-600 text-xs tracking-wider space-y-1 font-bold">
         <div>🔒 ENCRYPTED LOCAL STORAGE · SECURE SANDBOX</div>
-        <div>V9.9 OMNI-ASSET INTEGRATED PLATFORM</div>
+        <div>V10.0 OMNI-ASSET SPLIT-PANEL PLATFORM</div>
     </div>
 
     <div id="stock-modal" class="hidden fixed inset-0 bg-black/70 backdrop-blur-sm z-50 flex items-end sm:items-center justify-center p-0 sm:p-4 overflow-y-auto">
@@ -160,31 +160,29 @@
             { id: "9", symbol: "8028", name: "昇陽半導體", shares: 2000, cost: 75.84, price: 312.50 },
             { id: "10", symbol: "8112", name: "至上", shares: 5000, cost: 47.69, price: 85.00 },
             { id: "11", symbol: "2881", name: "富邦金", shares: 8000, cost: 26.70, price: 124.50 },
-            // 銀行活存資產預設資料
             { id: "12", symbol: "MA", name: "銀行資產", shares: 3600000, cost: 1.00, price: 1.00 }
         ];
 
         let stocks = JSON.parse(localStorage.getItem('github_portfolio_v7_lux')) || [...defaultStocks];
         let currentEditingId = null;
 
-        // 🛠️ 優化加總演算法：精準切割「股票部分」與「現金部分」的加總計價
         function renderPortfolio() {
             const container = document.getElementById('stock-list-container');
             container.innerHTML = '';
             
-            let totalStockMarket = 0; // 純股票總市值
-            let totalStockCost = 0;   // 純股票投入總成本
-            let bankCashValue = 0;    // 銀行固定活存資產
+            let totalStockMarket = 0; 
+            let totalStockCost = 0;   
+            let bankCashValue = 0;    
 
             stocks.forEach(stock => {
                 const costSum = stock.shares * stock.cost;
                 const marketValueSum = stock.shares * stock.price;
 
                 if (stock.symbol === "MA") {
-                    bankCashValue += marketValueSum; // 歸入現金資產
+                    bankCashValue += marketValueSum;
                 } else {
-                    totalStockMarket += marketValueSum; // 歸入股票市值
-                    totalStockCost += costSum;          // 歸入持股成本
+                    totalStockMarket += marketValueSum;
+                    totalStockCost += costSum;
                 }
 
                 const profit = marketValueSum - costSum;
@@ -226,12 +224,11 @@
                 container.appendChild(card);
             });
 
-            // 👑 總資產淨估值 = 純股票市值 + 銀行儲蓄 (完美的 $9,700,500)
             const finalNetWorth = totalStockMarket + bankCashValue;
             const totalStockProfit = totalStockMarket - totalStockCost;
             const totalStockProfitPercent = totalStockCost > 0 ? (totalStockProfit / totalStockCost) * 100 : 0;
             
-            // 刷新上層儀表板數據
+            // 🛠️ 同步刷新大字級金額與下方的獨立雙欄水庫
             document.getElementById('total-value').innerText = `$${Math.round(finalNetWorth).toLocaleString()}`;
             document.getElementById('total-stock-market').innerText = `$${Math.round(totalStockMarket).toLocaleString()}`;
             document.getElementById('total-bank-cash').innerText = `$${Math.round(bankCashValue).toLocaleString()}`;
@@ -264,7 +261,7 @@
                     stocks = stocks.map(stock => {
                         if (!stock.symbol) return stock;
                         const code = stock.symbol.trim();
-                        if (code === "MA") return { ...stock, price: 1.00 }; // 現金資產行情鎖定
+                        if (code === "MA") return { ...stock, price: 1.00 };
                         if (twseMap[code] && !isNaN(twseMap[code]) && twseMap[code] > 0) { updatedCount++; return { ...stock, price: twseMap[code] }; }
                         return stock;
                     });
