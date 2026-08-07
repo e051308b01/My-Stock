@@ -104,7 +104,7 @@
     <!-- 底部功能安全提示 -->
     <div class="p-8 text-center text-slate-600 text-xs tracking-wider space-y-1 font-bold">
         <div>🔒 ENCRYPTED LOCAL STORAGE · SECURE SANDBOX</div>
-        <div>V10.1 NATIVE-DATA INTEGRATED PLATFORM</div>
+        <div>V10.2 NO-CACHE LIVE DATA PLATFORM</div>
     </div>
 
     <!-- 彈出視窗 (Modal) -->
@@ -289,8 +289,10 @@
 
             const script = document.createElement('script');
             script.id = 'twse-core-handler';
-            // 🛠️ 核心修正點：放棄外部壞掉的資料源，改為讀取你自己 Github Repo 中由機器人抓下來的最新本地資料！
-            script.src = './data/exchangeReport/STOCK_DAY_ALL.js';
+            
+            // 🛠️ 終極防快取絕招：在網址最後面加上隨機時間戳記（?t=時間），逼迫瀏覽器每次都下載最新版！
+            script.src = './data/exchangeReport/STOCK_DAY_ALL.js?t=' + new Date().getTime();
+            
             script.onerror = function() {
                 statusEl.innerText = "WEEKEND · 週末市場休市或資料庫構建中";
                 btn.innerHTML = "🔄 同步數據"; btn.disabled = false;
