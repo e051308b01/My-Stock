@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
     <title>我的頂級資產追蹤系統</title>
+    <!-- 引入 Tailwind CSS -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <style>
         body { 
@@ -22,6 +23,7 @@
 </head>
 <body class="bg-finance-dark text-gray-100 min-h-screen pb-28">
 
+    <!-- 頂部奢華儀表板卡片區 -->
     <div class="p-4 pt-6">
         <div class="relative overflow-hidden rounded-3xl p-6 bg-gradient-to-br from-slate-800 via-slate-900 to-black border border-slate-700/40 shadow-2xl">
             <div class="absolute -right-10 -top-10 w-32 h-32 bg-emerald-500/10 rounded-full blur-3xl"></div>
@@ -40,6 +42,7 @@
             
             <div class="w-full h-px bg-slate-800/60 my-4"></div>
             
+            <!-- 雙欄獨立平行顯示區 -->
             <div class="grid grid-cols-2 gap-4 text-sm mb-4 border-b border-slate-800/60 pb-4">
                 <div class="bg-slate-950/40 p-3 rounded-xl border border-slate-800/40 shadow-inner">
                     <span class="text-slate-400 block text-xs font-bold mb-1">📈 股票庫存總值</span>
@@ -51,6 +54,7 @@
                 </div>
             </div>
 
+            <!-- 損益與成本數據欄位 -->
             <div class="grid grid-cols-2 gap-3 text-sm">
                 <div>
                     <span class="text-slate-400 block text-xs uppercase font-bold mb-0.5">持股投入總成本</span>
@@ -65,6 +69,7 @@
         </div>
     </div>
 
+    <!-- 晨報區塊 -->
     <div class="px-4 mb-4">
         <div class="glass-panel border border-slate-800/80 rounded-2xl p-5 shadow-xl relative overflow-hidden">
             <div class="absolute -left-6 -bottom-6 w-20 h-20 bg-teal-500/5 rounded-full blur-2xl"></div>
@@ -81,6 +86,7 @@
         </div>
     </div>
 
+    <!-- 頂部操作按鈕 -->
     <div class="px-4 mb-5 flex flex-wrap gap-2">
         <button onclick="toggleModal(true)" class="flex-1 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white font-black py-4 px-4 rounded-2xl text-sm tracking-wide shadow-lg shadow-emerald-900/20 active:scale-98 transition flex justify-center items-center gap-1 min-w-[180px]">
             ➕ 新增 / 調整持股資產
@@ -90,23 +96,29 @@
         </button>
     </div>
 
+    <!-- 持股清單列表 -->
     <div class="px-4 space-y-3" id="stock-list-container">
-        </div>
-
-    <div class="p-8 text-center text-slate-600 text-xs tracking-wider space-y-1 font-bold">
-        <div>🔒 ENCRYPTED LOCAL STORAGE · SECURE SANDBOX</div>
-        <div>V10.0 OMNI-ASSET SPLIT-PANEL PLATFORM</div>
+        <!-- JS 動態渲染卡片 -->
     </div>
 
+    <!-- 底部功能安全提示 -->
+    <div class="p-8 text-center text-slate-600 text-xs tracking-wider space-y-1 font-bold">
+        <div>🔒 ENCRYPTED LOCAL STORAGE · SECURE SANDBOX</div>
+        <div>V10.1 NATIVE-DATA INTEGRATED PLATFORM</div>
+    </div>
+
+    <!-- 彈出視窗 (Modal) -->
     <div id="stock-modal" class="hidden fixed inset-0 bg-black/70 backdrop-blur-sm z-50 flex items-end sm:items-center justify-center p-0 sm:p-4 overflow-y-auto">
         <div class="bg-slate-900 w-full sm:max-w-md rounded-t-3xl sm:rounded-2xl p-0 shadow-2xl border border-slate-800/80 overflow-hidden my-auto">
             
+            <!-- 上半層：外連功能區 -->
             <div id="yahoo-link-container" class="p-5 bg-emerald-950/20 border-b border-slate-800">
                 <button type="button" id="yahoo-stock-link-btn" class="w-full bg-slate-950/80 hover:bg-emerald-950/50 text-emerald-400 border border-emerald-500/50 font-black py-4 px-4 rounded-xl flex items-center justify-center gap-2 transition active:scale-95 text-sm tracking-wider shadow-md text-center cursor-pointer">
                     🔍 查詢個股盤勢 (外連 Yahoo 股市)
                 </button>
             </div>
 
+            <!-- 下半層：編輯表單區 -->
             <div class="p-6">
                 <div class="flex justify-between items-center mb-5">
                     <h3 class="text-base font-bold text-slate-200 tracking-wide">編輯持股資訊</h3>
@@ -145,6 +157,7 @@
         </div>
     </div>
 
+    <!-- JavaScript 邏輯控制 -->
     <script>
         const GAS_AI_URL = "https://script.google.com/macros/s/AKfycbzVKjy5nvE_PxnsyP7WdL7RPMPZMiXYU6dcSY7jeb_J54ejhdt9AegGu9QxoDCUMt810w/exec";
 
@@ -228,7 +241,6 @@
             const totalStockProfit = totalStockMarket - totalStockCost;
             const totalStockProfitPercent = totalStockCost > 0 ? (totalStockProfit / totalStockCost) * 100 : 0;
             
-            // 🛠️ 同步刷新大字級金額與下方的獨立雙欄水庫
             document.getElementById('total-value').innerText = `$${Math.round(finalNetWorth).toLocaleString()}`;
             document.getElementById('total-stock-market').innerText = `$${Math.round(totalStockMarket).toLocaleString()}`;
             document.getElementById('total-bank-cash').innerText = `$${Math.round(bankCashValue).toLocaleString()}`;
@@ -277,9 +289,10 @@
 
             const script = document.createElement('script');
             script.id = 'twse-core-handler';
-            script.src = 'https://rshadow.github.io/twse-openapi/data/exchangeReport/STOCK_DAY_ALL.js';
+            // 🛠️ 核心修正點：放棄外部壞掉的資料源，改為讀取你自己 Github Repo 中由機器人抓下來的最新本地資料！
+            script.src = './data/exchangeReport/STOCK_DAY_ALL.js';
             script.onerror = function() {
-                statusEl.innerText = "WEEKEND · 週末市場休市中";
+                statusEl.innerText = "WEEKEND · 週末市場休市或資料庫構建中";
                 btn.innerHTML = "🔄 同步數據"; btn.disabled = false;
                 renderPortfolio();
             };
