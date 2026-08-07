@@ -3,7 +3,7 @@ import { mkdir, writeFile } from 'node:fs/promises';
 const twseUrl = 'https://openapi.twse.com.tw/v1/exchangeReport/STOCK_DAY_ALL';
 const tpexUrl = 'https://www.tpex.org.tw/openapi/v1/tpex_mainboard_daily_close_quotes';
 const reportUrl = 'https://script.google.com/macros/s/AKfycbzVKjy5nvE_PxnsyP7WdL7RPMPZMiXYU6dcSY7jeb_J54ejhdt9AegGu9QxoDCUMt810w/exec';
-const timeoutMs = 20000;
+const timeoutMs = 30000;
 
 async function requestText(url) {
     const response = await fetch(url, { signal: AbortSignal.timeout(timeoutMs), redirect: 'follow' });
